@@ -4,25 +4,25 @@ import dog3 from "@/assets/dog-3.jpg";
 
 const dogs = [
   {
-    name: "Белла",
-    description: "Ласковая и игривая девочка, чемпион России",
+    name: "Bella",
+    description: "Láskyplná a hravá holčička, šampionka České republiky",
     image: dog1,
-    age: "2 года",
-    color: "Кремовый",
+    age: "2 roky",
+    color: "Krémová",
   },
   {
-    name: "Барон",
-    description: "Умный и спокойный мальчик, интерчемпион",
+    name: "Baron",
+    description: "Inteligentní a klidný chlapeček, interšampion",
     image: dog2,
-    age: "3 года",
-    color: "Золотистый",
+    age: "3 roky",
+    color: "Zlatavá",
   },
   {
-    name: "Тедди",
-    description: "Очаровательный щенок, готов к переезду в новый дом",
+    name: "Teddy",
+    description: "Okouzlující štěně, připraveno k nastěhování do nového domova",
     image: dog3,
-    age: "4 месяца",
-    color: "Рыжий с белым",
+    age: "4 měsíce",
+    color: "Zrzavá s bílou",
   },
 ];
 
@@ -32,14 +32,14 @@ const OurDogs = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
-            Наши питомцы
+            Naši mazlíčci
           </span>
           <h2 className="section-heading mb-4">
-            Познакомьтесь с нашими собаками
+            Seznamte se s našimi psy
           </h2>
           <p className="section-subheading mx-auto">
-            Каждый наш питомец — это член семьи. Мы тщательно следим за 
-            здоровьем и социализацией всех собак.
+            Každý náš mazlíček je členem rodiny. Pečlivě dbáme na 
+            zdraví a socializaci všech psů.
           </p>
         </div>
 
@@ -68,7 +68,7 @@ const OurDogs = () => {
                 </div>
                 <p className="text-muted-foreground">{dog.description}</p>
                 <p className="text-sm text-primary font-medium">
-                  Окрас: {dog.color}
+                  Zbarvení: {dog.color}
                 </p>
               </div>
             </article>
@@ -77,7 +77,7 @@ const OurDogs = () => {
 
         <div className="text-center mt-12">
           <a href="#contact" className="btn-hero inline-block">
-            Узнать о доступных щенках
+            Zjistit o dostupných štěňatech
           </a>
         </div>
       </div>

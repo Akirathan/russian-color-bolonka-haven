@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroDog}
-          alt="Русская цветная болонка"
+          alt="Ruská barevná bolonka"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
@@ -16,26 +16,26 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-2xl animate-fade-up">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6">
-            Профессиональный питомник
+            Profesionální chovatelská stanice
           </span>
           
           <h1 className="section-heading text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight">
-            Русская Цветная{" "}
-            <span className="text-gradient">Болонка</span>
+            Ruská Barevná{" "}
+            <span className="text-gradient">Bolonka</span>
           </h1>
           
           <p className="section-subheading mb-8 text-lg md:text-xl">
-            Добро пожаловать в наш питомник! Мы занимаемся разведением 
-            очаровательных русских цветных болонок — идеальных компаньонов 
-            для вашей семьи.
+            Vítejte v naší chovatelské stanici! Zabýváme se chovem 
+            okouzlujících ruských barevných bolonek — ideálních společníků 
+            pro vaši rodinu.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="#dogs" className="btn-hero text-center">
-              Наши щенки
+              Naše štěňata
             </a>
             <a href="#contact" className="btn-outline-hero text-center">
-              Связаться с нами
+              Kontaktujte nás
             </a>
           </div>
         </div>
