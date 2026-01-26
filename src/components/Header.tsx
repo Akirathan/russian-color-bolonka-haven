@@ -5,10 +5,10 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#home", label: "Главная" },
-    { href: "#about", label: "О породе" },
-    { href: "#dogs", label: "Наши собаки" },
-    { href: "#contact", label: "Контакты" },
+    { href: "#home", label: "Domů" },
+    { href: "#about", label: "O plemeni" },
+    { href: "#dogs", label: "Naši psi" },
+    { href: "#contact", label: "Kontakt" },
   ];
 
   return (
@@ -16,7 +16,7 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
           <a href="#home" className="font-display text-2xl font-semibold text-foreground">
-            Русская Цветная Болонка
+            Ruská Barevná Bolonka
           </a>
 
           {/* Desktop Navigation */}

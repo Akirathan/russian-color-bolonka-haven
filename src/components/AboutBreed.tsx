@@ -3,23 +3,23 @@ import { Heart, Shield, Smile, Sparkles } from "lucide-react";
 const features = [
   {
     icon: Heart,
-    title: "Преданность",
-    description: "Болонки невероятно привязаны к своим хозяевам и дарят безграничную любовь",
+    title: "Oddanost",
+    description: "Bolonky jsou neuvěřitelně oddané svým majitelům a dávají neomezenou lásku",
   },
   {
     icon: Sparkles,
-    title: "Гипоаллергенность",
-    description: "Практически не линяют, подходят для людей с аллергией на шерсть",
+    title: "Hypoalergenní",
+    description: "Téměř nelínají, vhodné pro lidi s alergií na srst",
   },
   {
     icon: Smile,
-    title: "Характер",
-    description: "Веселые, игривые и умные собаки, легко поддаются дрессировке",
+    title: "Povaha",
+    description: "Veselí, hraví a inteligentní psi, snadno se cvičí",
   },
   {
     icon: Shield,
-    title: "Здоровье",
-    description: "Крепкое здоровье и долголетие при правильном уходе до 15-16 лет",
+    title: "Zdraví",
+    description: "Pevné zdraví a dlouhověkost při správné péči až 15-16 let",
   },
 ];
 
@@ -29,14 +29,14 @@ const AboutBreed = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
-            О породе
+            O plemeni
           </span>
           <h2 className="section-heading mb-4">
-            Русская Цветная Болонка
+            Ruská Barevná Bolonka
           </h2>
           <p className="section-subheading mx-auto">
-            Уникальная российская декоративная порода собак, выведенная в 
-            Ленинграде в 1950-х годах. Идеальный компаньон для городской жизни.
+            Unikátní ruské okrasné plemeno psů vyšlechtěné v 
+            Leningradu v 50. letech. Ideální společník pro městský život.
           </p>
         </div>
 
@@ -66,19 +66,19 @@ const AboutBreed = () => {
               <div className="font-display text-4xl md:text-5xl font-bold text-primary mb-2">
                 20+
               </div>
-              <p className="text-muted-foreground">лет опыта</p>
+              <p className="text-muted-foreground">let zkušeností</p>
             </div>
             <div>
               <div className="font-display text-4xl md:text-5xl font-bold text-primary mb-2">
                 150+
               </div>
-              <p className="text-muted-foreground">счастливых семей</p>
+              <p className="text-muted-foreground">šťastných rodin</p>
             </div>
             <div>
               <div className="font-display text-4xl md:text-5xl font-bold text-primary mb-2">
                 50+
               </div>
-              <p className="text-muted-foreground">чемпионов выставок</p>
+              <p className="text-muted-foreground">výstavních šampionů</p>
             </div>
           </div>
         </div>

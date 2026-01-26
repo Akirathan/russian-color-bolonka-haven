@@ -3,26 +3,26 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 const contactInfo = [
   {
     icon: Phone,
-    label: "Телефон",
-    value: "+7 (999) 123-45-67",
-    href: "tel:+79991234567",
+    label: "Telefon",
+    value: "+420 123 456 789",
+    href: "tel:+420123456789",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "info@bolonka-kennel.ru",
-    href: "mailto:info@bolonka-kennel.ru",
+    value: "info@bolonka-chov.cz",
+    href: "mailto:info@bolonka-chov.cz",
   },
   {
     icon: MapPin,
-    label: "Адрес",
-    value: "Москва, Россия",
+    label: "Adresa",
+    value: "Praha, Česká republika",
     href: "#",
   },
   {
     icon: Clock,
-    label: "Часы работы",
-    value: "Пн-Вс: 10:00 - 20:00",
+    label: "Provozní doba",
+    value: "Po-Ne: 10:00 - 20:00",
     href: "#",
   },
 ];
@@ -33,14 +33,14 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
-            Контакты
+            Kontakt
           </span>
           <h2 className="section-heading mb-4">
-            Свяжитесь с нами
+            Kontaktujte nás
           </h2>
           <p className="section-subheading mx-auto">
-            Мы всегда рады ответить на ваши вопросы о породе и помочь 
-            выбрать идеального щенка для вашей семьи.
+            Rádi odpovíme na vaše dotazy o plemeni a pomůžeme 
+            vybrat ideální štěně pro vaši rodinu.
           </p>
         </div>
 
@@ -68,13 +68,13 @@ const Contact = () => {
           <form className="card-warm space-y-5">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                Ваше имя
+                Vaše jméno
               </label>
               <input
                 type="text"
                 id="name"
                 className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
-                placeholder="Введите ваше имя"
+                placeholder="Zadejte vaše jméno"
               />
             </div>
             <div>
@@ -90,17 +90,17 @@ const Contact = () => {
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                Сообщение
+                Zpráva
               </label>
               <textarea
                 id="message"
                 rows={4}
                 className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none"
-                placeholder="Расскажите, чем мы можем вам помочь..."
+                placeholder="Řekněte nám, jak vám můžeme pomoci..."
               />
             </div>
             <button type="submit" className="btn-hero w-full">
-              Отправить сообщение
+              Odeslat zprávu
             </button>
           </form>
         </div>
