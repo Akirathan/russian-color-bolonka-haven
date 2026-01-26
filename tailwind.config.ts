@@ -49,9 +49,9 @@ export default {
         },
         cream: "hsl(var(--cream))",
         "warm-brown": "hsl(var(--warm-brown))",
-        terracotta: "hsl(var(--terracotta))",
-        "soft-gold": "hsl(var(--soft-gold))",
-        blush: "hsl(var(--blush))",
+        forest: "hsl(var(--forest))",
+        sage: "hsl(var(--sage))",
+        meadow: "hsl(var(--meadow))",
       },
       fontFamily: {
         display: ['Playfair Display', 'serif'],
