@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import heroDog from "@/assets/hero-dog.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20">
+    <section className="relative min-h-screen flex items-center pt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -31,12 +32,12 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="#dogs" className="btn-hero text-center">
+            <Link to="/nasi-psi" className="btn-hero text-center">
               Naše štěňata
-            </a>
-            <a href="#contact" className="btn-outline-hero text-center">
+            </Link>
+            <Link to="/kontakt" className="btn-outline-hero text-center">
               Kontaktujte nás
-            </a>
+            </Link>
           </div>
         </div>
       </div>

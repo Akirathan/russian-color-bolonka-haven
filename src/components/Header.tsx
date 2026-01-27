@@ -1,34 +1,42 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navLinks = [
-    { href: "#home", label: "Domů" },
-    { href: "#about", label: "O plemeni" },
-    { href: "#dogs", label: "Naši psi" },
-    { href: "#contact", label: "Kontakt" },
+    { href: "/", label: "Domů" },
+    { href: "/o-plemeni", label: "O plemeni" },
+    { href: "/nasi-psi", label: "Naši psi" },
+    { href: "/kontakt", label: "Kontakt" },
   ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
-          <a href="#home" className="font-display text-2xl font-semibold text-foreground">
+          <Link to="/" className="font-display text-2xl font-semibold text-foreground">
             Ruská Barevná Bolonka
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
-                className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                to={link.href}
+                className={cn(
+                  "transition-colors font-medium",
+                  location.pathname === link.href
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-primary"
+                )}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -47,14 +55,19 @@ const Header = () => {
           <div className="md:hidden pt-4 pb-2 animate-fade-in">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
+                  to={link.href}
+                  className={cn(
+                    "transition-colors font-medium py-2",
+                    location.pathname === link.href
+                      ? "text-primary"
+                      : "text-muted-foreground hover:text-primary"
+                  )}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
