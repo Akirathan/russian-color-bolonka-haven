@@ -51,14 +51,15 @@ const ReservationStepper = () => {
         </motion.div>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Connection line */}
-          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2 z-0" />
+          {/* Connection line - behind everything */}
+          <div className="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-0.5 bg-border z-0" />
           
-          {/* Progress line */}
+          {/* Progress line - behind content */}
           <motion.div
-            className="hidden md:block absolute top-1/2 left-0 h-0.5 bg-primary -translate-y-1/2 z-0"
+            className="hidden md:block absolute top-8 left-[12.5%] h-0.5 bg-primary z-0"
+            style={{ width: "0%" }}
             initial={{ width: "0%" }}
-            animate={isInView ? { width: "100%" } : {}}
+            animate={isInView ? { width: "75%" } : {}}
             transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
           />
 
