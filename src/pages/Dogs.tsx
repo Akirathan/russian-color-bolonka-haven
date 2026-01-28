@@ -1,10 +1,16 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { Trophy, Heart, Camera, ChevronRight } from "lucide-react";
+import { Trophy, Heart, Camera, ChevronRight, ChevronLeft } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import oskar1 from "@/assets/oskar-1.jpg";
 import oskar2 from "@/assets/oskar-2.jpg";
 import oskar3 from "@/assets/oskar-3.jpg";
@@ -86,6 +92,19 @@ const dogs = [
 
 const Dogs = () => {
   const prefersReducedMotion = useReducedMotion();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxImages, setLightboxImages] = useState<string[]>([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const openLightbox = (images: string[], startIndex: number) => {
+    setLightboxImages(images);
+    setCurrentImageIndex(startIndex);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => setLightboxOpen(false);
+  const nextImage = () => setCurrentImageIndex((prev) => (prev + 1) % lightboxImages.length);
+  const prevImage = () => setCurrentImageIndex((prev) => (prev - 1 + lightboxImages.length) % lightboxImages.length);
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -176,9 +195,10 @@ const Dogs = () => {
                     transition={{ duration: 0.6 }}
                   >
                     <motion.div 
-                      className="image-frame overflow-hidden"
+                      className="image-frame overflow-hidden cursor-pointer"
                       whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
                       transition={{ duration: 0.3 }}
+                      onClick={() => openLightbox([dog.image, ...dog.gallery], 0)}
                     >
                       <motion.img
                         src={dog.image}
@@ -198,6 +218,7 @@ const Dogs = () => {
                           viewport={{ once: true }}
                           transition={{ duration: 0.4, delay: i * 0.1 }}
                           whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
+                          onClick={() => openLightbox([dog.image, ...dog.gallery], i + 1)}
                         >
                           <img
                             src={img}
@@ -398,6 +419,43 @@ const Dogs = () => {
         </section>
       </main>
       <Footer />
+
+      {/* Lightbox Dialog */}
+      <Dialog open={lightboxOpen} onOpenChange={closeLightbox}>
+        <DialogContent className="max-w-4xl w-[95vw] p-0 bg-background/95 backdrop-blur border-none">
+          <DialogTitle className="sr-only">Fotogalerie - obrázek {currentImageIndex + 1}</DialogTitle>
+          <div className="relative">
+            {lightboxImages.length > 0 && (
+              <img
+                src={lightboxImages[currentImageIndex]}
+                alt={`Foto ${currentImageIndex + 1}`}
+                className="w-full max-h-[85vh] object-contain"
+              />
+            )}
+            
+            {/* Navigation buttons */}
+            <button
+              onClick={(e) => { e.stopPropagation(); prevImage(); }}
+              className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
+              aria-label="Předchozí fotka"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={(e) => { e.stopPropagation(); nextImage(); }}
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
+              aria-label="Další fotka"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+            
+            {/* Image counter */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-background/80 text-sm">
+              {currentImageIndex + 1} / {lightboxImages.length}
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
