@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Heart, Calendar, CheckCircle, Phone, Clock, Shield, Baby, Home } from "lucide-react";
 import { Link } from "react-router-dom";
-import dog3 from "@/assets/dog-3.jpg";
+import litter202601 from "@/assets/litter-2026-01.jpg";
 
 const currentLitters = [
   {
@@ -14,7 +14,7 @@ const currentLitters = [
     puppiesDetail: "2 pejsci, 4 fenky",
     colors: ["Černá", "Hnědá", "Světlá"],
     readyDate: "7. března 2026",
-    image: dog3,
+    image: litter202601,
   },
 ];
 
