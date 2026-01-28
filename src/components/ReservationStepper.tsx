@@ -15,8 +15,8 @@ const steps = [
   },
   {
     icon: Heart,
-    title: "Příprava",
-    description: "Poradíme s výbavou a připravíme vše pro příchod štěněte.",
+    title: "Rezervace",
+    description: "Vyberete si konkrétní štěně a složíte zálohu na rezervaci.",
   },
   {
     icon: Home,
