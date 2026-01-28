@@ -20,7 +20,7 @@ const dogs = [
     gallery: [oskar1, oskar2, oskar3],
     age: "5 let",
     birthDate: "1. května 2019",
-    color: "Barevná",
+    color: "Hnědá se znaky",
     weight: "3,5 kg",
     height: "25 cm",
     titles: [
