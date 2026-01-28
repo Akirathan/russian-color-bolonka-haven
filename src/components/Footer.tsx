@@ -11,11 +11,8 @@ const Footer = () => {
             <div className="font-display text-2xl font-semibold text-foreground mb-2">
               Chovatelská stanice Pikaro
             </div>
-            <p className="text-sm text-muted-foreground mb-4">
-              Chov ruských barevných bolonek s láskou od roku 1988
-            </p>
-            <p className="text-xs text-muted-foreground">
-              Mezinárodně chráněný název stanice od roku 1997
+            <p className="text-sm text-muted-foreground">
+              Chov psů s láskou od roku 1988
             </p>
           </div>
 
