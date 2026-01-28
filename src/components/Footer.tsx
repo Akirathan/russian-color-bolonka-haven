@@ -20,8 +20,7 @@ const Footer = () => {
               {SITE_CONFIG.shortName} – {SITE_CONFIG.address.city}
             </div>
             <p className="text-sm text-muted-foreground mb-4">
-              Profesionální chov ruských barevných bolonek od roku {SITE_CONFIG.foundingDate}. 
-              Mezinárodně chráněný název stanice od roku {SITE_CONFIG.internationalProtectionYear}.
+              Profesionální chov ruských barevných bolonek.
             </p>
             
             {/* NAP (Name, Address, Phone) - consistent for local SEO */}
