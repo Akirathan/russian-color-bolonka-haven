@@ -14,6 +14,7 @@ import bekka1 from "@/assets/bekka-1.jpg";
 import bekka2 from "@/assets/bekka-2.jpg";
 import bekka3 from "@/assets/bekka-3.jpg";
 import bekka4 from "@/assets/bekka-4.jpg";
+import kevina1 from "@/assets/kevina-1.jpg";
 
 const dogs = [
   {
@@ -59,19 +60,23 @@ const dogs = [
     litters: [],
   },
   {
-    name: "Teddy",
-    fullName: "Teddy z Pohádkového snu",
-    description: "Okouzlující štěně, potomek našich šampionů Belly a Barona. Teddy je hvězdou našeho chovu.",
-    image: dog3,
-    gallery: [dog3, dog1, dog2],
-    age: "4 měsíce",
-    birthDate: "15. září 2024",
-    color: "Zrzavá s bílou",
-    weight: "1,8 kg",
-    height: "18 cm",
-    titles: [],
-    healthTests: ["Veterinární kontrola: OK"],
-    character: "Teddy je zvědavé, hravé štěně s úžasnou povahou. Již nyní ukazuje krásnou strukturu srsti a typický výraz plemene.",
+    name: "Kevina",
+    fullName: "Amálka Hamvaley",
+    description: "Uchovněná fenka, dnes hlavně rodinná parťačka pro radost, klid a pohodu.",
+    image: kevina1,
+    gallery: [kevina1, kevina1, kevina1],
+    age: "10 let",
+    birthDate: "18. září 2014",
+    color: "Černá",
+    weight: "3,5 kg",
+    height: "25 cm",
+    titles: [
+      "Výborná 1",
+      "CAC",
+      "BOB",
+    ],
+    healthTests: [],
+    character: "Kevina je uchovněná fenka, která už u nás není aktivně v chovu – dnes hlavně rodinná parťačka pro radost, klid a pohodu.",
     litters: [],
   },
 ];
