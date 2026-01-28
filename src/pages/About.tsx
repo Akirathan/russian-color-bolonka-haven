@@ -347,33 +347,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-16 gradient-warm">
-          <div className="container mx-auto px-6">
-            <div className="bg-card rounded-3xl p-8 md:p-12 shadow-card">
-              <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div>
-                  <div className="font-display text-4xl md:text-5xl font-bold text-primary mb-2">
-                    20+
-                  </div>
-                  <p className="text-muted-foreground">let zkušeností</p>
-                </div>
-                <div>
-                  <div className="font-display text-4xl md:text-5xl font-bold text-primary mb-2">
-                    150+
-                  </div>
-                  <p className="text-muted-foreground">šťastných rodin</p>
-                </div>
-                <div>
-                  <div className="font-display text-4xl md:text-5xl font-bold text-primary mb-2">
-                    50+
-                  </div>
-                  <p className="text-muted-foreground">výstavních šampionů</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
