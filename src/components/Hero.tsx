@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-2xl animate-fade-up">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6">
-            Chovatelská stanice Pikaro — od roku 1988
+            Chov psů s láskou od roku 1988
           </span>
           
           <h1 className="section-heading text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight">
@@ -27,8 +27,7 @@ const Hero = () => {
           
           <p className="section-subheading mb-8 text-lg md:text-xl">
             Objevte dokonalého společníka pro váš domov. Přátelský, oddaný 
-            a nekonfliktní pejsek, který vám zpříjemní každý den. 
-            S láskou chováme již přes 35 let.
+            a nekonfliktní pejsek, který vám zpříjemní každý den.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
