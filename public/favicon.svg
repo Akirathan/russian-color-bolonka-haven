@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Paw pad - main -->
+  <ellipse cx="16" cy="20" rx="7" ry="6" fill="#B8860B"/>
+  <!-- Toe pads -->
+  <ellipse cx="8" cy="10" rx="3.5" ry="4" fill="#B8860B"/>
+  <ellipse cx="16" cy="7" rx="3.5" ry="4" fill="#B8860B"/>
+  <ellipse cx="24" cy="10" rx="3.5" ry="4" fill="#B8860B"/>
+  <ellipse cx="26" cy="18" rx="3" ry="3.5" fill="#B8860B"/>
+  <ellipse cx="6" cy="18" rx="3" ry="3.5" fill="#B8860B"/>
+</svg>
