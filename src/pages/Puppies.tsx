@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Heart, Calendar, CheckCircle, Phone, Clock, Shield, Baby, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 import dog3 from "@/assets/dog-3.jpg";
@@ -65,6 +66,16 @@ const puppyCareTips = [
 const Puppies = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Štěňata ruské barevné bolonky"
+        description="Štěňata ruské barevné bolonky k prodeji. Zdravá štěňata s PP, očkovaná, čipovaná. Rezervace štěňat, aktuální vrhy. Chovatelská stanice Pikaro."
+        keywords="štěňata bolonky, ruská barevná bolonka štěně, štěňata k prodeji, bolonka prodej, Pikaro štěňata"
+        url="https://pikaro.cz/stenata"
+        breadcrumbs={[
+          { name: "Domů", url: "/" },
+          { name: "Štěňata", url: "/stenata" },
+        ]}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

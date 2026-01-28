@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Heart, Shield, Smile, Sparkles, Ruler, Weight, Clock, Palette } from "lucide-react";
 
 const features = [
@@ -85,6 +86,16 @@ Po pádu Sovětského svazu se plemeno začalo šířit do západní Evropy a Am
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="O plemeni ruská barevná bolonka"
+        description="Ruská barevná bolonka - standard plemene, charakteristika, historie. Malý, hypoalergenní pes ideální do bytu. Vše o tomto úžasném plemeni."
+        keywords="ruská barevná bolonka, standard plemene, bolonka charakteristika, bolonka povaha, malý pes, hypoalergenní pes"
+        url="https://pikaro.cz/o-plemeni"
+        breadcrumbs={[
+          { name: "Domů", url: "/" },
+          { name: "O plemeni", url: "/o-plemeni" },
+        ]}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
