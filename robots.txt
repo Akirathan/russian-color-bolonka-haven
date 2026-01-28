@@ -1,0 +1,23 @@
+# Robots.txt for Chovatelská stanice Pikaro
+# https://pikaro.cz
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://pikaro.cz/sitemap.xml
+
+# Crawl-delay (optional, for polite crawling)
+Crawl-delay: 1
