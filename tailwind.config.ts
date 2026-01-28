@@ -54,8 +54,8 @@ export default {
         sand: "hsl(var(--sand))",
       },
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
-        body: ['Lato', 'sans-serif'],
+        display: ['Cormorant Garamond', 'serif'],
+        body: ['Nunito', 'sans-serif'],
       },
       boxShadow: {
         soft: 'var(--shadow-soft)',
