@@ -1,8 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Calendar, Baby } from "lucide-react";
+import { Calendar, Baby } from "lucide-react";
 import litterA from "@/assets/litter-2026-01-a.jpg";
 import litterB from "@/assets/litter-2026-01-b.jpg";
 import litterC from "@/assets/litter-2026-01-c.jpg";
@@ -11,6 +12,12 @@ import litterMain from "@/assets/litter-2026-01.jpg";
 const LitterDetail = () => {
   const images = [litterMain, litterA, litterB, litterC];
 
+  const breadcrumbs = [
+    { name: "Domů", url: "/" },
+    { name: "Štěňata", url: "/stenata" },
+    { name: "Vrh leden 2026", url: "/stenata/vrh-leden-2026" },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -18,24 +25,20 @@ const LitterDetail = () => {
         description="Štěňata ruské barevné bolonky narozená 9. ledna 2026. 6 štěňat - 2 pejsci a 4 fenky. Chovatelská stanice Pikaro, Plzeň."
         keywords="štěňata bolonky, vrh leden 2026, ruská barevná bolonka štěně, Pikaro"
         url="https://pikaro.cz/stenata/vrh-leden-2026"
-        breadcrumbs={[
-          { name: "Domů", url: "/" },
-          { name: "Štěňata", url: "/stenata" },
-          { name: "Vrh leden 2026", url: "/stenata/vrh-leden-2026" },
-        ]}
+        breadcrumbs={breadcrumbs}
+        product={{
+          name: "Štěňata ruské barevné bolonky - Vrh leden 2026",
+          description: "6 štěňat ruské barevné bolonky narozených 9. ledna 2026. 2 pejsci a 4 fenky.",
+          image: litterMain,
+          availability: "PreOrder",
+        }}
       />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-12 gradient-warm">
           <div className="container mx-auto px-6">
-            <Link 
-              to="/stenata" 
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Zpět na štěňata
-            </Link>
+            <Breadcrumbs items={breadcrumbs} className="mb-6" />
             <div className="flex items-center gap-4 mb-4">
               <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm">
                 Vrh leden 2026

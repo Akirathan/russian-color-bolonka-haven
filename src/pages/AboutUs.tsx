@@ -1,10 +1,16 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Heart, Users, Award, Calendar, Dog, Home, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
 import heroDog from "@/assets/hero-dog.jpg";
+
+const breadcrumbs = [
+  { name: "Domů", url: "/" },
+  { name: "O nás", url: "/o-nas" },
+];
 
 const values = [
   {
@@ -76,6 +82,7 @@ const AboutUs = () => {
         {/* Hero Section */}
         <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
+            <Breadcrumbs items={breadcrumbs} className="mb-8 justify-center" />
             <motion.div 
               className="text-center mb-12"
               initial="hidden"

@@ -2,9 +2,12 @@ import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import TableOfContents from "@/components/TableOfContents";
 import { getArticleBySlug } from "@/data/articlesData";
 import { ArrowLeft, Clock, CheckCircle, AlertTriangle, Phone, Mail, User } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { toISODate } from "@/lib/seo";
 
 const ArticleDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -25,17 +28,45 @@ const ArticleDetail = () => {
     );
   }
 
+  const breadcrumbs = [
+    { name: "Domů", url: "/" },
+    { name: "Články", url: "/clanky" },
+    { name: article.title, url: `/clanky/${article.slug}` },
+  ];
+
+  const tocItems = article.sections.map((section) => ({
+    id: section.id,
+    title: section.title,
+    level: 1,
+  }));
+
+  // Add FAQ to TOC if exists
+  if (article.faq.length > 0) {
+    tocItems.push({ id: "faq", title: "Časté otázky", level: 1 });
+  }
+
   return (
     <div className="min-h-screen bg-background">
-      <SEO title={article.seoTitle} description={article.metaDescription} />
+      <SEO
+        title={article.seoTitle}
+        description={article.metaDescription}
+        url={`https://pikaro.cz/clanky/${article.slug}`}
+        type="article"
+        article={{
+          publishedTime: toISODate(article.date),
+          modifiedTime: toISODate(article.date),
+          author: "Chovatelská stanice Pikaro",
+          section: article.category,
+        }}
+        breadcrumbs={breadcrumbs}
+        faq={article.faq}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero */}
         <section className="py-12 gradient-warm">
           <div className="container mx-auto px-6">
-            <Link to="/clanky" className="inline-flex items-center gap-2 text-primary hover:underline mb-6">
-              <ArrowLeft className="w-4 h-4" /> Zpět na články
-            </Link>
+            <Breadcrumbs items={breadcrumbs} className="mb-6" />
             <div className="flex items-center gap-3 mb-4">
               <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">{article.category}</span>
               <span className="flex items-center gap-1 text-sm text-muted-foreground"><Clock className="w-4 h-4" />{article.readTime}</span>
@@ -100,29 +131,35 @@ const ArticleDetail = () => {
           </section>
         )}
 
-        {/* Content */}
+        {/* Content with TOC */}
         <section className="py-12 bg-background">
           <div className="container mx-auto px-6">
-            <div className="max-w-3xl mx-auto space-y-10">
-              {article.sections.map((section) => (
-                <div key={section.id} id={section.id}>
-                  <h2 className="font-display text-2xl font-semibold text-foreground mb-4">{section.title}</h2>
-                  <p className="text-muted-foreground leading-relaxed mb-4">{section.content}</p>
-                  {section.subsections?.map((sub, i) => (
-                    <div key={i} className="ml-4 mb-4 pl-4 border-l-2 border-primary/20">
-                      <h3 className="font-display text-lg font-medium text-foreground mb-2">{sub.title}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{sub.content}</p>
-                    </div>
-                  ))}
-                </div>
-              ))}
+            <div className="max-w-5xl mx-auto flex gap-8">
+              {/* TOC Sidebar */}
+              <TableOfContents items={tocItems} className="w-64 flex-shrink-0" />
+              
+              {/* Main Content */}
+              <article className="flex-1 max-w-3xl space-y-10">
+                {article.sections.map((section) => (
+                  <div key={section.id} id={section.id}>
+                    <h2 className="font-display text-2xl font-semibold text-foreground mb-4">{section.title}</h2>
+                    <p className="text-muted-foreground leading-relaxed mb-4">{section.content}</p>
+                    {section.subsections?.map((sub, i) => (
+                      <div key={i} className="ml-4 mb-4 pl-4 border-l-2 border-primary/20">
+                        <h3 className="font-display text-lg font-medium text-foreground mb-2">{sub.title}</h3>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{sub.content}</p>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </article>
             </div>
           </div>
         </section>
 
         {/* FAQ */}
         {article.faq.length > 0 && (
-          <section className="py-12 gradient-warm">
+          <section id="faq" className="py-12 gradient-warm">
             <div className="container mx-auto px-6">
               <div className="max-w-3xl mx-auto">
                 <h2 className="font-display text-2xl font-semibold text-foreground mb-6 text-center">Často kladené otázky</h2>
@@ -139,8 +176,34 @@ const ArticleDetail = () => {
           </section>
         )}
 
-        {/* CTA */}
+        {/* Related Articles */}
         <section className="py-12 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-display text-xl font-semibold text-foreground mb-4">Další články</h2>
+              <div className="flex flex-wrap gap-3">
+                <Link to="/clanky/vychova-stenete-ruske-barevne-bolonky" className="text-sm text-primary hover:underline">
+                  Výchova štěněte
+                </Link>
+                <span className="text-muted-foreground">•</span>
+                <Link to="/clanky/bolonka-do-bytu" className="text-sm text-primary hover:underline">
+                  Bolonka do bytu
+                </Link>
+                <span className="text-muted-foreground">•</span>
+                <Link to="/clanky/pece-o-srst-bolonky-bez-stresu" className="text-sm text-primary hover:underline">
+                  Péče o srst
+                </Link>
+                <span className="text-muted-foreground">•</span>
+                <Link to="/clanky/vyziva-bolonky" className="text-sm text-primary hover:underline">
+                  Výživa bolonky
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-12 bg-muted/30">
           <div className="container mx-auto px-6">
             <div className="max-w-2xl mx-auto card-warm border-l-4 border-primary">
               <h2 className="font-display text-xl font-semibold text-foreground mb-2">
