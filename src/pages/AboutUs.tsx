@@ -196,8 +196,52 @@ const AboutUs = () => {
           </div>
         </section>
 
-        {/* Our Values */}
+        {/* Who We Are */}
         <section className="py-16 gradient-warm overflow-hidden">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={staggerContainer}
+              >
+                <motion.h2 
+                  className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-6 text-center"
+                  variants={fadeInUp}
+                  transition={{ duration: 0.5 }}
+                >
+                  Kdo jsme
+                </motion.h2>
+                
+                <motion.div 
+                  className="card-warm"
+                  variants={fadeInUp}
+                  transition={{ duration: 0.6 }}
+                >
+                  <div className="space-y-4 text-muted-foreground leading-relaxed">
+                    <p>
+                      Jsme <strong className="text-foreground">Ivana a Karel Roubalovi</strong> a žijeme v Plzni v rodinném domě. 
+                      Psi jsou pro nás součástí rodiny – Ivana vyrůstala v prostředí, kde se psi chovali po generace 
+                      (choval je už její tatínek), a chovatelství je pro ni dlouholetý koníček i srdcová záležitost.
+                    </p>
+                    <p>
+                      Dáváme přednost <strong className="text-foreground">malému rodinnému chovu</strong>, kde se můžeme štěňátkům 
+                      věnovat naplno a každý vrh je událostí pro celou rodinu; proto máme maximálně jeden vrh za rok.
+                    </p>
+                    <p>
+                      Kromě psů u nás doma najdete i kachny, křepelky a slepice – to je zase Karlova velká vášeň. 
+                      Dnes jsme už v důchodu a o to víc si užíváme čas se psy: milujeme dlouhé procházky v lese a výlety do přírody.
+                    </p>
+                  </div>
+                </motion.div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Values */}
+        <section className="py-16 bg-background overflow-hidden">
           <div className="container mx-auto px-6">
             <motion.div 
               className="text-center mb-12"
