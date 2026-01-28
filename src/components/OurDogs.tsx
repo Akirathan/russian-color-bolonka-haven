@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import oskar4 from "@/assets/oskar-4.jpg";
 import bekka1 from "@/assets/bekka-1.jpg";
 import kevina1 from "@/assets/kevina-1.jpg";
@@ -26,11 +28,39 @@ const dogs = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 const OurDogs = () => {
   return (
     <section id="dogs" className="py-24 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
             Naši mazlíčci
           </span>
@@ -41,20 +71,30 @@ const OurDogs = () => {
             Každý náš mazlíček je členem rodiny. Pečlivě dbáme na 
             zdraví a socializaci všech psů.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {dogs.map((dog, index) => (
-            <article
+        <motion.div 
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          {dogs.map((dog) => (
+            <motion.article
               key={dog.name}
               className="group cursor-pointer"
-              style={{ animationDelay: `${index * 0.15}s` }}
+              variants={itemVariants}
+              whileHover={{ y: -8 }}
+              transition={{ duration: 0.3 }}
             >
               <div className="image-frame mb-5 overflow-hidden">
-                <img
+                <motion.img
                   src={dog.image}
                   alt={dog.name}
-                  className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full aspect-square object-cover"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.5 }}
                 />
               </div>
               <div className="space-y-2">
@@ -71,15 +111,21 @@ const OurDogs = () => {
                   Zbarvení: {dog.color}
                 </p>
               </div>
-            </article>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="text-center mt-12">
-          <a href="#contact" className="btn-hero inline-block">
+        <motion.div 
+          className="text-center mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <Link to="/stenata" className="btn-hero inline-block">
             Zjistit o dostupných štěňatech
-          </a>
-        </div>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

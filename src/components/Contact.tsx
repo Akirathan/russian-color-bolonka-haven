@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { motion } from "framer-motion";
 
 const contactInfo = [
   {
@@ -27,11 +28,39 @@ const contactInfo = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -30 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
 const Contact = () => {
   return (
     <section id="contact" className="py-24 gradient-warm">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
             Kontakt
           </span>
@@ -42,30 +71,49 @@ const Contact = () => {
             Rádi odpovíme na vaše dotazy o plemeni a pomůžeme 
             vybrat ideální štěně pro vaši rodinu.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Contact Info */}
-          <div className="space-y-6">
+          <motion.div 
+            className="space-y-6"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
             {contactInfo.map((item) => (
-              <a
+              <motion.a
                 key={item.label}
                 href={item.href}
                 className="card-warm flex items-center gap-4 group"
+                variants={itemVariants}
+                whileHover={{ x: 8, scale: 1.02 }}
+                transition={{ duration: 0.2 }}
               >
-                <div className="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                <motion.div 
+                  className="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center shrink-0"
+                  whileHover={{ scale: 1.15, rotate: 5 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <item.icon className="w-5 h-5 text-primary-foreground" />
-                </div>
+                </motion.div>
                 <div>
                   <p className="text-sm text-muted-foreground">{item.label}</p>
                   <p className="font-medium text-foreground">{item.value}</p>
                 </div>
-              </a>
+              </motion.a>
             ))}
-          </div>
+          </motion.div>
 
           {/* Contact Form */}
-          <form className="card-warm space-y-5">
+          <motion.form 
+            className="card-warm space-y-5"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                 Vaše jméno
@@ -99,10 +147,16 @@ const Contact = () => {
                 placeholder="Řekněte nám, jak vám můžeme pomoci..."
               />
             </div>
-            <button type="submit" className="btn-hero w-full">
+            <motion.button 
+              type="submit" 
+              className="btn-hero w-full"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ duration: 0.2 }}
+            >
               Odeslat zprávu
-            </button>
-          </form>
+            </motion.button>
+          </motion.form>
         </div>
       </div>
     </section>
