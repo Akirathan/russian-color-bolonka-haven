@@ -10,8 +10,8 @@ const steps = [
   },
   {
     icon: FileText,
-    title: "Rezervace štěněte",
-    description: "Vyberete si konkrétní štěně a složíte zálohu na rezervaci.",
+    title: "Osobní setkání",
+    description: "Navštivte nás a seznamte se s rodiči štěňat i samotnými štěňaty.",
   },
   {
     icon: Heart,
