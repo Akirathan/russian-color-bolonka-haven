@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
 import heroDog from "@/assets/hero-dog.jpg";
-import pawTrail from "@/assets/paw-trail.png";
 
 // Simple paw SVG icon
 const PawIcon = ({ className }: { className?: string }) => (
@@ -93,28 +92,6 @@ const Hero = () => {
             <Link to="/o-nas" className="btn-outline-hero text-center">
               Poznejte nás
             </Link>
-          </motion.div>
-
-          {/* Animated Paw Trail */}
-          <motion.div 
-            className="mt-12 overflow-hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: 1.2 }}
-          >
-            <motion.img
-              src={pawTrail}
-              alt=""
-              aria-hidden="true"
-              className="w-full max-w-xl opacity-30 sepia saturate-150 hue-rotate-[-10deg]"
-              initial={{ opacity: 0, x: -80 }}
-              animate={{ opacity: 0.3, x: 0 }}
-              transition={{ 
-                duration: 2, 
-                ease: "easeOut",
-                delay: 1.4
-              }}
-            />
           </motion.div>
         </div>
       </div>
