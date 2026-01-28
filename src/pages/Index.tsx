@@ -2,6 +2,8 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import ReservationStepper from "@/components/ReservationStepper";
+import SnowEffect from "@/components/SnowEffect";
 
 const Index = () => {
   return (
@@ -13,9 +15,11 @@ const Index = () => {
         url="https://pikaro.cz/"
         breadcrumbs={[{ name: "Domů", url: "/" }]}
       />
+      <SnowEffect />
       <Header />
       <main>
         <Hero />
+        <ReservationStepper />
       </main>
       <Footer />
     </div>
