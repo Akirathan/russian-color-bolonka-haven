@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import oskar4 from "@/assets/oskar-4.jpg";
 import bekka1 from "@/assets/bekka-1.jpg";
 import kevina1 from "@/assets/kevina-1.jpg";
+import pawTrail from "@/assets/paw-trail.png";
 
 const dogs = [
   {
@@ -71,6 +72,29 @@ const OurDogs = () => {
             Každý náš mazlíček je členem rodiny. Pečlivě dbáme na 
             zdraví a socializaci všech psů.
           </p>
+          
+          {/* Animated Paw Trail */}
+          <motion.div 
+            className="mt-8 overflow-hidden"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.3 }}
+          >
+            <motion.img
+              src={pawTrail}
+              alt=""
+              aria-hidden="true"
+              className="w-full max-w-2xl mx-auto opacity-20"
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 0.2, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ 
+                duration: 2, 
+                ease: "easeOut",
+              }}
+            />
+          </motion.div>
         </motion.div>
 
         <motion.div 
