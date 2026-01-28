@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Heart, Calendar, CheckCircle, Phone, Clock, Shield, Baby, Home } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion, useReducedMotion } from "framer-motion";
 import litter202601 from "@/assets/litter-2026-01.jpg";
 
 const currentLitters = [
@@ -66,6 +67,28 @@ const puppyCareTips = [
 ];
 
 const Puppies = () => {
+  const prefersReducedMotion = useReducedMotion();
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: prefersReducedMotion ? 0 : 0.1
+      }
+    }
+  };
+
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1 }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -81,75 +104,125 @@ const Puppies = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-16 gradient-warm">
+        <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
-              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
+            <motion.div 
+              className="text-center mb-12"
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+            >
+              <motion.span 
+                className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4"
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+              >
                 Štěňata
-              </span>
-              <h1 className="section-heading mb-4">
+              </motion.span>
+              <motion.h1 
+                className="section-heading mb-4"
+                variants={fadeInUp}
+                transition={{ duration: 0.6 }}
+              >
                 Naše štěňata
-              </h1>
-              <p className="section-subheading mx-auto">
+              </motion.h1>
+              <motion.p 
+                className="section-subheading mx-auto"
+                variants={fadeInUp}
+                transition={{ duration: 0.6 }}
+              >
                 S láskou vychováváme štěňata Ruské barevné bolonky. 
                 Každé štěně odchází do nového domova připravené, socializované a zdravé.
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
           </div>
         </section>
 
         {/* Current Litters */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-background overflow-hidden">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
+            <motion.div 
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+            >
               <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">
                 Aktuální vrhy
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Přehled aktuálně dostupných štěňat a plánovaných vrhů
               </p>
-            </div>
+            </motion.div>
 
             {currentLitters.length > 0 ? (
-              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <motion.div 
+                className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={staggerContainer}
+              >
                 {currentLitters.map((litter, index) => (
-                  <Link 
-                    key={index} 
-                    to={`/stenata/${litter.slug}`}
-                    className="card-warm overflow-hidden group hover:shadow-lg transition-shadow"
+                  <motion.div
+                    key={index}
+                    variants={scaleIn}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <div className="aspect-video overflow-hidden rounded-xl mb-4">
-                      <img 
-                        src={litter.image} 
-                        alt={`Vrh ${litter.parents}`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                      {litter.parents}
-                    </h3>
-                    <div className="space-y-2 text-sm">
-                      <p className="text-muted-foreground">
-                        <span className="font-medium text-foreground">Datum narození:</span> {litter.birthDate}
-                      </p>
-                      <p className="text-muted-foreground">
-                        <span className="font-medium text-foreground">Počet štěňat:</span> {litter.totalPuppies} {litter.puppiesDetail && `(${litter.puppiesDetail})`}
-                      </p>
-                      <p className="text-muted-foreground">
-                        <span className="font-medium text-foreground">Zbarvení:</span> {litter.colors.join(", ")}
-                      </p>
-                      <p className="text-muted-foreground">
-                        <span className="font-medium text-foreground">K odběru od:</span> {litter.readyDate}
-                      </p>
-                    </div>
-                    <span className="btn-hero inline-block mt-4 text-center w-full">
-                      Zobrazit detail
-                    </span>
-                  </Link>
+                    <Link 
+                      to={`/stenata/${litter.slug}`}
+                      className="card-warm overflow-hidden group hover:shadow-lg transition-shadow block"
+                    >
+                      <motion.div 
+                        className="aspect-video overflow-hidden rounded-xl mb-4"
+                        whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <motion.img 
+                          src={litter.image} 
+                          alt={`Vrh ${litter.parents}`}
+                          className="w-full h-full object-cover"
+                          whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
+                          transition={{ duration: 0.4 }}
+                        />
+                      </motion.div>
+                      <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                        {litter.parents}
+                      </h3>
+                      <div className="space-y-2 text-sm">
+                        <p className="text-muted-foreground">
+                          <span className="font-medium text-foreground">Datum narození:</span> {litter.birthDate}
+                        </p>
+                        <p className="text-muted-foreground">
+                          <span className="font-medium text-foreground">Počet štěňat:</span> {litter.totalPuppies} {litter.puppiesDetail && `(${litter.puppiesDetail})`}
+                        </p>
+                        <p className="text-muted-foreground">
+                          <span className="font-medium text-foreground">Zbarvení:</span> {litter.colors.join(", ")}
+                        </p>
+                        <p className="text-muted-foreground">
+                          <span className="font-medium text-foreground">K odběru od:</span> {litter.readyDate}
+                        </p>
+                      </div>
+                      <motion.span 
+                        className="btn-hero inline-block mt-4 text-center w-full"
+                        whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
+                        whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
+                      >
+                        Zobrazit detail
+                      </motion.span>
+                    </Link>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             ) : (
-              <div className="text-center py-12 card-warm max-w-2xl mx-auto">
+              <motion.div 
+                className="text-center py-12 card-warm max-w-2xl mx-auto"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
                 <Baby className="w-16 h-16 mx-auto text-primary mb-4" />
                 <h3 className="font-display text-xl font-semibold text-foreground mb-2">
                   Momentálně nemáme volná štěňata
@@ -160,97 +233,166 @@ const Puppies = () => {
                 <Link to="/kontakt" className="btn-hero inline-block">
                   Zapsat se do čekací listiny
                 </Link>
-              </div>
+              </motion.div>
             )}
           </div>
         </section>
 
         {/* Puppy Care */}
-        <section className="py-16 gradient-warm">
+        <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
+            <motion.div 
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+            >
               <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">
                 Jak vychováváme štěňata
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Každé naše štěně dostává tu nejlepší péči od prvního dne
               </p>
-            </div>
+            </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <motion.div 
+              className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+            >
               {puppyCareTips.map((tip, index) => (
-                <div
+                <motion.div
                   key={tip.title}
-                  className="card-warm text-center group"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="card-warm text-center group cursor-pointer"
+                  variants={scaleIn}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={prefersReducedMotion ? {} : { y: -8, transition: { duration: 0.2 } }}
                 >
-                  <div className="w-14 h-14 mx-auto mb-4 rounded-2xl gradient-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <motion.div 
+                    className="w-14 h-14 mx-auto mb-4 rounded-2xl gradient-accent flex items-center justify-center"
+                    whileHover={prefersReducedMotion ? {} : { scale: 1.1, rotate: [0, -5, 5, 0], transition: { duration: 0.3 } }}
+                  >
                     <tip.icon className="w-7 h-7 text-primary-foreground" />
-                  </div>
+                  </motion.div>
                   <h3 className="font-display text-lg font-semibold mb-2 text-foreground">
                     {tip.title}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {tip.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Reservation Process */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-background overflow-hidden">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
+            <motion.div 
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+            >
               <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">
                 Jak rezervovat štěně
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Jednoduchý proces v několika krocích
               </p>
-            </div>
+            </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <motion.div 
+              className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+            >
               {reservationSteps.map((step, index) => (
-                <div key={step.title} className="relative">
-                  <div className="card-warm text-center h-full">
-                    <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
+                <motion.div 
+                  key={step.title} 
+                  className="relative"
+                  variants={fadeInUp}
+                  transition={{ duration: 0.5, delay: index * 0.15 }}
+                >
+                  <motion.div 
+                    className="card-warm text-center h-full"
+                    whileHover={prefersReducedMotion ? {} : { y: -5, transition: { duration: 0.2 } }}
+                  >
+                    <motion.div 
+                      className="w-10 h-10 mx-auto mb-4 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold"
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: index * 0.15 + 0.2, type: "spring" }}
+                    >
                       {index + 1}
-                    </div>
-                    <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-secondary flex items-center justify-center">
+                    </motion.div>
+                    <motion.div 
+                      className="w-12 h-12 mx-auto mb-4 rounded-xl bg-secondary flex items-center justify-center"
+                      whileHover={prefersReducedMotion ? {} : { rotate: [0, -10, 10, 0], transition: { duration: 0.4 } }}
+                    >
                       <step.icon className="w-6 h-6 text-primary" />
-                    </div>
+                    </motion.div>
                     <h3 className="font-display text-lg font-semibold mb-2 text-foreground">
                       {step.title}
                     </h3>
                     <p className="text-muted-foreground text-sm">
                       {step.description}
                     </p>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
 
-            <div className="text-center mt-12">
-              <Link to="/kontakt" className="btn-hero inline-block">
-                Kontaktujte nás
-              </Link>
-            </div>
+            <motion.div 
+              className="text-center mt-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <motion.div
+                whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
+                whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
+              >
+                <Link to="/kontakt" className="btn-hero inline-block">
+                  Kontaktujte nás
+                </Link>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
 
         {/* What You Get */}
-        <section className="py-16 gradient-warm">
+        <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto">
-              <div className="text-center mb-8">
+              <motion.div 
+                className="text-center mb-8"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6 }}
+              >
                 <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">
                   Co dostanete se štěnětem
                 </h2>
-              </div>
+              </motion.div>
 
-              <div className="card-warm">
+              <motion.div 
+                className="card-warm"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
                 <ul className="space-y-4">
                   {[
                     "Průkaz původu (PP) s rodokmenem",
@@ -262,13 +404,20 @@ const Puppies = () => {
                     "Podrobné pokyny k péči a výživě",
                     "Celoživotní poradenskou podporu",
                   ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
+                    <motion.li 
+                      key={index} 
+                      className="flex items-start gap-3"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: index * 0.08 }}
+                    >
                       <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                       <span className="text-foreground">{item}</span>
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>

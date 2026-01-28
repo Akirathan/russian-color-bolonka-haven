@@ -5,6 +5,7 @@ import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { motion, useReducedMotion } from "framer-motion";
 
 const contactInfo = [
   {
@@ -34,6 +35,7 @@ const contactInfo = [
 ];
 
 const ContactPage = () => {
+  const prefersReducedMotion = useReducedMotion();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -43,6 +45,21 @@ const ContactPage = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: prefersReducedMotion ? 0 : 0.1
+      }
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -117,29 +134,56 @@ const ContactPage = () => {
       />
       <Header />
       <main className="pt-20">
-        <section className="py-16 gradient-warm">
+        <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
-              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
+            <motion.div 
+              className="text-center mb-12"
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+            >
+              <motion.span 
+                className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4"
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+              >
                 Kontakt
-              </span>
-              <h1 className="section-heading mb-4">
+              </motion.span>
+              <motion.h1 
+                className="section-heading mb-4"
+                variants={fadeInUp}
+                transition={{ duration: 0.6 }}
+              >
                 Kontaktujte nás
-              </h1>
-              <p className="section-subheading mx-auto">
+              </motion.h1>
+              <motion.p 
+                className="section-subheading mx-auto"
+                variants={fadeInUp}
+                transition={{ duration: 0.6 }}
+              >
                 Rádi odpovíme na vaše dotazy o ruských barevných bolonkách 
                 a pomůžeme vybrat ideálního společníka pro vaši rodinu.
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
           </div>
         </section>
 
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-background overflow-hidden">
           <div className="container mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {/* Contact Info */}
-              <div className="space-y-6">
-                <div className="card-warm">
+              <motion.div 
+                className="space-y-6"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={staggerContainer}
+              >
+                <motion.div 
+                  className="card-warm"
+                  variants={fadeInUp}
+                  transition={{ duration: 0.5 }}
+                >
                   <h2 className="font-display text-xl font-semibold text-foreground mb-4">
                     Chovatelská stanice Pikaro
                   </h2>
@@ -147,28 +191,38 @@ const ContactPage = () => {
                     Chov ruských barevných bolonek s láskou od roku 1988. 
                     Mezinárodně chráněný název stanice od roku 1997.
                   </p>
-                </div>
+                </motion.div>
 
-                {contactInfo.map((item) => (
-                  <a
+                {contactInfo.map((item, index) => (
+                  <motion.a
                     key={item.label}
                     href={item.href}
                     target={item.href.startsWith("http") ? "_blank" : undefined}
                     rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="card-warm flex items-center gap-4 group"
+                    className="card-warm flex items-center gap-4 group block"
+                    variants={fadeInUp}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    whileHover={prefersReducedMotion ? {} : { x: 5, transition: { duration: 0.2 } }}
                   >
-                    <div className="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                    <motion.div 
+                      className="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center shrink-0"
+                      whileHover={prefersReducedMotion ? {} : { scale: 1.1, rotate: [0, -5, 5, 0], transition: { duration: 0.3 } }}
+                    >
                       <item.icon className="w-5 h-5 text-primary-foreground" />
-                    </div>
+                    </motion.div>
                     <div>
                       <p className="text-sm text-muted-foreground">{item.label}</p>
                       <p className="font-medium text-foreground">{item.value}</p>
                     </div>
-                  </a>
+                  </motion.a>
                 ))}
 
                 {/* Map embed placeholder */}
-                <div className="card-warm p-0 overflow-hidden">
+                <motion.div 
+                  className="card-warm p-0 overflow-hidden"
+                  variants={fadeInUp}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                >
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.2!2d13.3776!3d49.7384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDQ0JzE4LjIiTiAxM8KwMjInMzkuNCJF!5e0!3m2!1scs!2scz!4v1234567890"
                     width="100%"
@@ -180,11 +234,18 @@ const ContactPage = () => {
                     title="Mapa - Chovatelská stanice Pikaro"
                     className="grayscale hover:grayscale-0 transition-all duration-300"
                   />
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
 
               {/* Contact Form */}
-              <form onSubmit={handleSubmit} className="card-warm space-y-5">
+              <motion.form 
+                onSubmit={handleSubmit} 
+                className="card-warm space-y-5"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6 }}
+              >
                 <h2 className="font-display text-xl font-semibold text-foreground mb-2">
                   Napište nám
                 </h2>
@@ -193,7 +254,12 @@ const ContactPage = () => {
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.1 }}
+                  >
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                       Vaše jméno *
                     </label>
@@ -207,8 +273,13 @@ const ContactPage = () => {
                       maxLength={100}
                       required
                     />
-                  </div>
-                  <div>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.15 }}
+                  >
                     <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
                       Telefon
                     </label>
@@ -221,10 +292,15 @@ const ContactPage = () => {
                       placeholder="+420 123 456 789"
                       maxLength={20}
                     />
-                  </div>
+                  </motion.div>
                 </div>
 
-                <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                >
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                     Email *
                   </label>
@@ -238,9 +314,14 @@ const ContactPage = () => {
                     maxLength={255}
                     required
                   />
-                </div>
+                </motion.div>
 
-                <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.25 }}
+                >
                   <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
                     Předmět
                   </label>
@@ -257,9 +338,14 @@ const ContactPage = () => {
                     <option value="question">Obecný dotaz</option>
                     <option value="other">Jiné</option>
                   </select>
-                </div>
+                </motion.div>
 
-                <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
                   <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                     Zpráva *
                   </label>
@@ -273,12 +359,18 @@ const ContactPage = () => {
                     maxLength={2000}
                     required
                   />
-                </div>
+                </motion.div>
 
-                <button 
+                <motion.button 
                   type="submit" 
                   className="btn-hero w-full flex items-center justify-center gap-2"
                   disabled={isSubmitting}
+                  whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
+                  whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.35 }}
                 >
                   {isSubmitting ? (
                     "Odesílání..."
@@ -288,12 +380,12 @@ const ContactPage = () => {
                       Odeslat zprávu
                     </>
                   )}
-                </button>
+                </motion.button>
 
                 <p className="text-xs text-muted-foreground text-center">
                   * Povinná pole. Vaše údaje zpracováváme pouze za účelem odpovědi na váš dotaz.
                 </p>
-              </form>
+              </motion.form>
             </div>
           </div>
         </section>
