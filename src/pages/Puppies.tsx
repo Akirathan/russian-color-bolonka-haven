@@ -55,7 +55,7 @@ const puppyCareTips = [
   {
     icon: Baby,
     title: "Výchova od začátku",
-    description: 'Nejde nám o „dril povelů" u miminek, ale o správný start. Štěňata od mala postupně učíme, že hřeben, kartáč, dotek na tlapkách, kontrola uší nebo krátké zvednutí do náruče jsou normální a bezpečné věci. Pracujeme krátce, hravě a vždy podle toho, co štěně zvládá. Díky tomu bývá pozdější péče o srst i běžná manipulace mnohem snazší a bez stresu.',
+    description: "Od raného věku štěňata citlivě navykáme na manipulaci a péči: hřeben/kartáč, tlapky, uši, tlamu, zvuky domácnosti a krátké zklidnění. Je to praktický základ pro pohodovou srst i veterinární ošetření.",
   },
   {
     icon: Clock,
