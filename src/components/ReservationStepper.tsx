@@ -43,7 +43,7 @@ const ReservationStepper = () => {
             Jak to funguje
           </span>
           <h2 className="section-heading text-3xl md:text-4xl mb-4">
-            Rezervace ve 4 krocích
+            Rezervace štěňátka ve 4 krocích
           </h2>
           <p className="section-subheading max-w-2xl mx-auto">
             Od prvního kontaktu po šťastný příchod štěněte do vaší rodiny
