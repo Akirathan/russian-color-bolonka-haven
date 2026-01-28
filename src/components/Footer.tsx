@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="py-12 bg-card border-t border-border">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand & NAP */}
           <motion.div
             className="md:col-span-2"
@@ -78,28 +78,6 @@ const Footer = () => {
             </nav>
           </motion.div>
 
-          {/* Service Areas - Local SEO */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <h3 className="font-display font-semibold text-foreground mb-4">
-              Působíme v regionu
-            </h3>
-            <p className="text-sm text-muted-foreground mb-3">
-              Štěňata předáváme osobně v Plzni a blízkém okolí:
-            </p>
-            <ul className="text-sm text-muted-foreground space-y-1">
-              {SITE_CONFIG.serviceAreas.map((area) => (
-                <li key={area} className="flex items-center gap-1">
-                  <span className="w-1 h-1 rounded-full bg-primary/50" />
-                  {area}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
         </div>
 
         <motion.div 
