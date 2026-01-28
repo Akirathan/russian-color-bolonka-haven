@@ -85,9 +85,9 @@ const OurDogs = () => {
               src={pawTrail}
               alt=""
               aria-hidden="true"
-              className="w-full max-w-2xl mx-auto opacity-20"
+              className="w-full max-w-2xl mx-auto opacity-45 sepia saturate-150 hue-rotate-[-10deg]"
               initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 0.2, x: 0 }}
+              whileInView={{ opacity: 0.45, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ 
                 duration: 2, 
