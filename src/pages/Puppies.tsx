@@ -55,7 +55,7 @@ const puppyCareTips = [
   {
     icon: Baby,
     title: "Výchova od začátku",
-    description: "Začínáme s výchovou již od raného věku - základní povely, čistotnost, chůze na vodítku.",
+    description: 'Nejde nám o „dril povelů" u miminek, ale o správný start. Štěňata od mala postupně učíme, že hřeben, kartáč, dotek na tlapkách, kontrola uší nebo krátké zvednutí do náruče jsou normální a bezpečné věci. Pracujeme krátce, hravě a vždy podle toho, co štěně zvládá. Díky tomu bývá pozdější péče o srst i běžná manipulace mnohem snazší a bez stresu.',
   },
   {
     icon: Clock,
