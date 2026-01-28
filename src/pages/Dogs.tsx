@@ -31,7 +31,7 @@ const dogs = [
       "Výborný 1, vítěz třídy mladých",
     ],
     healthTests: ["Patella: 0/1", "Oči: bez nálezu na dědičné choroby"],
-    character: "Vinný vrch je milá a přátelská fenka s klidnou povahou. Je výborně socializovaná a skvěle vychází s ostatními psy i dětmi.",
+    character: "Oskar je náš krycí pes – klidný, přátelský a povahově velmi vyrovnaný parťák, se kterým je radost fungovat v každodenním režimu. Vyniká kontaktní, jemnou povahou a schopností se snadno zklidnit, což je přesně to, co u bolonky chceme předávat dál. V chovu se dlouhodobě osvědčuje – jeho potomci bývají zdravě stavění, krásně socializovatelní a povahově úžasní. Právě proto je Oskar pro nás důležitou součástí chovu a pečlivě vybíraným tatínkem budoucích vrhů.",
     litters: [],
   },
   {
