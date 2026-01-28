@@ -5,6 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: "/russian-color-bolonka-haven/",
   server: {
     host: "::",
     port: 8080,
