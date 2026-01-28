@@ -6,14 +6,18 @@ import { Trophy, Heart, Camera, ChevronRight } from "lucide-react";
 import dog1 from "@/assets/dog-1.jpg";
 import dog2 from "@/assets/dog-2.jpg";
 import dog3 from "@/assets/dog-3.jpg";
+import oskar1 from "@/assets/oskar-1.jpg";
+import oskar2 from "@/assets/oskar-2.jpg";
+import oskar3 from "@/assets/oskar-3.jpg";
+import oskar4 from "@/assets/oskar-4.jpg";
 
 const dogs = [
   {
     name: "Oskar",
     fullName: "Luk-Cvet Vinný vrch",
     description: "Krásná fenka s výbornou povahou a úspěchy na výstavách. Klubová vítězka junior 2020.",
-    image: dog1,
-    gallery: [dog1, dog2, dog3],
+    image: oskar2,
+    gallery: [oskar1, oskar3, oskar4],
     age: "5 let",
     birthDate: "1. května 2019",
     color: "Barevná",
