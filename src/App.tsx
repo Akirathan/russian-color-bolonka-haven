@@ -8,6 +8,7 @@ import AboutUs from "./pages/AboutUs";
 import About from "./pages/About";
 import Dogs from "./pages/Dogs";
 import Puppies from "./pages/Puppies";
+import LitterDetail from "./pages/LitterDetail";
 import Articles from "./pages/Articles";
 import ArticleDetail from "./pages/ArticleDetail";
 import ContactPage from "./pages/ContactPage";
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/o-plemeni" element={<About />} />
           <Route path="/nasi-psi" element={<Dogs />} />
           <Route path="/stenata" element={<Puppies />} />
+          <Route path="/stenata/vrh-leden-2026" element={<LitterDetail />} />
           <Route path="/clanky" element={<Articles />} />
           <Route path="/clanky/:slug" element={<ArticleDetail />} />
           <Route path="/kontakt" element={<ContactPage />} />
