@@ -22,18 +22,18 @@ const Hero = () => {
         <div className="max-w-2xl">
           <motion.span 
             className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
           >
             Chov psů s láskou od roku 1988
           </motion.span>
           
           <motion.h1 
             className="section-heading text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           >
             Ruská Barevná{" "}
             <span className="text-gradient">Bolonka</span>
@@ -41,9 +41,9 @@ const Hero = () => {
           
           <motion.p 
             className="section-subheading mb-8 text-lg md:text-xl"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           >
             Objevte dokonalého společníka pro váš domov. Přátelský, oddaný 
             a nekonfliktní pejsek, který vám zpříjemní každý den.
@@ -51,13 +51,23 @@ const Hero = () => {
 
           <motion.div 
             className="flex flex-col sm:flex-row gap-4"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
           >
-            <Link to="/stenata" className="btn-hero text-center">
-              Dostupná štěňata
-            </Link>
+            <motion.div
+              initial={{ scale: 1 }}
+              animate={{ scale: [1, 1.05, 1] }}
+              transition={{ 
+                duration: 0.6, 
+                delay: 2,
+                ease: "easeInOut"
+              }}
+            >
+              <Link to="/stenata" className="btn-hero text-center block">
+                Dostupná štěňata
+              </Link>
+            </motion.div>
             <Link to="/o-nas" className="btn-outline-hero text-center">
               Poznejte nás
             </Link>
