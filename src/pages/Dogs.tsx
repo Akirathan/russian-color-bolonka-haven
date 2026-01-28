@@ -180,7 +180,7 @@ const Dogs = () => {
                   src={pawTrail}
                   alt=""
                   aria-hidden="true"
-                  className="w-full max-w-2xl mx-auto opacity-45"
+                  className="w-full max-w-2xl mx-auto opacity-45 sepia saturate-150 hue-rotate-[-10deg]"
                   initial={{ opacity: 0, x: -80 }}
                   animate={{ opacity: 0.45, x: 0 }}
                   transition={{ 
