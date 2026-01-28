@@ -15,6 +15,7 @@ const currentLitters = [
     colors: ["Černá", "Hnědá", "Světlá"],
     readyDate: "7. března 2026",
     image: litter202601,
+    slug: "vrh-leden-2026",
   },
 ];
 
@@ -112,15 +113,19 @@ const Puppies = () => {
             {currentLitters.length > 0 ? (
               <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 {currentLitters.map((litter, index) => (
-                  <div key={index} className="card-warm overflow-hidden">
+                  <Link 
+                    key={index} 
+                    to={`/stenata/${litter.slug}`}
+                    className="card-warm overflow-hidden group hover:shadow-lg transition-shadow"
+                  >
                     <div className="aspect-video overflow-hidden rounded-xl mb-4">
                       <img 
                         src={litter.image} 
                         alt={`Vrh ${litter.parents}`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-                    <h3 className="font-display text-xl font-semibold text-foreground mb-3">
+                    <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                       {litter.parents}
                     </h3>
                     <div className="space-y-2 text-sm">
@@ -137,10 +142,10 @@ const Puppies = () => {
                         <span className="font-medium text-foreground">K odběru od:</span> {litter.readyDate}
                       </p>
                     </div>
-                    <Link to="/kontakt" className="btn-hero inline-block mt-4 text-center w-full">
-                      Mám zájem
-                    </Link>
-                  </div>
+                    <span className="btn-hero inline-block mt-4 text-center w-full">
+                      Zobrazit detail
+                    </span>
+                  </Link>
                 ))}
               </div>
             ) : (
