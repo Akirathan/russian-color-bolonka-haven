@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -104,6 +105,16 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Kontakt"
+        description="Kontaktujte chovatelskou stanici Pikaro. Adresa: U Černého mostu 131/13, Plzeň. Telefon: +420 724 174 659. Email: ipikaro@gmail.com"
+        keywords="kontakt Pikaro, chovatelská stanice kontakt, bolonka Plzeň, štěňata kontakt"
+        url="https://pikaro.cz/kontakt"
+        breadcrumbs={[
+          { name: "Domů", url: "/" },
+          { name: "Kontakt", url: "/kontakt" },
+        ]}
+      />
       <Header />
       <main className="pt-20">
         <section className="py-16 gradient-warm">

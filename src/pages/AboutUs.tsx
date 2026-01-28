@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Heart, Users, Award, Calendar, Dog, Home, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroDog from "@/assets/hero-dog.jpg";
@@ -30,6 +31,16 @@ const values = [
 const AboutUs = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="O nás"
+        description="Chovatelská stanice Pikaro - s láskou chováme ruské barevné bolonky od roku 1988. Mezinárodně chráněný název stanice. Seznamte se s naší historií a hodnotami."
+        keywords="chovatelská stanice Pikaro, ruská barevná bolonka, chov bolonek, Plzeň, o nás"
+        url="https://pikaro.cz/o-nas"
+        breadcrumbs={[
+          { name: "Domů", url: "/" },
+          { name: "O nás", url: "/o-nas" },
+        ]}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Calendar, Clock, ArrowRight, Dog, Home, Heart, Scissors, Apple, Baby } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -137,6 +138,16 @@ const categories = ["Všechny", "Výchova", "Životní styl", "Péče", "Výživ
 const Articles = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Články o ruské barevné bolonce"
+        description="Užitečné články o výchově, péči a zdraví ruské barevné bolonky. Tipy pro majitele, výživa, péče o srst. Chovatelská stanice Pikaro."
+        keywords="bolonka články, výchova bolonky, péče o bolonku, bolonka výživa, bolonka zdraví, tipy pro majitele"
+        url="https://pikaro.cz/clanky"
+        breadcrumbs={[
+          { name: "Domů", url: "/" },
+          { name: "Články", url: "/clanky" },
+        ]}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

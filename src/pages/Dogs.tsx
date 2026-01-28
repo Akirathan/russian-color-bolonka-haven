@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Trophy, Heart, Camera, ChevronRight } from "lucide-react";
 import dog1 from "@/assets/dog-1.jpg";
 import dog2 from "@/assets/dog-2.jpg";
@@ -74,6 +75,16 @@ const dogs = [
 const Dogs = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Naši psi"
+        description="Seznamte se s našimi ruské barevné bolonky - výstavní šampioni, zdravotní testy, rodokmen. Chovatelská stanice Pikaro, Plzeň."
+        keywords="ruská barevná bolonka, naši psi, chovní psi, šampioni, rodokmen, Pikaro"
+        url="https://pikaro.cz/nasi-psi"
+        breadcrumbs={[
+          { name: "Domů", url: "/" },
+          { name: "Naši psi", url: "/nasi-psi" },
+        ]}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
