@@ -1,8 +1,29 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { useState } from "react";
 import heroDog from "@/assets/hero-dog.jpg";
 
+// Simple paw SVG icon
+const PawIcon = ({ className }: { className?: string }) => (
+  <svg 
+    viewBox="0 0 32 32" 
+    className={className}
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <ellipse cx="16" cy="20" rx="6" ry="5" />
+    <ellipse cx="9" cy="11" rx="3" ry="3.5" />
+    <ellipse cx="16" cy="8" rx="3" ry="3.5" />
+    <ellipse cx="23" cy="11" rx="3" ry="3.5" />
+    <ellipse cx="25" cy="18" rx="2.5" ry="3" />
+    <ellipse cx="7" cy="18" rx="2.5" ry="3" />
+  </svg>
+);
+
 const Hero = () => {
+  const prefersReducedMotion = useReducedMotion();
+  const [hasHovered, setHasHovered] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center pt-20">
       {/* Background Image */}
@@ -74,6 +95,33 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Decorative bouncing paw icon */}
+      <motion.div
+        className="absolute bottom-24 right-6 md:bottom-28 md:right-8 z-10 hidden sm:block"
+        initial={prefersReducedMotion ? { opacity: 0.4 } : { opacity: 0, y: 0 }}
+        animate={prefersReducedMotion 
+          ? { opacity: 0.4 } 
+          : { 
+              opacity: 0.4, 
+              y: [0, -12, 0, -6, 0],
+            }
+        }
+        transition={{ 
+          duration: 0.8, 
+          delay: 1.5,
+          ease: "easeOut",
+          y: { duration: 0.6, delay: 1.5 }
+        }}
+        onMouseEnter={() => !prefersReducedMotion && setHasHovered(true)}
+        onMouseLeave={() => setHasHovered(false)}
+        whileHover={prefersReducedMotion ? {} : { 
+          y: [0, -8, 0],
+          transition: { duration: 0.3 }
+        }}
+      >
+        <PawIcon className="w-10 h-10 md:w-12 md:h-12 text-primary drop-shadow-sm" />
+      </motion.div>
 
       {/* Decorative scroll indicator */}
       <motion.div 
