@@ -7,12 +7,13 @@ import dog3 from "@/assets/dog-3.jpg";
 
 const currentLitters = [
   {
-    parents: "Bella × Baron",
-    birthDate: "15. prosince 2024",
-    available: 3,
-    totalPuppies: 5,
-    colors: ["Krémová", "Zlatavá", "Zrzavá"],
-    readyDate: "15. února 2025",
+    parents: "Merry od Modlivého vrchu × Zeus Země snů",
+    birthDate: "9. ledna 2026",
+    available: 6,
+    totalPuppies: 6,
+    puppiesDetail: "2 pejsci, 4 fenky",
+    colors: ["Černá"],
+    readyDate: "Začátek března 2026",
     image: dog3,
   },
 ];
@@ -127,7 +128,7 @@ const Puppies = () => {
                         <span className="font-medium text-foreground">Datum narození:</span> {litter.birthDate}
                       </p>
                       <p className="text-muted-foreground">
-                        <span className="font-medium text-foreground">Počet štěňat:</span> {litter.totalPuppies} ({litter.available} k dispozici)
+                        <span className="font-medium text-foreground">Počet štěňat:</span> {litter.totalPuppies} {litter.puppiesDetail && `(${litter.puppiesDetail})`}
                       </p>
                       <p className="text-muted-foreground">
                         <span className="font-medium text-foreground">Zbarvení:</span> {litter.colors.join(", ")}
