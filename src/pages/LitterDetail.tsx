@@ -1,16 +1,28 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
-import { Calendar, Baby } from "lucide-react";
+import { Calendar, Baby, ChevronLeft, ChevronRight, X } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import litterA from "@/assets/litter-2026-01-a.jpg";
 import litterB from "@/assets/litter-2026-01-b.jpg";
 import litterC from "@/assets/litter-2026-01-c.jpg";
 import litterMain from "@/assets/litter-2026-01.jpg";
 
 const LitterDetail = () => {
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const images = [litterMain, litterA, litterB, litterC];
+
+  const openLightbox = (index: number) => setSelectedImage(index);
+  const closeLightbox = () => setSelectedImage(null);
+  const nextImage = () => setSelectedImage((prev) => (prev !== null ? (prev + 1) % images.length : null));
+  const prevImage = () => setSelectedImage((prev) => (prev !== null ? (prev - 1 + images.length) % images.length : null));
 
   const breadcrumbs = [
     { name: "Domů", url: "/" },
@@ -59,7 +71,10 @@ const LitterDetail = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               {/* Main Image */}
-              <div className="image-frame overflow-hidden mb-8">
+              <div 
+                className="image-frame overflow-hidden mb-8 cursor-pointer hover:opacity-90 transition-opacity"
+                onClick={() => openLightbox(0)}
+              >
                 <img
                   src={litterMain}
                   alt="Štěňata s maminkou"
@@ -99,7 +114,11 @@ const LitterDetail = () => {
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
                 {images.map((img, i) => (
-                  <div key={i} className="image-frame overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
+                  <div 
+                    key={i} 
+                    className="image-frame overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => openLightbox(i)}
+                  >
                     <img
                       src={img}
                       alt={`Štěňata - foto ${i + 1}`}
@@ -108,6 +127,43 @@ const LitterDetail = () => {
                   </div>
                 ))}
               </div>
+
+              {/* Lightbox Dialog */}
+              <Dialog open={selectedImage !== null} onOpenChange={closeLightbox}>
+                <DialogContent className="max-w-4xl w-[95vw] p-0 bg-background/95 backdrop-blur border-none">
+                  <DialogTitle className="sr-only">Fotogalerie - obrázek {selectedImage !== null ? selectedImage + 1 : 0}</DialogTitle>
+                  <div className="relative">
+                    {selectedImage !== null && (
+                      <img
+                        src={images[selectedImage]}
+                        alt={`Štěňata - foto ${selectedImage + 1}`}
+                        className="w-full max-h-[85vh] object-contain"
+                      />
+                    )}
+                    
+                    {/* Navigation buttons */}
+                    <button
+                      onClick={(e) => { e.stopPropagation(); prevImage(); }}
+                      className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
+                      aria-label="Předchozí fotka"
+                    >
+                      <ChevronLeft className="w-6 h-6" />
+                    </button>
+                    <button
+                      onClick={(e) => { e.stopPropagation(); nextImage(); }}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
+                      aria-label="Další fotka"
+                    >
+                      <ChevronRight className="w-6 h-6" />
+                    </button>
+                    
+                    {/* Image counter */}
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-background/80 text-sm">
+                      {selectedImage !== null ? selectedImage + 1 : 0} / {images.length}
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
 
               {/* CTA */}
               <div className="card-warm text-center">
