@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const contactInfo = [
   {
@@ -68,15 +69,37 @@ const ContactPage = () => {
 
     setIsSubmitting(true);
 
-    // For now, show success message - backend will be added
-    setTimeout(() => {
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-form", {
+        body: {
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          phone: formData.phone.trim() || undefined,
+          subject: formData.subject || undefined,
+          message: formData.message.trim(),
+        },
+      });
+
+      if (error) {
+        console.error("Error sending contact form:", error);
+        throw new Error(error.message || "Nepodařilo se odeslat zprávu");
+      }
+
       toast({
         title: "Zpráva odeslána!",
         description: "Děkujeme za vaši zprávu. Ozveme se vám co nejdříve.",
       });
       setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    } catch (error) {
+      console.error("Contact form error:", error);
+      toast({
+        title: "Chyba při odesílání",
+        description: "Nepodařilo se odeslat zprávu. Zkuste to prosím později nebo nás kontaktujte telefonicky.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
