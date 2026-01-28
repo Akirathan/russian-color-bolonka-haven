@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { getArticleBySlug } from "@/data/articlesData";
-import { ArrowLeft, Clock, CheckCircle, AlertTriangle, ChevronDown } from "lucide-react";
+import { ArrowLeft, Clock, CheckCircle, AlertTriangle, Phone, Mail, User } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const ArticleDetail = () => {
@@ -41,7 +41,22 @@ const ArticleDetail = () => {
               <span className="flex items-center gap-1 text-sm text-muted-foreground"><Clock className="w-4 h-4" />{article.readTime}</span>
             </div>
             <h1 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">{article.title}</h1>
-            <p className="text-lg text-muted-foreground max-w-3xl">{article.excerpt}</p>
+            <p className="text-lg text-muted-foreground max-w-3xl mb-6">{article.excerpt}</p>
+            
+            {/* Author Box */}
+            <div className="max-w-3xl bg-card/50 rounded-xl p-4 border border-border/50">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <User className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-foreground mb-1">O autorovi</p>
+                  <p className="text-sm text-muted-foreground">
+                    Články připravuje CHS Pikaro® (Plzeň) – zaměřujeme se na ruskou barevnou bolonku a klidný, moderní přístup k výchově (rutina, pozitivní motivace, zvládnutelné kroky).
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -127,10 +142,32 @@ const ArticleDetail = () => {
         {/* CTA */}
         <section className="py-12 bg-background">
           <div className="container mx-auto px-6">
-            <div className="max-w-2xl mx-auto text-center card-warm">
-              <h2 className="font-display text-xl font-semibold text-foreground mb-3">Máte dotaz?</h2>
-              <p className="text-muted-foreground mb-4">Pokud si nejste jistí, napište nám – rádi poradíme.</p>
-              <Link to="/kontakt" className="btn-hero inline-block">Kontaktujte nás</Link>
+            <div className="max-w-2xl mx-auto card-warm border-l-4 border-primary">
+              <h2 className="font-display text-xl font-semibold text-foreground mb-2">
+                Potřebujete poradit? Jsme tu pro vás.
+              </h2>
+              <p className="text-muted-foreground mb-4">
+                Rádi vám pomůžeme s nastavením režimu, socializace, samoty i péče o srst.
+              </p>
+              <div className="text-sm text-foreground font-medium mb-3">
+                CHS Pikaro® – Plzeň (návštěvy po domluvě)
+              </div>
+              <div className="flex flex-wrap gap-4">
+                <a 
+                  href="tel:+420724174659" 
+                  className="inline-flex items-center gap-2 text-primary hover:underline"
+                >
+                  <Phone className="w-4 h-4" />
+                  +420 724 174 659
+                </a>
+                <a 
+                  href="mailto:ipikaro@gmail.com" 
+                  className="inline-flex items-center gap-2 text-primary hover:underline"
+                >
+                  <Mail className="w-4 h-4" />
+                  ipikaro@gmail.com
+                </a>
+              </div>
             </div>
           </div>
         </section>
