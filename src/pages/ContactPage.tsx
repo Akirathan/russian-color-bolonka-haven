@@ -1,11 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { motion, useReducedMotion } from "framer-motion";
+
+const breadcrumbs = [
+  { name: "Domů", url: "/" },
+  { name: "Kontakt", url: "/kontakt" },
+];
 
 const contactInfo = [
   {
@@ -136,7 +142,8 @@ const ContactPage = () => {
       <main className="pt-20">
         <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
-            <motion.div 
+            <Breadcrumbs items={breadcrumbs} className="mb-8 justify-center" />
+            <motion.div
               className="text-center mb-12"
               initial="hidden"
               animate="visible"

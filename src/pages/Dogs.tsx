@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Trophy, Heart, Camera, ChevronRight } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import oskar1 from "@/assets/oskar-1.jpg";
@@ -12,6 +13,11 @@ import bekka1 from "@/assets/bekka-1.jpg";
 import bekka3 from "@/assets/bekka-3.jpg";
 import bekka4 from "@/assets/bekka-4.jpg";
 import kevina1 from "@/assets/kevina-1.jpg";
+
+const breadcrumbs = [
+  { name: "Domů", url: "/" },
+  { name: "Naši psi", url: "/nasi-psi" },
+];
 
 const dogs = [
   {
@@ -113,6 +119,7 @@ const Dogs = () => {
         {/* Hero Section */}
         <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
+            <Breadcrumbs items={breadcrumbs} className="mb-8 justify-center" />
             <motion.div 
               className="text-center mb-12"
               initial="hidden"

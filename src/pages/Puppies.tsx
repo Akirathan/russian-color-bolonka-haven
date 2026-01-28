@@ -1,10 +1,16 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Heart, Calendar, CheckCircle, Phone, Clock, Shield, Baby, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
 import litter202601 from "@/assets/litter-2026-01.jpg";
+
+const breadcrumbs = [
+  { name: "Domů", url: "/" },
+  { name: "Štěňata", url: "/stenata" },
+];
 
 const currentLitters = [
   {
@@ -106,6 +112,7 @@ const Puppies = () => {
         {/* Hero Section */}
         <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
+            <Breadcrumbs items={breadcrumbs} className="mb-8 justify-center" />
             <motion.div 
               className="text-center mb-12"
               initial="hidden"
