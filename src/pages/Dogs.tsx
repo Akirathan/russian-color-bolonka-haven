@@ -3,15 +3,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Trophy, Heart, Camera, ChevronRight } from "lucide-react";
-import dog1 from "@/assets/dog-1.jpg";
-import dog2 from "@/assets/dog-2.jpg";
-import dog3 from "@/assets/dog-3.jpg";
+import { motion, useReducedMotion } from "framer-motion";
 import oskar1 from "@/assets/oskar-1.jpg";
 import oskar2 from "@/assets/oskar-2.jpg";
 import oskar3 from "@/assets/oskar-3.jpg";
 import oskar4 from "@/assets/oskar-4.jpg";
 import bekka1 from "@/assets/bekka-1.jpg";
-import bekka2 from "@/assets/bekka-2.jpg";
 import bekka3 from "@/assets/bekka-3.jpg";
 import bekka4 from "@/assets/bekka-4.jpg";
 import kevina1 from "@/assets/kevina-1.jpg";
@@ -82,6 +79,23 @@ const dogs = [
 ];
 
 const Dogs = () => {
+  const prefersReducedMotion = useReducedMotion();
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: prefersReducedMotion ? 0 : 0.1
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -97,92 +111,150 @@ const Dogs = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-16 gradient-warm">
+        <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
-              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
+            <motion.div 
+              className="text-center mb-12"
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+            >
+              <motion.span 
+                className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4"
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+              >
                 Naši mazlíčci
-              </span>
-              <h1 className="section-heading mb-4">
+              </motion.span>
+              <motion.h1 
+                className="section-heading mb-4"
+                variants={fadeInUp}
+                transition={{ duration: 0.6 }}
+              >
                 Seznamte se s našimi psy
-              </h1>
-              <p className="section-subheading mx-auto">
+              </motion.h1>
+              <motion.p 
+                className="section-subheading mx-auto"
+                variants={fadeInUp}
+                transition={{ duration: 0.6 }}
+              >
                 Každý náš mazlíček je členem rodiny. Pečlivě dbáme na 
                 zdraví a socializaci všech psů.
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
           </div>
         </section>
 
         {/* Dogs Detail */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-background overflow-hidden">
           <div className="container mx-auto px-6">
             <div className="space-y-16">
               {dogs.map((dog, index) => (
-                <article 
+                <motion.article 
                   key={dog.name} 
                   className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-start ${
                     index % 2 === 1 ? "lg:flex-row-reverse" : ""
                   }`}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.7, delay: 0.1 }}
                 >
                   {/* Image Gallery */}
-                  <div className={`space-y-4 ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                    <div className="image-frame overflow-hidden">
-                      <img
+                  <motion.div 
+                    className={`space-y-4 ${index % 2 === 1 ? "lg:order-2" : ""}`}
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <motion.div 
+                      className="image-frame overflow-hidden"
+                      whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <motion.img
                         src={dog.image}
                         alt={dog.fullName}
                         className="w-full aspect-square object-cover"
+                        whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
+                        transition={{ duration: 0.4 }}
                       />
-                    </div>
+                    </motion.div>
                     <div className="grid grid-cols-3 gap-3">
                       {dog.gallery.map((img, i) => (
-                        <div key={i} className="image-frame overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+                        <motion.div 
+                          key={i} 
+                          className="image-frame overflow-hidden cursor-pointer"
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.4, delay: i * 0.1 }}
+                          whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
+                        >
                           <img
                             src={img}
                             alt={`${dog.name} - foto ${i + 1}`}
                             className="w-full aspect-square object-cover"
                           />
-                        </div>
+                        </motion.div>
                       ))}
                     </div>
-                  </div>
+                  </motion.div>
 
                   {/* Info */}
-                  <div className={`space-y-6 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                    <div>
+                  <motion.div 
+                    className={`space-y-6 ${index % 2 === 1 ? "lg:order-1" : ""}`}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={staggerContainer}
+                  >
+                    <motion.div variants={fadeInUp} transition={{ duration: 0.5 }}>
                       <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-2">
                         {dog.name}
                       </h2>
                       <p className="text-primary font-medium">{dog.fullName}</p>
-                    </div>
+                    </motion.div>
 
-                    <p className="text-muted-foreground leading-relaxed">
+                    <motion.p 
+                      className="text-muted-foreground leading-relaxed"
+                      variants={fadeInUp}
+                      transition={{ duration: 0.5 }}
+                    >
                       {dog.character}
-                    </p>
+                    </motion.p>
 
                     {/* Quick Info */}
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-secondary/50 rounded-xl p-4">
-                        <p className="text-sm text-muted-foreground">Věk</p>
-                        <p className="font-semibold text-foreground">{dog.age}</p>
-                      </div>
-                      <div className="bg-secondary/50 rounded-xl p-4">
-                        <p className="text-sm text-muted-foreground">Zbarvení</p>
-                        <p className="font-semibold text-foreground">{dog.color}</p>
-                      </div>
-                      <div className="bg-secondary/50 rounded-xl p-4">
-                        <p className="text-sm text-muted-foreground">Hmotnost</p>
-                        <p className="font-semibold text-foreground">{dog.weight}</p>
-                      </div>
-                      <div className="bg-secondary/50 rounded-xl p-4">
-                        <p className="text-sm text-muted-foreground">Výška</p>
-                        <p className="font-semibold text-foreground">{dog.height}</p>
-                      </div>
-                    </div>
+                    <motion.div 
+                      className="grid grid-cols-2 gap-4"
+                      variants={fadeInUp}
+                      transition={{ duration: 0.5 }}
+                    >
+                      {[
+                        { label: "Věk", value: dog.age },
+                        { label: "Zbarvení", value: dog.color },
+                        { label: "Hmotnost", value: dog.weight },
+                        { label: "Výška", value: dog.height },
+                      ].map((item, i) => (
+                        <motion.div 
+                          key={item.label}
+                          className="bg-secondary/50 rounded-xl p-4"
+                          whileHover={prefersReducedMotion ? {} : { y: -3, transition: { duration: 0.2 } }}
+                        >
+                          <p className="text-sm text-muted-foreground">{item.label}</p>
+                          <p className="font-semibold text-foreground">{item.value}</p>
+                        </motion.div>
+                      ))}
+                    </motion.div>
 
                     {/* Titles */}
                     {dog.titles.length > 0 && (
-                      <div className="card-warm">
+                      <motion.div 
+                        className="card-warm"
+                        variants={fadeInUp}
+                        transition={{ duration: 0.5 }}
+                      >
                         <div className="flex items-center gap-2 mb-3">
                           <Trophy className="w-5 h-5 text-primary" />
                           <h3 className="font-display text-lg font-semibold text-foreground">
@@ -191,36 +263,60 @@ const Dogs = () => {
                         </div>
                         <ul className="space-y-2">
                           {dog.titles.map((title, i) => (
-                            <li key={i} className="flex items-center gap-2 text-muted-foreground text-sm">
+                            <motion.li 
+                              key={i} 
+                              className="flex items-center gap-2 text-muted-foreground text-sm"
+                              initial={{ opacity: 0, x: -10 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              viewport={{ once: true }}
+                              transition={{ duration: 0.3, delay: i * 0.05 }}
+                            >
                               <ChevronRight className="w-4 h-4 text-primary" />
                               {title}
-                            </li>
+                            </motion.li>
                           ))}
                         </ul>
-                      </div>
+                      </motion.div>
                     )}
 
                     {/* Health Tests */}
-                    <div className="card-warm">
-                      <div className="flex items-center gap-2 mb-3">
-                        <Heart className="w-5 h-5 text-primary" />
-                        <h3 className="font-display text-lg font-semibold text-foreground">
-                          Zdravotní testy
-                        </h3>
-                      </div>
-                      <ul className="space-y-2">
-                        {dog.healthTests.map((test, i) => (
-                          <li key={i} className="flex items-center gap-2 text-muted-foreground text-sm">
-                            <ChevronRight className="w-4 h-4 text-primary" />
-                            {test}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    {dog.healthTests.length > 0 && (
+                      <motion.div 
+                        className="card-warm"
+                        variants={fadeInUp}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <div className="flex items-center gap-2 mb-3">
+                          <Heart className="w-5 h-5 text-primary" />
+                          <h3 className="font-display text-lg font-semibold text-foreground">
+                            Zdravotní testy
+                          </h3>
+                        </div>
+                        <ul className="space-y-2">
+                          {dog.healthTests.map((test, i) => (
+                            <motion.li 
+                              key={i} 
+                              className="flex items-center gap-2 text-muted-foreground text-sm"
+                              initial={{ opacity: 0, x: -10 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              viewport={{ once: true }}
+                              transition={{ duration: 0.3, delay: i * 0.05 }}
+                            >
+                              <ChevronRight className="w-4 h-4 text-primary" />
+                              {test}
+                            </motion.li>
+                          ))}
+                        </ul>
+                      </motion.div>
+                    )}
 
                     {/* Litters */}
                     {dog.litters.length > 0 && (
-                      <div className="card-warm">
+                      <motion.div 
+                        className="card-warm"
+                        variants={fadeInUp}
+                        transition={{ duration: 0.5 }}
+                      >
                         <div className="flex items-center gap-2 mb-3">
                           <Camera className="w-5 h-5 text-primary" />
                           <h3 className="font-display text-lg font-semibold text-foreground">
@@ -228,41 +324,69 @@ const Dogs = () => {
                           </h3>
                         </div>
                         <ul className="space-y-2">
-                          {dog.litters.map((litter, i) => (
+                          {dog.litters.map((litter: any, i: number) => (
                             <li key={i} className="flex items-center gap-2 text-muted-foreground text-sm">
                               <ChevronRight className="w-4 h-4 text-primary" />
                               {litter.year}: s {litter.partner} - {litter.puppies} štěňat
                             </li>
                           ))}
                         </ul>
-                      </div>
+                      </motion.div>
                     )}
-                  </div>
-                </article>
+                  </motion.div>
+                </motion.article>
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 gradient-warm">
+        <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
-            <div className="text-center">
-              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">
+            <motion.div 
+              className="text-center"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+            >
+              <motion.h2 
+                className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4"
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+              >
                 Máte zájem o štěně?
-              </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+              </motion.h2>
+              <motion.p 
+                className="text-muted-foreground max-w-2xl mx-auto mb-8"
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+              >
                 Rádi vám poskytneme více informací o našich psech a plánovaných vrzích
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/stenata" className="btn-hero inline-block">
-                  Zobrazit štěňata
-                </Link>
-                <Link to="/kontakt" className="inline-block px-8 py-3 rounded-full border-2 border-primary text-primary font-medium hover:bg-primary hover:text-primary-foreground transition-colors">
-                  Kontaktovat nás
-                </Link>
-              </div>
-            </div>
+              </motion.p>
+              <motion.div 
+                className="flex flex-col sm:flex-row gap-4 justify-center"
+                variants={fadeInUp}
+                transition={{ duration: 0.5 }}
+              >
+                <motion.div
+                  whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
+                  whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
+                >
+                  <Link to="/stenata" className="btn-hero inline-block">
+                    Zobrazit štěňata
+                  </Link>
+                </motion.div>
+                <motion.div
+                  whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
+                  whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
+                >
+                  <Link to="/kontakt" className="inline-block px-8 py-3 rounded-full border-2 border-primary text-primary font-medium hover:bg-primary hover:text-primary-foreground transition-colors">
+                    Kontaktovat nás
+                  </Link>
+                </motion.div>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
       </main>
