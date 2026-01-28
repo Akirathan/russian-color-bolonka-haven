@@ -43,7 +43,7 @@ const dogs = [
     fullName: "Mery od Modlivého dolu",
     description: "Fenka s krásně klidnou, stabilní povahou a velkým srdcem. Skvělá máma a základ našeho chovu.",
     image: bekka1,
-    gallery: [bekka2, bekka3, bekka4],
+    gallery: [bekka3, bekka4, bekka1],
     age: "4 roky",
     birthDate: "14. září 2020",
     color: "Černá",
