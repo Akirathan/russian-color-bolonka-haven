@@ -120,7 +120,7 @@ const Hero = () => {
           transition: { duration: 0.3 }
         }}
       >
-        <PawIcon className="w-8 h-8 md:w-12 md:h-12 text-primary drop-shadow-md" />
+        <PawIcon className="w-24 h-24 md:w-36 md:h-36 text-primary drop-shadow-md" />
       </motion.div>
 
       {/* Decorative scroll indicator */}
