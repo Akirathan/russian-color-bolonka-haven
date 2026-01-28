@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, PawPrint } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -27,8 +27,14 @@ const Header = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
-          <Link to="/" className="font-display text-xl md:text-2xl font-semibold text-foreground">
-            <span className="hidden sm:inline">Chovatelská stanice</span> Pikaro
+          <Link to="/" className="font-display text-xl md:text-2xl font-semibold text-foreground flex items-center gap-2">
+            <motion.div
+              animate={{ scale: [1, 1.15, 1] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <PawPrint className="w-6 h-6 text-primary" />
+            </motion.div>
+            <span><span className="hidden sm:inline">Chovatelská stanice </span>Pikaro</span>
           </Link>
 
           {/* Desktop Navigation */}
