@@ -1,4 +1,4 @@
-import { Baby, Home, Scissors, Apple, Heart, Dog, LucideIcon } from "lucide-react";
+import { Baby, Home, Scissors, Apple, Heart, Dog, Clock, Droplets, Volume2, Sofa, ShieldCheck, Sparkles, LucideIcon } from "lucide-react";
 
 export interface ArticleFAQ {
   question: string;
@@ -639,6 +639,434 @@ export const articles: Article[] = [
       { question: "Je náročná na pohyb?", answer: "Spíš na kontakt a klid než na kilometry." },
       { question: "Je vhodná pro alergiky?", answer: "Nelze garantovat – vždy individuální." },
       { question: "Kolik péče vyžaduje srst?", answer: "Krátká, ale pravidelná rutina." }
+    ]
+  },
+  {
+    id: 7,
+    slug: "samota-bolonka-14denni-plan",
+    title: "Samota u bolonky: 14denní plán prevence separačních potíží",
+    seoTitle: "Samota u bolonky: 14denní plán, který zvládnete doma (bez stresu)",
+    metaDescription: "Praktický plán nácviku samoty pro ruskou bolonku: mikrokroky, chyby, signály stresu, jak nastavit odchody a co dělat, když to nejde.",
+    excerpt: "Ruská barevná bolonka je kontaktní a často velmi na člověka. To je její kouzlo — a zároveň důvod, proč je potřeba samotu učit cíleně. Dobrá zpráva: když začnete brzy a po malých dávkách, dá se samota zvládnout bez dramat.",
+    category: "Výchova",
+    readTime: "10 min",
+    date: "28. ledna 2025",
+    icon: Clock,
+    canDoBox: [
+      "Postup po vteřinách, ne po hodinách",
+      "Vracejte se dřív, než začne protestovat",
+      "Odchody i příchody nudně – žádné drama"
+    ],
+    vetBox: [
+      "Panické chování (intenzivní štěkání, ničení, slinění)",
+      "Štěně se nedokáže zklidnit ani při velmi krátkém odchodu",
+      "Problém trvá i po týdnech postupného tréninku"
+    ],
+    sections: [
+      {
+        id: "proc-bolonka-resi-samotu",
+        title: "Proč bolonka samotu někdy řeší víc než jiná plemena",
+        content: "Bolonka často vyrostla v blízkosti lidí a má silnou motivaci být u Vás. Pokud se samota nechá na náhodě, může se z ní stát stresový spouštěč. Cíl tréninku samoty není aby to vydržela, ale aby se štěně naučilo: odchod = bezpečná nuda."
+      },
+      {
+        id: "test-pripravenosti",
+        title: "Nejdřív rychlý test: je štěně připravené trénovat samotu?",
+        content: "Trénink samoty dělejte ideálně, když štěně je vyvenčené, má za sebou krátkou aktivitu (mentální, ne vyčerpání), je nakrmené a má šanci vypnout. Pokud štěně jede na doraz, odchod spíš spustí paniku."
+      },
+      {
+        id: "5-pravidel",
+        title: "5 pravidel, která rozhodují o úspěchu",
+        content: "Postup po vteřinách, ne po hodinách. Vracejte se dřív, než začne protestovat (trénujete klid, ne hysterii). Odchody i příchody nudně – žádné loučení, žádné jsem zpátky! Kvalitní klidové místo (ohrádka/klec jako domeček, ne trest). Když to nejde, zmenšete krok."
+      },
+      {
+        id: "14denni-plan",
+        title: "14denní plán (realistický, zvládnutelný)",
+        content: "Každý pes je jiný — pokud štěně některý den nezvládne, nic se neděje: zopakujte předchozí úroveň.",
+        subsections: [
+          {
+            title: "Den 1–3: mikrokroky (5–30 vteřin)",
+            content: "10–20 krátkých odchodů denně. Odchod = vy jdete za dveře / do jiné místnosti. Návrat = tichý, neutrální. Cíl: štěně si ani nestihne říct kde jste."
+          },
+          {
+            title: "Den 4–7: krátké minuty (30–120 vteřin)",
+            content: "5–10 opakování denně. Přidejte reálnější odchod: vezmete klíče, otevřete dveře, zavřete. Stále se vracejte před protestem."
+          },
+          {
+            title: "Den 8–10: 2–5 minut",
+            content: "3–6 opakování denně. Jeden z odchodů udělejte snadný (krátký), aby mělo úspěch."
+          },
+          {
+            title: "Den 11–14: 5–15 minut",
+            content: "2–4 opakování denně. Postupně přidávejte minuty, ale ne každý odchod prodlužujte (střídejte)."
+          }
+        ]
+      },
+      {
+        id: "co-dat-bolonce",
+        title: "Co dát bolonce, když odcházíte",
+        content: "Volte jen bezpečné věci: lízací podložka (klidová aktivita), čichací hra (pár granulí do ručníku), případně bezpečné žvýkání. Proč lízání funguje: zpomaluje tělo a pomáhá přepnout do klidového režimu."
+      },
+      {
+        id: "signaly-stresu",
+        title: "Jak poznáte, že už je to stres",
+        content: "Signály, že jste šli moc rychle: kňučení/štěkání hned po odchodu, škrábání dveří, neklidné pobíhání, zrychlené dýchání, slinění, odmítání pamlsku. Co udělat: další trénink zkrátit, vrátit se o 1–2 úrovně zpět."
+      },
+      {
+        id: "nejcastejsi-chyby",
+        title: "Nejčastější chyby (a rychlé opravy)",
+        content: "Zkusíme to rovnou na hodinu – vraťte se k vteřinám. Ať si zvykne, nebudu se vracet – u citlivých plemen to často zhorší paniku. Samotu trénujete, když je štěně přetažené – zkrátit podněty, přidat spánek. Velká emoce při odchodu/příchodu – odchody i příchody jako by nic."
+      }
+    ],
+    faq: [
+      { question: "Má štěně být při samotě v kleci?", answer: "Může, pokud ji vnímá jako bezpečný domeček. Pokud klec stresuje, začněte ohrádku bez zavírání." },
+      { question: "Pomůže druhý pes?", answer: "Někdy ano, někdy ne. Separace je vztah k člověku, ne jen být sám." },
+      { question: "Jak rychle přidávat čas?", answer: "Jen když předchozí krok probíhá klidně. Raději pomaleji." },
+      { question: "Co když štěně štěká hned, jak zavřu dveře?", answer: "Jdete příliš rychle. Začněte odchodem na 1–2 vteřiny a vraťte se ještě před reakcí." }
+    ]
+  },
+  {
+    id: 8,
+    slug: "cistota-stenete-bolonky",
+    title: "Čistota u štěněte bolonky: venčení bez trestů",
+    seoTitle: "Čistota u bolonky: jak naučit venčení bez trestů (praktický plán)",
+    metaDescription: "Jak naučit štěně bolonky venčit venku: frekvence, signály, odměny, noční režim, podložky a řešení nehod doma.",
+    excerpt: "Čistota není o poslušnosti. Je to kombinace biologie (malý měchýř), rutiny a správného načasování. Když štěněti dáte šanci uspět, bývá bolonka velmi rychle čistotná.",
+    category: "Výchova",
+    readTime: "7 min",
+    date: "27. ledna 2025",
+    icon: Droplets,
+    canDoBox: [
+      "Venčit po spánku, jídle a hře – klíčové momenty",
+      "Odměna ihned po úspěchu venku",
+      "Nehody uklidit beze slov, bez trestů"
+    ],
+    vetBox: [
+      "Extrémně časté močení nebo bolest",
+      "Krev v moči nebo stolici",
+      "Apatie, nechutenství, náhlá změna"
+    ],
+    sections: [
+      {
+        id: "nejcastejsi-duvod",
+        title: "Nejčastější důvod nehod: štěně to nestihne",
+        content: "U malého štěněte je normální, že po spánku musí ven téměř hned, po jídle to přijde rychle, po hře se to spustí během chvilky. Pokud nehody pokračují, často to znamená chodíme ven pozdě, ne štěně to nechápe."
+      },
+      {
+        id: "kdy-chodit-ven",
+        title: "Jednoduchý režim: kdy chodit ven",
+        content: "Povinné momenty: po probuzení (i krátkém šlofíku), po jídle, po hře / vzrušení, před spaním. Preventivní intervaly: na začátku klidně po 2–3 hodinách. Postupně se interval prodlužuje."
+      },
+      {
+        id: "co-delat-venku",
+        title: "Co dělat venku, aby se to naučilo rychle",
+        content: "Venku klid — žádné pobíhání a pojď sem. Po vykonání potřeby okamžitě odměna (pamlsek + pochvala). Teprve potom procházka / zábava. Proč to funguje: štěně pochopí, že tohle chování venku mu přináší odměnu."
+      },
+      {
+        id: "signaly",
+        title: "Signály, že to přijde",
+        content: "Čichání země, točení, odchod do rohu. Náhlé přerušení hry a hledání místa. Neklidné pobíhání. Jakmile to vidíte: beze slov ven."
+      },
+      {
+        id: "nehoda-doma",
+        title: "Co dělat při nehodě doma",
+        content: "Uklidit a hotovo. Žádné trestání, žádné ukazování, žádné zvýšené emoce. Tresty mohou vést k tomu, že se pes začne bát vykonat potřebu před Vámi — a paradoxně se to zhorší."
+      },
+      {
+        id: "podlozky",
+        title: "Podložky: ano, ne, kdy a jak",
+        content: "Podložka může být užitečná: když bydlíte vysoko a štěně to fyzicky nestíhá, při nemoci, jako přechodné řešení. Riziko: štěně si zvykne na vykonat potřebu na textilii. Jak tomu předejít: podložku dávejte jen na jedno místo, a jakmile to jde, přenášejte návyk ven."
+      },
+      {
+        id: "nocni-rezim",
+        title: "Noční režim",
+        content: "Poslední venčení těsně před spaním. Pokud je nutné noční venčení: jen vyvenčit, pochválit, zpět do klidu. Ráno hned ven (i když je zima a nechce se)."
+      },
+      {
+        id: "kdyz-se-zasekne",
+        title: "Když se čistota zasekne",
+        content: "Mini-audit: Chodíte ven opravdu po spánku/jídle/hře? Odměňujete venku opravdu hned? Není štěně přetažené a ve stresu? Nedostává večer moc vody / málo venčení? Není tu zdravotní důvod?"
+      }
+    ],
+    faq: [
+      { question: "Jak dlouho trvá, než bude čistotné?", answer: "U většiny štěňat je to otázka týdnů, ne dnů. Důležitá je konzistence." },
+      { question: "Co když venku jen běhá a doma se vyčůrá?", answer: "Venku nejdřív klid, žádné rozptylování. Odměna až po úspěchu." },
+      { question: "Je normální, že se občas zapomene?", answer: "Ano, hlavně při změně režimu, návštěvě, přetažení." },
+      { question: "Mám omezit vodu?", answer: "Ne. Vodu neomezujte, raději přidejte venčení." }
+    ]
+  },
+  {
+    id: 9,
+    slug: "stekani-bolonka-v-byte",
+    title: "Štěkání bolonky v bytě: prevence a řešení",
+    seoTitle: "Štěkání bolonky v bytě: proč vzniká a jak ho řešit (zvonek, chodba, okno)",
+    metaDescription: "Praktické kroky proti štěkání v bytě: management podnětů, trénink místo, přepis zvonku, plán na 7 dní a nejčastější chyby.",
+    excerpt: "Bolonka umí být tichý pohodář — ale v bytě se často spouští štěkání na zvuky z chodby, zvonek nebo pohyb za oknem. Dobrá zpráva: štěkání je řešitelné, když víte, co ho spouští a co má pes dělat místo něj.",
+    category: "Životní styl",
+    readTime: "8 min",
+    date: "26. ledna 2025",
+    icon: Volume2,
+    canDoBox: [
+      "Management podnětů: závěs, bílý šum, zástěna",
+      "Naučte místo (deka) jako bezpečný bod",
+      "Přepis zvonku: zvonek = pamlsky na deku"
+    ],
+    vetBox: [
+      "Štěkání spojené s agresí nebo panikou",
+      "Náhlá změna chování bez zjevné příčiny",
+      "Štěkání doprovázené bolestí nebo nepohodou"
+    ],
+    sections: [
+      {
+        id: "proc-steka",
+        title: "Proč bolonka štěká (nejčastější důvody)",
+        content: "Hlídání zvuků: chodba, výtah, sousedi. Zvonek: vzrušení, očekávání návštěvy. Okno: pohyb lidí/psů venku. Přetažení/nuda: pes je unavený a neumí vypnout. Nejistota: pes se snaží zahnat podnět. Nezačínejte tím, že budete štěkání zakazovat. Začněte tím, že psovi dáte alternativu."
+      },
+      {
+        id: "nejrychlejsi-kombinace",
+        title: "Nejrychlejší kombinace, která funguje",
+        content: "Tři kroky, které ve většině bytů pomohou.",
+        subsections: [
+          {
+            title: "1) Management podnětů",
+            content: "Závěs / fólie na spodní část okna. Zástěna, aby pes nehlídal chodbu. Bílý šum / rádio potichu u citlivých jedinců. Tím snížíte počet spouštěčů."
+          },
+          {
+            title: "2) Místo (deka) jako bezpečný bod",
+            content: "Naučte bolonku, že na dece se vyplácí být v klidu."
+          },
+          {
+            title: "3) Přepis zvonku",
+            content: "Cíl: místo alarmu bude zvonek signál běž na deku, tam se odměňuje."
+          }
+        ]
+      },
+      {
+        id: "7denni-plan",
+        title: "7denní plán",
+        content: "Den 1–2: trénujte deku bez zvonku (odměny za klid). Den 3–4: pusťte si zvonek potichu z telefonu, okamžitě odměna na dece. Den 5–6: reálný zvonek, poslat na deku, odměnit. Den 7: přidejte návštěvu nanečisto (kamarád zazvoní, vejde, ignoruje psa, Vy odměňujete klid)."
+      },
+      {
+        id: "v-momente-stekani",
+        title: "Co dělat v momentě štěkání",
+        content: "Zachovejte klid, žádné křičení. Přerušte přístup k podnětu (zavřít dveře, stáhnout roletu). Nabídněte místo a odměňte první vteřiny ticha. Proč nekřičet: často to pes vyhodnotí jako štěkáme spolu."
+      },
+      {
+        id: "nejcastejsi-chyby",
+        title: "Nejčastější chyby",
+        content: "Odměňování štěkání pozorností (co je? ticho!). Příliš rychlé zvyšování obtížnosti. Žádný klidový režim (přetažený pes = hlasitější pes). Nekonzistence (jednou se štěká, jednou ne)."
+      }
+    ],
+    faq: [
+      { question: "Mám štěkání ignorovat?", answer: "Někdy ano, ale v bytě často potřebujete kombinaci managementu + naučit alternativu." },
+      { question: "Pomůže antištěkací obojek?", answer: "Nedoporučujeme jako první volbu. U citlivých psů může zvýšit stres." },
+      { question: "Co když štěká jen večer?", answer: "Často přetažení. Zkraťte podněty, přidejte klidové aktivity a spánek." },
+      { question: "Jak rychle se to zlepší?", answer: "Často do 1–2 týdnů uvidíte posun, když je plán konzistentní." }
+    ]
+  },
+  {
+    id: 10,
+    slug: "klid-na-dece-bolonka",
+    title: "Klid na dece: návyk, který bolonce zlepší život v bytě",
+    seoTitle: "Klid na dece: jak naučit bolonku odpočívat (návod krok za krokem)",
+    metaDescription: "Jak naučit bolonku vypnout na dece: postup po vteřinách, odměňování klidu, využití u zvonku, návštěv a večerního přetažení.",
+    excerpt: "Mnoho lidí trénuje sedni/lehni, ale neřeší schopnost psa opravdu odpočívat. Deka (místo) je jednoduchý nástroj, jak bolonku naučit klidu v bytě — a využijete ho u zvonku, návštěv, jídla i večer.",
+    category: "Výchova",
+    readTime: "6 min",
+    date: "24. ledna 2025",
+    icon: Sofa,
+    canDoBox: [
+      "Začněte bez povelu – pes objeví, že deka je výhodná",
+      "Odměňujte skutečný klid, ne jen polohu",
+      "1–3 minuty denně stačí, ale pravidelně"
+    ],
+    vetBox: [
+      "Pes se nedokáže uvolnit ani v klidném prostředí",
+      "Výrazný neklid spojený s bolestí nebo nepohodou"
+    ],
+    sections: [
+      {
+        id: "co-je-klid",
+        title: "Co je klid na dece",
+        content: "Nejde o to, že pes leží. Jde o to, že zpomalí dech, uvolní tělo, přestane skenovat okolí. To je skutečný klid."
+      },
+      {
+        id: "jak-zacit",
+        title: "Jak začít (bez povelu)",
+        content: "Položte deku na zem. Pes se na ni podívá – odměna. Pes udělá krok směrem – odměna. Tlapka na dece – odměna. Nechte psa objevit, že deka je výhodná."
+      },
+      {
+        id: "budovani-vydrze",
+        title: "Budování výdrže (po vteřinách)",
+        content: "Když už pes na dece stojí nebo si lehne: odměňte klid (ticho, uvolnění), prodlužujte po 1–3 vteřinách, raději 10 krátkých úspěchů než jeden dlouhý neúspěch. Tip: Odměňujte nejdřív často. Jakmile pes chápe, odměny řídněte."
+      },
+      {
+        id: "pridejte-signal",
+        title: "Přidejte signál (až když to umí)",
+        content: "Až když pes na deku chodí sám, přidejte slovo: místo / deka. Řeknete slovo, pes jde na deku, odměna."
+      },
+      {
+        id: "vyuziti",
+        title: "Jak deku využít v reálném životě",
+        content: "Zvonek: zvonek = místo, odměna na dece. Hosté psa ignorují první minuty. Návštěvy: deka je bezpečná zóna, kam má pes možnost odejít. Večerní přetažení: deka + lízací podložka + ticho."
+      },
+      {
+        id: "nejcastejsi-chyby",
+        title: "Nejčastější chyby",
+        content: "Chtít, aby vydržel na dece 10 minut hned první den. Odměňovat jen lehni, ne skutečný klid. Používat deku jako trest (běž na místo!). Deka je pokaždé jinde (začátek držte stejné místo)."
+      }
+    ],
+    faq: [
+      { question: "Mám psa na dece fixovat vodítkem?", answer: "Ne na začátku. Chcete dobrovolnost." },
+      { question: "Co když z deky odchází?", answer: "Zkraťte dobu a odměňujte častěji." },
+      { question: "Můžu deku přesunout?", answer: "Ano, ale až když návyk drží, a dělejte to postupně." },
+      { question: "Jak často trénovat?", answer: "1–3 minuty denně stačí, ale pravidelně." }
+    ]
+  },
+  {
+    id: 11,
+    slug: "jak-poznat-seriozniho-chovatele-bolonka",
+    title: "Jak poznat seriózního chovatele bolonky",
+    seoTitle: "Jak poznat seriózního chovatele bolonky: checklist a otázky pro zájemce",
+    metaDescription: "Praktický seznam toho, na co se ptát a co sledovat u chovatele bolonky: socializace, podmínky, smlouva, transparentnost, zdraví a podpora po odběru.",
+    excerpt: "Když si vybíráte štěně, vybíráte si i start do života: genetiku, rané prostředí, socializaci i přístup chovatele. Tady je přehledný checklist, podle kterého rychle poznáte, jestli jednáte se seriózním chovatelem.",
+    category: "O plemeni",
+    readTime: "8 min",
+    date: "22. ledna 2025",
+    icon: ShieldCheck,
+    canDoBox: [
+      "Ptejte se na konkrétní plán socializace",
+      "Žádejte transparentnost o prostředí a psech",
+      "Očekávejte podporu i po odběru štěněte"
+    ],
+    vetBox: [
+      "Nátlak na rychlé rozhodnutí nebo zálohu",
+      "Žádné informace o prostředí nebo rodičích",
+      "Neochota odpovídat na otázky"
+    ],
+    sections: [
+      {
+        id: "transparentnost",
+        title: "1) Transparentnost: ukazuje chovatel své psy a prostředí?",
+        content: "Seriózní chovatel má dohledatelné informace o psech (fotky, původ, výsledky, povaha), otevřeně popíše, jak štěňata vyrůstají, nevyhýbá se otázkám. Varovné signály: neptejte se, hlavně pošlete zálohu, žádné fotky prostředí, nátlak na rychlé rozhodnutí."
+      },
+      {
+        id: "socializace",
+        title: "2) Socializace a režim: co konkrétně chovatel dělá?",
+        content: "Ptejte se: Jak štěňata seznamujete s běžným chodem domácnosti? Zvykáte je na manipulaci (tlapky, kartáč, uši)? Jak řešíte klid a spánek? Seriózní odpověď je konkrétní (denní rutina, krátké podněty, klidový režim), ne jen obecné socializujeme."
+      },
+      {
+        id: "zdravi",
+        title: "3) Zdraví: co je standard a co je navíc",
+        content: "U malých plemen dává smysl řešit: preventivní prohlídky, plán očkování a odčervení, konzultace k zubům, kondici, pohybu, případně zdravotní vyšetření rodičů. Seriózní chovatel bude umět vysvětlit, co sleduje a proč."
+      },
+      {
+        id: "smlouva",
+        title: "4) Smlouva, předání, dokumenty",
+        content: "Seriózní chovatel předává štěně s jasnou smlouvou, dá vám instrukce k režimu, krmení a péči, zajímá se, kam štěně jde (ne komukoli). Varovné signály: žádná smlouva, nejasné informace, ochota předat štěně hned, bez ohledu na věk."
+      },
+      {
+        id: "podpora",
+        title: "5) Podpora po odběru: tohle je obrovský rozdíl",
+        content: "Kvalitní chovatel nekončí předáním. Nabízí radu k čistotě, samotě, výchově, pomoc při prvních problémech, lidskou, neodsuzující komunikaci."
+      },
+      {
+        id: "cena",
+        title: "6) Cena: levné štěně bývá drahé později",
+        content: "V ceně bývá chov, péče o matku, krmení, veterinární péče, čas socializace, dokumenty a administrativa, a hlavně odpovědnost. Nejde o to, aby bylo štěně nejdražší. Jde o to, aby bylo poctivě odchované."
+      },
+      {
+        id: "checklist",
+        title: "Checklist (rychlá verze)",
+        content: "✅ ukázané prostředí a způsob odchovu ✅ konkrétní plán socializace a manipulace ✅ smlouva a jasné podmínky předání ✅ chovatel se ptá na váš režim (samota, děti, zkušenosti) ✅ podpora po odběru ⚠️ nátlak, tajnosti, rychle poslat zálohu, neochota odpovídat"
+      }
+    ],
+    faq: [
+      { question: "Jak poznám, že jde o podvodníka?", answer: "Nátlak, neochota ukázat prostředí, žádné dokumenty, podezřele nízká cena." },
+      { question: "Je důležitý průkaz původu?", answer: "Ano, je to doklad o původu a kontrole chovu. Ale není zárukou povahy." },
+      { question: "Mohu navštívit chovatele předem?", answer: "Seriózní chovatel návštěvu po domluvě obvykle umožní." },
+      { question: "Co když chovatel nechce odpovídat?", answer: "Varovný signál. Seriózní chovatel se otázkám nevyhýbá." }
+    ]
+  },
+  {
+    id: 12,
+    slug: "zuby-bolonka-cisteni-plan",
+    title: "Zuby u bolonky: 14denní plán na čištění bez boje",
+    seoTitle: "Zuby bolonky: jak začít čistit bez boje (14denní plán pro začátečníky)",
+    metaDescription: "Jednoduchý návykový plán na čištění zubů u bolonky: postup po vteřinách, pomůcky, motivace, chyby a kdy řešit veterináře.",
+    excerpt: "U malých plemen jsou zuby téma, které se vyplatí řešit včas. Ne proto, abyste měli dokonalého psa, ale protože pravidelná péče umí ušetřit bolesti i veterinární zákroky. A ano — dá se to naučit klidně a bez boje.",
+    category: "Péče",
+    readTime: "7 min",
+    date: "20. ledna 2025",
+    icon: Sparkles,
+    canDoBox: [
+      "Postup po vteřinách – nejdřív spolupráce, pak čištění",
+      "Psí pasta bez lidských sladidel",
+      "Kratší intervaly jsou lepší než dlouhé zápasy"
+    ],
+    vetBox: [
+      "Zápach z tlamy, krvácení dásní",
+      "Bolest při jídle, pouštění hraček",
+      "Viditelný zubní kámen nebo otok"
+    ],
+    sections: [
+      {
+        id: "proc-dulezite",
+        title: "Proč je u bolonky péče o zuby důležitá",
+        content: "Malá tlama, často těsnější zuby a sklon k tvorbě zubního kamene znamenají, že prevence dává velký smysl. Nejvíc funguje krátké, pravidelné čištění, zvykání od štěněte, klid a spolupráce."
+      },
+      {
+        id: "pomucky",
+        title: "Pomůcky (jednoduše)",
+        content: "Psí zubní pasta (bez lidských sladidel), malý měkký kartáček / prstový kartáček (na start), pamlsky na odměnu (mini), klidné místo (ideálně deka). Neřešte první týden dokonalé vyčištění. Řešte nácvik spolupráce."
+      },
+      {
+        id: "14denni-plan",
+        title: "14denní plán (po vteřinách, bez tlaku)",
+        content: "Postupný plán, který buduje spolupráci.",
+        subsections: [
+          {
+            title: "Dny 1–3: pasta je dobrá",
+            content: "Jen ochutnání pasty z prstu. 5–10 vteřin, 1× denně. Cíl: pes se těší, ne utíká."
+          },
+          {
+            title: "Dny 4–6: dotyk zubů prstem",
+            content: "Prst s pastou na špičáky a přední zuby. 5–15 vteřin. Odměna, konec."
+          },
+          {
+            title: "Dny 7–9: prstový kartáček / gáza",
+            content: "1–2 jemné tahy po zubech. Jen přední část, žádné lovy vzadu. Odměna, konec."
+          },
+          {
+            title: "Dny 10–12: kartáček (krátce)",
+            content: "Měkký kartáček, 5–10 vteřin. Zaměřit se na vnější stranu zubů (tam se drží plak nejvíc). Odměna, konec."
+          },
+          {
+            title: "Dny 13–14: prodlužování",
+            content: "Přidat pár vteřin. Stále raději kratší, ale klidné."
+          }
+        ]
+      },
+      {
+        id: "moc-rychle",
+        title: "Jak poznáte, že jdete moc rychle",
+        content: "Pes uhýbá hlavou, ztuhne, olizuje se, snaží se odejít. To není vzdor. To je informace. Zkraťte krok, vraťte se o 1–2 dny zpět."
+      },
+      {
+        id: "motivace",
+        title: "Co může pomoct, když motivace kolísá",
+        content: "Dělat to ve stejný čas (po večeři). Odměna, kterou má pes opravdu rád. Kratší intervaly (klidně 5 vteřin je úspěch)."
+      },
+      {
+        id: "kdy-veterinar",
+        title: "Kdy řešit veterináře",
+        content: "Zápach z tlamy, krvácení dásní. Bolest při jídle, pouštění hraček. Viditelný kámen nebo otok. Štěně, které má výrazně špatný dech dlouhodobě."
+      }
+    ],
+    faq: [
+      { question: "Jak často čistit?", answer: "Ideálně pravidelně (čím častěji, tím kratší a snadnější)." },
+      { question: "Pomůžou dentální pamlsky místo kartáčku?", answer: "Jsou doplněk, ale kartáček je nejúčinnější." },
+      { question: "Co když pes pastu nesnáší?", answer: "Zkuste jinou příchuť nebo začněte jen dotykem bez pasty a přidejte ji později." },
+      { question: "Mám držet tlamu násilím?", answer: "Ne. Cíl je spolupráce, ne zápas." }
     ]
   }
 ];
