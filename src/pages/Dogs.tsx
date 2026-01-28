@@ -19,6 +19,7 @@ import bekka1 from "@/assets/bekka-1.jpg";
 import bekka3 from "@/assets/bekka-3.jpg";
 import bekka4 from "@/assets/bekka-4.jpg";
 import kevina1 from "@/assets/kevina-1.jpg";
+import pawTrail from "@/assets/paw-trail.png";
 
 const breadcrumbs = [
   { name: "Domů", url: "/" },
@@ -167,6 +168,28 @@ const Dogs = () => {
                 Každý náš mazlíček je členem rodiny. Pečlivě dbáme na 
                 zdraví a socializaci všech psů.
               </motion.p>
+              
+              {/* Animated Paw Trail */}
+              <motion.div 
+                className="mt-8 overflow-hidden"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3, delay: 0.5 }}
+              >
+                <motion.img
+                  src={pawTrail}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-full max-w-2xl mx-auto opacity-15"
+                  initial={{ opacity: 0, x: -80 }}
+                  animate={{ opacity: 0.15, x: 0 }}
+                  transition={{ 
+                    duration: 2, 
+                    ease: "easeOut",
+                    delay: 0.6
+                  }}
+                />
+              </motion.div>
             </motion.div>
           </div>
         </section>
