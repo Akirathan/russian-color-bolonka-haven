@@ -1,296 +1,244 @@
 import { Helmet } from "react-helmet-async";
+import { SITE_CONFIG, generateCanonical, isPreviewEnvironment } from "@/lib/seo";
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  article?: {
-    publishedTime?: string;
-    modifiedTime?: string;
-    author?: string;
-    section?: string;
-  };
-  breadcrumbs?: Array<{ name: string; url: string }>;
-  product?: {
-    name: string;
-    description: string;
-    image: string;
-    availability: string;
-  };
-  faq?: Array<{ question: string; answer: string }>;
-  noindex?: boolean;
+interface BreadcrumbItem {
+  name: string;
+  url: string;
 }
 
-const SITE_URL = "https://pikaro.cz";
-const DEFAULT_TITLE = "Chovatelská stanice Pikaro | Ruská barevná bolonka | Plzeň";
-const DEFAULT_DESCRIPTION = "Profesionální chov ruských barevných bolonek od roku 1988. Zdravá štěňata s PP, výstavní šampioni. Chovatelská stanice Pikaro, Plzeň.";
-const DEFAULT_IMAGE = `${SITE_URL}/og-image.jpg`;
+interface FAQItem {
+  question: string;
+  answer: string;
+}
 
-// Check if we're on preview/dev environment
-const isPreview = typeof window !== "undefined" && 
-  (window.location.hostname.includes("lovable.app") || 
-   window.location.hostname.includes("localhost") ||
-   window.location.hostname.includes("127.0.0.1"));
+interface SEOProps {
+  title: string;
+  description: string;
+  keywords?: string;
+  url?: string;
+  image?: string;
+  type?: "website" | "article" | "product";
+  breadcrumbs?: BreadcrumbItem[];
+  faq?: FAQItem[];
+  article?: {
+    datePublished: string;
+    dateModified?: string;
+    author?: string;
+  };
+  noIndex?: boolean;
+}
 
 const SEO = ({
   title,
-  description = DEFAULT_DESCRIPTION,
+  description,
   keywords,
-  image = DEFAULT_IMAGE,
   url,
+  image = "/og-image.jpg",
   type = "website",
-  article,
   breadcrumbs,
-  product,
   faq,
-  noindex = false,
+  article,
+  noIndex = false,
 }: SEOProps) => {
-  const fullTitle = title ? `${title} | Chovatelská stanice Pikaro` : DEFAULT_TITLE;
-  const canonicalUrl = url || SITE_URL;
-  const shouldNoindex = noindex || isPreview;
-
-  // Breadcrumb Schema
-  const breadcrumbSchema = breadcrumbs
-    ? {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: breadcrumbs.map((item, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          name: item.name,
-          item: `${SITE_URL}${item.url}`,
-        })),
-      }
-    : null;
-
-  // Article Schema
-  const articleSchema = article
-    ? {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        headline: title,
-        description: description,
-        image: image,
-        author: {
-          "@type": "Organization",
-          name: "Chovatelská stanice Pikaro",
-          url: SITE_URL,
-        },
-        publisher: {
-          "@type": "Organization",
-          name: "Chovatelská stanice Pikaro",
-          logo: {
-            "@type": "ImageObject",
-            url: `${SITE_URL}/logo.png`,
-          },
-        },
-        datePublished: article.publishedTime,
-        dateModified: article.modifiedTime || article.publishedTime,
-        articleSection: article.section,
-        mainEntityOfPage: {
-          "@type": "WebPage",
-          "@id": canonicalUrl,
-        },
-      }
-    : null;
-
-  // Product Schema
-  const productSchema = product
-    ? {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        name: product.name,
-        description: product.description,
-        image: product.image,
-        brand: {
-          "@type": "Organization",
-          name: "Chovatelská stanice Pikaro",
-        },
-        offers: {
-          "@type": "Offer",
-          availability: `https://schema.org/${product.availability}`,
-          priceCurrency: "CZK",
-        },
-      }
-    : null;
-
-  // FAQ Schema
-  const faqSchema = faq && faq.length > 0
-    ? {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: faq.map((item) => ({
-          "@type": "Question",
-          name: item.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: item.answer,
-          },
-        })),
-      }
-    : null;
-
-  // WebSite Schema (for homepage)
-  const webSiteSchema = type === "website" && !article
-    ? {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "@id": `${SITE_URL}/#website`,
-        name: "Chovatelská stanice Pikaro",
-        url: SITE_URL,
-        description: "Profesionální chov ruských barevných bolonek od roku 1988",
-        inLanguage: "cs-CZ",
-        potentialAction: {
-          "@type": "SearchAction",
-          target: `${SITE_URL}/?s={search_term_string}`,
-          "query-input": "required name=search_term_string",
-        },
-      }
-    : null;
+  const isPreview = isPreviewEnvironment();
+  const shouldNoIndex = noIndex || isPreview;
+  
+  // Always use production canonical
+  const canonicalUrl = url ? generateCanonical(url.replace(SITE_CONFIG.url, "")) : generateCanonical("/");
+  const fullImageUrl = image.startsWith("http") ? image : `${SITE_CONFIG.url}${image}`;
+  
+  // Truncate title to ~60 chars, description to ~155 chars
+  const safeTitle = title.length > 60 ? title.substring(0, 57) + "..." : title;
+  const safeDescription = description.length > 155 ? description.substring(0, 152) + "..." : description;
 
   // Organization Schema
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": `${SITE_URL}/#organization`,
-    name: "Chovatelská stanice Pikaro",
-    alternateName: "CHS Pikaro",
-    url: SITE_URL,
-    logo: {
-      "@type": "ImageObject",
-      url: `${SITE_URL}/logo.png`,
-      width: 200,
-      height: 200,
-    },
-    image: DEFAULT_IMAGE,
-    description: "Profesionální chovatelská stanice ruských barevných bolonek s více než 35 lety zkušeností. Mezinárodně chráněný název od roku 1997.",
-    foundingDate: "1988",
-    email: "ipikaro@gmail.com",
-    telephone: "+420724174659",
+    "@id": `${SITE_CONFIG.url}/#organization`,
+    name: SITE_CONFIG.name,
+    alternateName: SITE_CONFIG.shortName,
+    url: SITE_CONFIG.url,
+    logo: `${SITE_CONFIG.url}/logo.png`,
+    email: SITE_CONFIG.email,
+    telephone: SITE_CONFIG.phone,
+    foundingDate: SITE_CONFIG.foundingDate,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "U Černého mostu 131/13",
-      addressLocality: "Plzeň",
-      postalCode: "312 00",
-      addressCountry: "CZ",
-    },
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+420724174659",
-      contactType: "customer service",
-      availableLanguage: ["Czech"],
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "Česká republika",
-    },
-  };
-
-  // Place/LocalBusiness Schema
-  const placeSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": `${SITE_URL}/#localbusiness`,
-    name: "Chovatelská stanice Pikaro",
-    image: DEFAULT_IMAGE,
-    url: SITE_URL,
-    telephone: "+420724174659",
-    email: "ipikaro@gmail.com",
-    priceRange: "$$",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "U Černého mostu 131/13",
-      addressLocality: "Plzeň",
-      postalCode: "312 00",
-      addressRegion: "Plzeňský kraj",
-      addressCountry: "CZ",
+      streetAddress: SITE_CONFIG.address.street,
+      addressLocality: SITE_CONFIG.address.city,
+      postalCode: SITE_CONFIG.address.postalCode,
+      addressRegion: SITE_CONFIG.address.region,
+      addressCountry: SITE_CONFIG.address.country,
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 49.7384,
-      longitude: 13.3776,
+      latitude: SITE_CONFIG.geo.latitude,
+      longitude: SITE_CONFIG.geo.longitude,
     },
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      opens: "09:00",
-      closes: "18:00",
-    },
-    sameAs: [],
+    areaServed: SITE_CONFIG.serviceAreas.map(area => ({
+      "@type": "City",
+      name: area,
+    })),
   };
+
+  // LocalBusiness Schema
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${SITE_CONFIG.url}/#localbusiness`,
+    name: SITE_CONFIG.name,
+    description: "Profesionální chov ruských barevných bolonek v Plzni od roku 1988. Zdravá štěňata s PP, výstavní šampioni.",
+    url: SITE_CONFIG.url,
+    telephone: SITE_CONFIG.phone,
+    email: SITE_CONFIG.email,
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: SITE_CONFIG.address.street,
+      addressLocality: SITE_CONFIG.address.city,
+      postalCode: SITE_CONFIG.address.postalCode,
+      addressRegion: SITE_CONFIG.address.region,
+      addressCountry: SITE_CONFIG.address.country,
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: SITE_CONFIG.geo.latitude,
+      longitude: SITE_CONFIG.geo.longitude,
+    },
+    areaServed: SITE_CONFIG.serviceAreas,
+  };
+
+  // WebSite Schema
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_CONFIG.url}/#website`,
+    url: SITE_CONFIG.url,
+    name: SITE_CONFIG.name,
+    description: safeDescription,
+    inLanguage: SITE_CONFIG.language,
+    publisher: {
+      "@id": `${SITE_CONFIG.url}/#organization`,
+    },
+  };
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbs.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: generateCanonical(item.url),
+    })),
+  } : null;
+
+  // Article Schema
+  const articleSchema = article ? {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: safeTitle,
+    description: safeDescription,
+    datePublished: article.datePublished,
+    dateModified: article.dateModified || article.datePublished,
+    author: {
+      "@type": "Organization",
+      name: SITE_CONFIG.name,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_CONFIG.name,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_CONFIG.url}/logo.png`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": canonicalUrl,
+    },
+  } : null;
+
+  // FAQ Schema
+  const faqSchema = faq && faq.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map(item => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  } : null;
 
   return (
     <Helmet>
-      {/* Primary Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="title" content={fullTitle} />
-      <meta name="description" content={description} />
+      {/* Basic Meta */}
+      <title>{safeTitle}</title>
+      <meta name="description" content={safeDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
-      
-      {/* Canonical & Robots */}
+      <meta name="author" content={SITE_CONFIG.name} />
       <link rel="canonical" href={canonicalUrl} />
-      {shouldNoindex ? (
+      <meta name="language" content={SITE_CONFIG.language} />
+      
+      {/* Robots */}
+      {shouldNoIndex ? (
         <meta name="robots" content="noindex, nofollow" />
       ) : (
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       )}
-
-      {/* Language & Geo */}
-      <meta name="language" content="Czech" />
-      <meta httpEquiv="content-language" content="cs" />
-      <meta name="geo.region" content="CZ-PL" />
-      <meta name="geo.placename" content="Plzeň" />
-
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={article ? "article" : type} />
+      
+      {/* Open Graph */}
+      <meta property="og:type" content={type} />
       <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <meta property="og:title" content={safeTitle} />
+      <meta property="og:description" content={safeDescription} />
+      <meta property="og:image" content={fullImageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:locale" content="cs_CZ" />
-      <meta property="og:site_name" content="Chovatelská stanice Pikaro" />
-
-      {/* Twitter */}
+      <meta property="og:locale" content={SITE_CONFIG.locale} />
+      <meta property="og:site_name" content={SITE_CONFIG.name} />
+      
+      {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={canonicalUrl} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:title" content={safeTitle} />
+      <meta name="twitter:description" content={safeDescription} />
+      <meta name="twitter:image" content={fullImageUrl} />
+      
+      {/* Geo Tags */}
+      <meta name="geo.region" content={`${SITE_CONFIG.address.country}-${SITE_CONFIG.address.region}`} />
+      <meta name="geo.placename" content={SITE_CONFIG.address.city} />
+      <meta name="geo.position" content={`${SITE_CONFIG.geo.latitude};${SITE_CONFIG.geo.longitude}`} />
+      <meta name="ICBM" content={`${SITE_CONFIG.geo.latitude}, ${SITE_CONFIG.geo.longitude}`} />
 
-      {/* Article specific */}
-      {article?.publishedTime && (
-        <meta property="article:published_time" content={article.publishedTime} />
-      )}
-      {article?.modifiedTime && (
-        <meta property="article:modified_time" content={article.modifiedTime} />
-      )}
-      {article?.author && <meta property="article:author" content={article.author} />}
-      {article?.section && <meta property="article:section" content={article.section} />}
-
-      {/* Structured Data - Always include Organization & Place */}
-      <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-      <script type="application/ld+json">{JSON.stringify(placeSchema)}</script>
-
-      {/* Conditional Schemas */}
-      {webSiteSchema && (
-        <script type="application/ld+json">{JSON.stringify(webSiteSchema)}</script>
-      )}
+      {/* JSON-LD Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(organizationSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(localBusinessSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(websiteSchema)}
+      </script>
       {breadcrumbSchema && (
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       )}
       {articleSchema && (
-        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
-      )}
-      {productSchema && (
-        <script type="application/ld+json">{JSON.stringify(productSchema)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
       )}
       {faqSchema && (
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
       )}
     </Helmet>
   );

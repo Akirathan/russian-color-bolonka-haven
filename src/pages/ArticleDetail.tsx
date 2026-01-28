@@ -50,13 +50,12 @@ const ArticleDetail = () => {
       <SEO
         title={article.seoTitle}
         description={article.metaDescription}
-        url={`https://pikaro.cz/clanky/${article.slug}`}
+        url={`/clanky/${article.slug}`}
         type="article"
         article={{
-          publishedTime: toISODate(article.date),
-          modifiedTime: toISODate(article.date),
+          datePublished: toISODate(article.date),
+          dateModified: toISODate(article.date),
           author: "Chovatelská stanice Pikaro",
-          section: article.category,
         }}
         breadcrumbs={breadcrumbs}
         faq={article.faq}

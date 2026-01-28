@@ -98,10 +98,10 @@ const Puppies = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Štěňata ruské barevné bolonky"
-        description="Štěňata ruské barevné bolonky k prodeji. Zdravá štěňata s PP, očkovaná, čipovaná. Rezervace štěňat, aktuální vrhy. Chovatelská stanice Pikaro."
-        keywords="štěňata bolonky, ruská barevná bolonka štěně, štěňata k prodeji, bolonka prodej, Pikaro štěňata"
-        url="https://pikaro.cz/stenata"
+        title="Štěňata ruské bolonky | CHS Pikaro Plzeň"
+        description="Štěňata ruské barevné bolonky k prodeji. Zdravá, socializovaná štěňata s PP, očkovaná, čipovaná. Aktuální vrhy od CHS Pikaro v Plzni."
+        keywords="štěňata ruské bolonky, štěně ruské barevné bolonky, bolonka zwetna štěňata, štěně bolonky Plzeň, ruská bolonka štěně"
+        url="/stenata"
         breadcrumbs={[
           { name: "Domů", url: "/" },
           { name: "Štěňata", url: "/stenata" },
@@ -426,6 +426,48 @@ const Puppies = () => {
                 </ul>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* Useful Articles - Internal Linking */}
+        <section className="py-16 bg-background overflow-hidden">
+          <div className="container mx-auto px-6">
+            <motion.div 
+              className="max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="font-display text-2xl font-semibold text-foreground mb-6 text-center">
+                Užitečné články pro budoucí majitele
+              </h2>
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {[
+                  { slug: "vychova-stenete-ruske-barevne-bolonky", title: "Výchova štěněte", desc: "Socializace, rutina, samota" },
+                  { slug: "bolonka-do-bytu", title: "Bolonka do bytu", desc: "Štěkání, citlivost, režim" },
+                  { slug: "pece-o-srst-bolonky-bez-stresu", title: "Péče o srst", desc: "Česání, koupání, salon" },
+                  { slug: "vyziva-stenete-bolonky", title: "Výživa štěněte", desc: "Krmení, dávkování, režim" },
+                  { slug: "zdravi-bolonky-prevence", title: "Zdraví a prevence", desc: "Patella, oči, zuby" },
+                ].map((article) => (
+                  <Link
+                    key={article.slug}
+                    to={`/clanky/${article.slug}`}
+                    className="card-warm group hover:border-primary/30 transition-colors p-4"
+                  >
+                    <h3 className="font-medium text-foreground group-hover:text-primary transition-colors text-sm">
+                      {article.title}
+                    </h3>
+                    <p className="text-xs text-muted-foreground mt-1">{article.desc}</p>
+                  </Link>
+                ))}
+              </div>
+              <div className="text-center mt-6">
+                <Link to="/clanky" className="text-sm text-primary hover:underline">
+                  Zobrazit všechny články →
+                </Link>
+              </div>
+            </motion.div>
           </div>
         </section>
       </main>

@@ -129,10 +129,10 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Kontakt"
-        description="Kontaktujte chovatelskou stanici Pikaro. Adresa: U Černého mostu 131/13, Plzeň. Telefon: +420 724 174 659. Email: ipikaro@gmail.com"
-        keywords="kontakt Pikaro, chovatelská stanice kontakt, bolonka Plzeň, štěňata kontakt"
-        url="https://pikaro.cz/kontakt"
+        title="Kontakt | CHS Pikaro Plzeň"
+        description="Kontaktujte CHS Pikaro v Plzni. Tel: +420 724 174 659, email: ipikaro@gmail.com. Adresa: U Černého mostu 131/13, 312 00 Plzeň."
+        keywords="kontakt chovatelská stanice Plzeň, ruská bolonka Plzeň, štěně bolonky kontakt, CHS Pikaro"
+        url="/kontakt"
         breadcrumbs={[
           { name: "Domů", url: "/" },
           { name: "Kontakt", url: "/kontakt" },

@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import AboutUs from "./pages/AboutUs";
 import About from "./pages/About";
@@ -25,7 +25,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/o-nas" element={<AboutUs />} />
-          <Route path="/o-plemeni" element={<About />} />
+          {/* SEO-friendly breed URL with redirect from old */}
+          <Route path="/plemeno/ruska-barevna-bolonka" element={<About />} />
+          <Route path="/o-plemeni" element={<Navigate to="/plemeno/ruska-barevna-bolonka" replace />} />
           <Route path="/nasi-psi" element={<Dogs />} />
           <Route path="/stenata" element={<Puppies />} />
           <Route path="/stenata/vrh-leden-2026" element={<LitterDetail />} />

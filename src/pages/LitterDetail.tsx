@@ -21,17 +21,11 @@ const LitterDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Vrh leden 2026 | Štěňata ruské barevné bolonky"
-        description="Štěňata ruské barevné bolonky narozená 9. ledna 2026. 6 štěňat - 2 pejsci a 4 fenky. Chovatelská stanice Pikaro, Plzeň."
-        keywords="štěňata bolonky, vrh leden 2026, ruská barevná bolonka štěně, Pikaro"
-        url="https://pikaro.cz/stenata/vrh-leden-2026"
+        title="Štěňata bolonky – vrh leden 2026 | Plzeň – Pikaro"
+        description="Štěňata ruské barevné bolonky z vrhu leden 2026. 6 štěňat s PP od CHS Pikaro v Plzni. Zdravá, socializovaná, k odběru od března."
+        keywords="štěňata bolonky 2026, štěně bolonky Plzeň, ruská bolonka štěně, štěňata ruské bolonky"
+        url="/stenata/vrh-leden-2026"
         breadcrumbs={breadcrumbs}
-        product={{
-          name: "Štěňata ruské barevné bolonky - Vrh leden 2026",
-          description: "6 štěňat ruské barevné bolonky narozených 9. ledna 2026. 2 pejsci a 4 fenky.",
-          image: litterMain,
-          availability: "PreOrder",
-        }}
       />
       <Header />
       <main className="pt-20">
