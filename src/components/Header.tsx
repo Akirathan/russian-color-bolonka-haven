@@ -9,6 +9,7 @@ const Header = () => {
 
   const navLinks = [
     { href: "/", label: "Domů" },
+    { href: "/o-nas", label: "O nás" },
     { href: "/o-plemeni", label: "O plemeni" },
     { href: "/nasi-psi", label: "Naši psi" },
     { href: "/stenata", label: "Štěňata" },
@@ -20,18 +21,18 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
-          <Link to="/" className="font-display text-2xl font-semibold text-foreground">
-            Ruská Barevná Bolonka
+          <Link to="/" className="font-display text-xl md:text-2xl font-semibold text-foreground">
+            <span className="hidden sm:inline">Chovatelská stanice</span> Pikaro
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
                 className={cn(
-                  "transition-colors font-medium",
+                  "transition-colors font-medium text-sm",
                   location.pathname === link.href
                     ? "text-primary"
                     : "text-muted-foreground hover:text-primary"
@@ -44,7 +45,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-foreground"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -54,7 +55,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden pt-4 pb-2 animate-fade-in">
+          <div className="lg:hidden pt-4 pb-2 animate-fade-in">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
