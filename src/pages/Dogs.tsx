@@ -9,7 +9,7 @@ import dog3 from "@/assets/dog-3.jpg";
 
 const dogs = [
   {
-    name: "Vinný vrch",
+    name: "Oskar",
     fullName: "Luk-Cvet Vinný vrch",
     description: "Krásná fenka s výbornou povahou a úspěchy na výstavách. Klubová vítězka junior 2020.",
     image: dog1,
