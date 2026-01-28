@@ -108,7 +108,7 @@ const AboutUs = () => {
                 variants={fadeInUp}
                 transition={{ duration: 0.6 }}
               >
-                S láskou chováme ruské barevné bolonky již přes 35 let
+                S láskou chováme psy již přes 35 let
               </motion.p>
             </motion.div>
 
