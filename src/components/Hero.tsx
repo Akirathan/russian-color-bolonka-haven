@@ -98,12 +98,12 @@ const Hero = () => {
 
       {/* Decorative bouncing paw icon */}
       <motion.div
-        className="absolute bottom-24 right-6 md:bottom-28 md:right-8 z-10 hidden sm:block"
-        initial={prefersReducedMotion ? { opacity: 0.4 } : { opacity: 0, y: 0 }}
+        className="absolute bottom-24 right-6 md:bottom-28 md:right-8 z-10"
+        initial={prefersReducedMotion ? { opacity: 0.6 } : { opacity: 0, y: 0 }}
         animate={prefersReducedMotion 
-          ? { opacity: 0.4 } 
+          ? { opacity: 0.6 } 
           : { 
-              opacity: 0.4, 
+              opacity: 0.6, 
               y: [0, -12, 0, -6, 0],
             }
         }
@@ -120,7 +120,7 @@ const Hero = () => {
           transition: { duration: 0.3 }
         }}
       >
-        <PawIcon className="w-10 h-10 md:w-12 md:h-12 text-primary drop-shadow-sm" />
+        <PawIcon className="w-8 h-8 md:w-12 md:h-12 text-primary drop-shadow-md" />
       </motion.div>
 
       {/* Decorative scroll indicator */}
