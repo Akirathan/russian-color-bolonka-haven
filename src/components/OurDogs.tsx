@@ -1,28 +1,28 @@
-import dog1 from "@/assets/dog-1.jpg";
-import dog2 from "@/assets/dog-2.jpg";
-import dog3 from "@/assets/dog-3.jpg";
+import oskar4 from "@/assets/oskar-4.jpg";
+import bekka1 from "@/assets/bekka-1.jpg";
+import kevina1 from "@/assets/kevina-1.jpg";
 
 const dogs = [
   {
-    name: "Bella",
-    description: "Láskyplná a hravá holčička, šampionka České republiky",
-    image: dog1,
-    age: "2 roky",
-    color: "Krémová",
+    name: "Oskar",
+    description: "Klidný, přátelský a povahově vyrovnaný krycí pes",
+    image: oskar4,
+    age: "5 let",
+    color: "Hnědá se znaky",
   },
   {
-    name: "Baron",
-    description: "Inteligentní a klidný chlapeček, interšampion",
-    image: dog2,
-    age: "3 roky",
-    color: "Zlatavá",
+    name: "Bekka",
+    description: "Fenka s krásně klidnou, stabilní povahou a velkým srdcem",
+    image: bekka1,
+    age: "4 roky",
+    color: "Černá",
   },
   {
-    name: "Teddy",
-    description: "Okouzlující štěně, připraveno k nastěhování do nového domova",
-    image: dog3,
-    age: "4 měsíce",
-    color: "Zrzavá s bílou",
+    name: "Kevina",
+    description: "Uchovněná fenka, rodinná parťačka pro radost a pohodu",
+    image: kevina1,
+    age: "10 let",
+    color: "Černá",
   },
 ];
 
