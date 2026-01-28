@@ -9,10 +9,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Domů"
-        description="Chovatelská stanice Pikaro - profesionální chov ruských barevných bolonek od roku 1988. Zdravá štěňata s PP, výstavní šampioni. Plzeň."
-        keywords="ruská barevná bolonka, štěňata, chovatelská stanice Pikaro, Plzeň, bolonka štěně, malý pes"
-        url="https://pikaro.cz/"
+        title="CHS Pikaro – ruská barevná bolonka | Plzeň"
+        description="Profesionální chov ruských barevných bolonek od roku 1988. Zdravá štěňata s PP, výstavní šampioni. CHS Pikaro Plzeň."
+        keywords="ruská barevná bolonka, štěňata ruské bolonky, ruská bolonka štěně, bolonka zwetna štěňata, chovatelská stanice Plzeň"
+        url="/"
         breadcrumbs={[{ name: "Domů", url: "/" }]}
       />
       <SnowEffect />

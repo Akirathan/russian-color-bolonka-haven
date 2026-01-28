@@ -7,7 +7,7 @@ import { motion, useReducedMotion } from "framer-motion";
 
 const breadcrumbs = [
   { name: "Domů", url: "/" },
-  { name: "O plemeni", url: "/o-plemeni" },
+  { name: "O plemeni", url: "/plemeno/ruska-barevna-bolonka" },
 ];
 
 const features = [
@@ -160,13 +160,13 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="O plemeni ruská barevná bolonka"
-        description="Ruská barevná bolonka - standard plemene, charakteristika, historie. Malý, hypoalergenní pes ideální do bytu. Vše o tomto úžasném plemeni."
-        keywords="ruská barevná bolonka, standard plemene, bolonka charakteristika, bolonka povaha, malý pes, hypoalergenní pes"
-        url="https://pikaro.cz/o-plemeni"
+        title="Ruská barevná bolonka: povaha, péče, byt | CHS Pikaro Plzeň"
+        description="Ruská barevná bolonka: povaha, nároky na péči, vhodnost do bytu. Standard plemene FCI, historie. Vše od zkušeného chovatele v Plzni."
+        keywords="ruská barevná bolonka povaha, bolonka do bytu, ruská bolonka nároky, standard plemene, bolonka zkušenosti"
+        url="/plemeno/ruska-barevna-bolonka"
         breadcrumbs={[
           { name: "Domů", url: "/" },
-          { name: "O plemeni", url: "/o-plemeni" },
+          { name: "O plemeni", url: "/plemeno/ruska-barevna-bolonka" },
         ]}
       />
       <Header />

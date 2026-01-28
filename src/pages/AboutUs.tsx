@@ -68,10 +68,10 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="O nás"
-        description="Chovatelská stanice Pikaro - s láskou chováme ruské barevné bolonky od roku 1988. Mezinárodně chráněný název stanice. Seznamte se s naší historií a hodnotami."
-        keywords="chovatelská stanice Pikaro, ruská barevná bolonka, chov bolonek, Plzeň, o nás"
-        url="https://pikaro.cz/o-nas"
+        title="O nás | CHS Pikaro – chov bolonek od 1988"
+        description="CHS Pikaro – rodinný chov ruských barevných bolonek v Plzni od roku 1988. Mezinárodně chráněný název stanice od 1997. 35+ let zkušeností."
+        keywords="chovatelská stanice Pikaro, chov bolonek Plzeň, ruská bolonka chovatel, historie chovu"
+        url="/o-nas"
         breadcrumbs={[
           { name: "Domů", url: "/" },
           { name: "O nás", url: "/o-nas" },

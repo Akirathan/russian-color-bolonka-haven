@@ -105,10 +105,10 @@ const Dogs = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Naši psi"
-        description="Seznamte se s našimi ruské barevné bolonky - výstavní šampioni, zdravotní testy, rodokmen. Chovatelská stanice Pikaro, Plzeň."
-        keywords="ruská barevná bolonka, naši psi, chovní psi, šampioni, rodokmen, Pikaro"
-        url="https://pikaro.cz/nasi-psi"
+        title="Naši psi – ruská barevná bolonka | CHS Pikaro Plzeň"
+        description="Chovní jedinci ruské barevné bolonky. Výstavní šampioni s PP, zdravotní testy (patella, DNA). CHS Pikaro Plzeň."
+        keywords="chovní psi bolonka, ruská bolonka šampion, krycí pes bolonka Plzeň, zdravotní testy bolonka"
+        url="/nasi-psi"
         breadcrumbs={[
           { name: "Domů", url: "/" },
           { name: "Naši psi", url: "/nasi-psi" },

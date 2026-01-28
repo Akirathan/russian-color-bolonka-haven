@@ -44,10 +44,10 @@ const Articles = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Články o ruské barevné bolonce"
-        description="Užitečné články o výchově, péči a zdraví ruské barevné bolonky. Tipy pro majitele, výživa, péče o srst. Chovatelská stanice Pikaro."
-        keywords="bolonka články, výchova bolonky, péče o bolonku, bolonka výživa, bolonka zdraví, tipy pro majitele"
-        url="https://pikaro.cz/clanky"
+        title="Výchova a péče o bolonku | CHS Pikaro Plzeň"
+        description="Odborné články o výchově štěněte bolonky, péči o srst, zdraví a životě s bolonkou v bytě. Samota, čistota, štěkání – rady od CHS Pikaro."
+        keywords="výchova štěněte bolonky, samota bolonka, čistota štěněte bolonky, péče o srst bolonky, štěkání bolonka v bytě"
+        url="/clanky"
         breadcrumbs={[
           { name: "Domů", url: "/" },
           { name: "Články", url: "/clanky" },

@@ -11,7 +11,7 @@ const Header = () => {
   const navLinks = [
     { href: "/", label: "Domů" },
     { href: "/o-nas", label: "O nás" },
-    { href: "/o-plemeni", label: "O plemeni" },
+    { href: "/plemeno/ruska-barevna-bolonka", label: "O plemeni" },
     { href: "/nasi-psi", label: "Naši psi" },
     { href: "/stenata", label: "Štěňata" },
     { href: "/clanky", label: "Články" },
