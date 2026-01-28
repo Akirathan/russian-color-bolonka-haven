@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -6,6 +7,11 @@ import { Link } from "react-router-dom";
 import { articles, categories } from "@/data/articlesData";
 
 const Articles = () => {
+  const [selectedCategory, setSelectedCategory] = useState("Všechny");
+
+  const filteredArticles = selectedCategory === "Všechny"
+    ? articles
+    : articles.filter(article => article.category === selectedCategory);
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -40,8 +46,9 @@ const Articles = () => {
               {categories.map((category) => (
                 <button
                   key={category}
+                  onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                    category === "Všechny"
+                    category === selectedCategory
                       ? "bg-primary text-primary-foreground"
                       : "bg-secondary text-muted-foreground hover:bg-primary/10 hover:text-primary"
                   }`}
@@ -57,7 +64,7 @@ const Articles = () => {
         <section className="py-16 bg-background">
           <div className="container mx-auto px-6">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {articles.map((article) => (
+              {filteredArticles.map((article) => (
                 <Link to={`/clanky/${article.slug}`} key={article.id}>
                   <article className="card-warm group cursor-pointer h-full">
                     <div className="flex items-center gap-3 mb-4">
