@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Dogs from "./pages/Dogs";
 import Puppies from "./pages/Puppies";
 import Articles from "./pages/Articles";
+import ArticleDetail from "./pages/ArticleDetail";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/nasi-psi" element={<Dogs />} />
           <Route path="/stenata" element={<Puppies />} />
           <Route path="/clanky" element={<Articles />} />
+          <Route path="/clanky/:slug" element={<ArticleDetail />} />
           <Route path="/kontakt" element={<ContactPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
