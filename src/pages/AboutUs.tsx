@@ -178,9 +178,9 @@ const AboutUs = () => {
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   {[
                     <>Naše chovatelská stanice <strong className="text-foreground">PIKARO</strong> byla založena v roce 1988 a od roku 1997 je její název mezinárodně chráněn.</>,
-                    "V prvních letech po založení jsme chovali plemeno dalmatin a trpasličí pinč. Postupem času jsme se začali poohlížet po plemeni menším, klidnějším, vyrovnanějším.",
-                    "Vlastně náhodou díky našim přátelům, kteří chovali plemeno boloňský psík, jsme se seznámili s tímto skvělým, malým, houževnatým pejskem. V té době jsem měla jediný požadavek — chtěla jsem plemeno, které dle standardu může mít více barev.",
-                    <>No a výběr byl pro nás jasný: <strong className="text-foreground">ruská barevná bolonka</strong>. Malý, harmonicky stavěný pejsek, který působí atraktivně díky efektně zbarvené bohaté srsti.</>
+                    "V prvních letech jsme se věnovali plemenům dalmatin a trpasličí pinč, postupně jsme ale hledali menšího psa s klidnější a vyrovnanější povahou do rodinného režimu.",
+                    <>Díky našim přátelům, kteří chovali boloňského psíka, jsme se blíž seznámili se světem „boleneček" – malých, odolných a překvapivě houževnatých psů. Ivana měla v té době jedno přání: plemeno, které může být podle standardu ve více barevných variantách. A právě tehdy pro nás byla volba jasná: <strong className="text-foreground">ruská barevná bolonka</strong>.</>,
+                    <>Ruská bolonka je malý, harmonicky stavěný pes s bohatou srstí a milou, kontaktní povahou. Na našem chovu si nejvíc zakládáme na tom, aby štěňata odcházela do nových rodin nejen krásná, ale hlavně <strong className="text-foreground">zdravá, dobře socializovaná a povahově vyrovnaná</strong>.</>
                   ].map((text, index) => (
                     <motion.p 
                       key={index}
