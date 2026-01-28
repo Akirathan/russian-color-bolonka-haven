@@ -11,6 +11,8 @@ const Header = () => {
     { href: "/", label: "Domů" },
     { href: "/o-plemeni", label: "O plemeni" },
     { href: "/nasi-psi", label: "Naši psi" },
+    { href: "/stenata", label: "Štěňata" },
+    { href: "/clanky", label: "Články" },
     { href: "/kontakt", label: "Kontakt" },
   ];
 
