@@ -20,7 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/russian-color-bolonka-haven">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/o-nas" element={<AboutUs />} />
