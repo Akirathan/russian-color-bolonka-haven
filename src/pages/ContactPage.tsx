@@ -195,7 +195,7 @@ const ContactPage = () => {
                     Chovatelská stanice Pikaro
                   </h2>
                   <p className="text-muted-foreground text-sm mb-6">
-                    Chov ruských barevných bolonek s láskou od roku 1988. 
+                    Chov psů s láskou od roku 1988. 
                     Mezinárodně chráněný název stanice od roku 1997.
                   </p>
                 </motion.div>
