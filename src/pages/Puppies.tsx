@@ -12,8 +12,8 @@ const currentLitters = [
     available: 6,
     totalPuppies: 6,
     puppiesDetail: "2 pejsci, 4 fenky",
-    colors: ["Černá"],
-    readyDate: "Začátek března 2026",
+    colors: ["Černá", "Hnědá", "Světlá"],
+    readyDate: "7. března 2026",
     image: dog3,
   },
 ];
