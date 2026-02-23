@@ -6,11 +6,7 @@ import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Trophy, Heart, Camera, ChevronRight, ChevronLeft } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import oskar1 from "@/assets/oskar-1.jpg";
 import oskar2 from "@/assets/oskar-2.jpg";
 import oskar3 from "@/assets/oskar-3.jpg";
@@ -38,15 +34,10 @@ const dogs = [
     color: "Hnědá se znaky",
     weight: "3,5 kg",
     height: "25 cm",
-    titles: [
-      "Velmi nadějná 1",
-      "Výborný 1 CAJC",
-      "Klubový vítěz junior 2020",
-      "BOS",
-      "Výborný 1, vítěz třídy mladých",
-    ],
+    titles: ["Velmi nadějná 1", "Výborný 1 CAJC", "Klubový vítěz junior 2020", "BOS", "Výborný 1, vítěz třídy mladých"],
     healthTests: ["Patella: 0/1", "Oči: bez nálezu na dědičné choroby"],
-    character: "Oskar je náš krycí pes – klidný, přátelský a povahově velmi vyrovnaný parťák, se kterým je radost fungovat v každodenním režimu. Vyniká kontaktní, jemnou povahou a schopností se snadno zklidnit, což je přesně to, co u bolonky chceme předávat dál. V chovu se dlouhodobě osvědčuje – jeho potomci bývají zdravě stavění, krásně socializovatelní a povahově úžasní. Právě proto je Oskar pro nás důležitou součástí chovu a pečlivě vybíraným tatínkem budoucích vrhů.",
+    character:
+      "Oskar je náš krycí pes – klidný, přátelský a povahově velmi vyrovnaný parťák, se kterým je radost fungovat v každodenním režimu. Vyniká kontaktní, jemnou povahou a schopností se snadno zklidnit, což je přesně to, co u bolonky chceme předávat dál. V chovu se dlouhodobě osvědčuje – jeho potomci bývají zdravě stavění, krásně socializovatelní a povahově úžasní. Právě proto je Oskar pro nás důležitou součástí chovu a pečlivě vybíraným tatínkem budoucích vrhů.",
     litters: [],
   },
   {
@@ -60,19 +51,17 @@ const dogs = [
     color: "Černá",
     weight: "3,5 kg",
     height: "25 cm",
-    titles: [
-      "Výborná 1",
-      "CAJC",
-      "BOJ",
-    ],
+    titles: ["Výborná 1", "CAJC", "BOJ"],
     healthTests: ["Patella: 0/0", "Oči: Clear"],
-    character: "Bekka je fenka s krásně klidnou, stabilní povahou a velkým srdcem. Je přátelská, jemná a velmi vnímavá – dokáže se rychle přizpůsobit a v domácnosti působí jako 'uklidňující kotva'. Jako máma je pečlivá a trpělivá, štěňatům dává pocit bezpečí a zároveň je přirozeně vede k samostatnosti. Právě tahle kombinace klidu a citlivosti je pro nás v chovu zásadní, protože vytváří skvělý základ pro budoucí rodinné parťáky.",
+    character:
+      "Rebekka je fenka s krásně klidnou, stabilní povahou a velkým srdcem. Je přátelská, jemná a velmi vnímavá – dokáže se rychle přizpůsobit a v domácnosti působí jako 'uklidňující kotva'. Jako máma je pečlivá a trpělivá, štěňatům dává pocit bezpečí a zároveň je přirozeně vede k samostatnosti. Právě tahle kombinace klidu a citlivosti je pro nás v chovu zásadní, protože vytváří skvělý základ pro budoucí rodinné parťáky.",
     litters: [],
   },
   {
     name: "Kevina",
     fullName: "Amálka Hamvaley",
-    description: "Uchovněná fenka, dnes hlavně rodinná parťačka pro radost, klid a pohodu.",
+    description:
+      "Uchovněná fenka, dnes hlavně rodinná parťačka pro radost, klid a pohodu, která je stále vůdkyní naší smečky.",
     image: kevina1,
     gallery: [kevina1, kevina1, kevina1],
     age: "10 let",
@@ -80,13 +69,10 @@ const dogs = [
     color: "Černá",
     weight: "3,5 kg",
     height: "25 cm",
-    titles: [
-      "Výborná 1",
-      "CAC",
-      "BOB",
-    ],
+    titles: ["Výborná 1", "CAC", "BOB"],
     healthTests: [],
-    character: "Kevina je uchovněná fenka, která už u nás není aktivně v chovu – dnes hlavně rodinná parťačka pro radost, klid a pohodu.",
+    character:
+      "Kevina je uchovněná fenka, která už u nás není aktivně v chovu – dnes hlavně rodinná parťačka pro radost, klid a pohodu.",
     litters: [],
   },
 ];
@@ -109,7 +95,7 @@ const Dogs = () => {
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 }
+    visible: { opacity: 1, y: 0 },
   };
 
   const staggerContainer = {
@@ -117,9 +103,9 @@ const Dogs = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: prefersReducedMotion ? 0 : 0.1
-      }
-    }
+        staggerChildren: prefersReducedMotion ? 0 : 0.1,
+      },
+    },
   };
 
   return (
@@ -140,37 +126,23 @@ const Dogs = () => {
         <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
             <Breadcrumbs items={breadcrumbs} className="mb-8 justify-center" />
-            <motion.div 
-              className="text-center mb-12"
-              initial="hidden"
-              animate="visible"
-              variants={staggerContainer}
-            >
-              <motion.span 
+            <motion.div className="text-center mb-12" initial="hidden" animate="visible" variants={staggerContainer}>
+              <motion.span
                 className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4"
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
               >
                 Naši mazlíčci
               </motion.span>
-              <motion.h1 
-                className="section-heading mb-4"
-                variants={fadeInUp}
-                transition={{ duration: 0.6 }}
-              >
+              <motion.h1 className="section-heading mb-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
                 Seznamte se s našimi psy
               </motion.h1>
-              <motion.p 
-                className="section-subheading mx-auto"
-                variants={fadeInUp}
-                transition={{ duration: 0.6 }}
-              >
-                Každý náš mazlíček je členem rodiny. Pečlivě dbáme na 
-                zdraví a socializaci všech psů.
+              <motion.p className="section-subheading mx-auto" variants={fadeInUp} transition={{ duration: 0.6 }}>
+                Každý náš mazlíček je členem rodiny. Pečlivě dbáme na zdraví a socializaci všech psů.
               </motion.p>
-              
+
               {/* Animated Paw Trail */}
-              <motion.div 
+              <motion.div
                 className="mt-8 overflow-hidden"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -183,10 +155,10 @@ const Dogs = () => {
                   className="w-full max-w-2xl mx-auto opacity-45 sepia saturate-150 hue-rotate-[-10deg]"
                   initial={{ opacity: 0, x: -80 }}
                   animate={{ opacity: 0.45, x: 0 }}
-                  transition={{ 
-                    duration: 2, 
+                  transition={{
+                    duration: 2,
                     ease: "easeOut",
-                    delay: 0.6
+                    delay: 0.6,
                   }}
                 />
               </motion.div>
@@ -199,8 +171,8 @@ const Dogs = () => {
           <div className="container mx-auto px-6">
             <div className="space-y-16">
               {dogs.map((dog, index) => (
-                <motion.article 
-                  key={dog.name} 
+                <motion.article
+                  key={dog.name}
                   className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-start ${
                     index % 2 === 1 ? "lg:flex-row-reverse" : ""
                   }`}
@@ -210,14 +182,14 @@ const Dogs = () => {
                   transition={{ duration: 0.7, delay: 0.1 }}
                 >
                   {/* Image Gallery */}
-                  <motion.div 
+                  <motion.div
                     className={`space-y-4 ${index % 2 === 1 ? "lg:order-2" : ""}`}
                     initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6 }}
                   >
-                    <motion.div 
+                    <motion.div
                       className="image-frame overflow-hidden cursor-pointer"
                       whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
                       transition={{ duration: 0.3 }}
@@ -233,8 +205,8 @@ const Dogs = () => {
                     </motion.div>
                     <div className="grid grid-cols-3 gap-3">
                       {dog.gallery.map((img, i) => (
-                        <motion.div 
-                          key={i} 
+                        <motion.div
+                          key={i}
                           className="image-frame overflow-hidden cursor-pointer"
                           initial={{ opacity: 0, scale: 0.9 }}
                           whileInView={{ opacity: 1, scale: 1 }}
@@ -254,7 +226,7 @@ const Dogs = () => {
                   </motion.div>
 
                   {/* Info */}
-                  <motion.div 
+                  <motion.div
                     className={`space-y-6 ${index % 2 === 1 ? "lg:order-1" : ""}`}
                     initial="hidden"
                     whileInView="visible"
@@ -268,7 +240,7 @@ const Dogs = () => {
                       <p className="text-primary font-medium">{dog.fullName}</p>
                     </motion.div>
 
-                    <motion.p 
+                    <motion.p
                       className="text-muted-foreground leading-relaxed"
                       variants={fadeInUp}
                       transition={{ duration: 0.5 }}
@@ -277,18 +249,14 @@ const Dogs = () => {
                     </motion.p>
 
                     {/* Quick Info */}
-                    <motion.div 
-                      className="grid grid-cols-2 gap-4"
-                      variants={fadeInUp}
-                      transition={{ duration: 0.5 }}
-                    >
+                    <motion.div className="grid grid-cols-2 gap-4" variants={fadeInUp} transition={{ duration: 0.5 }}>
                       {[
                         { label: "Věk", value: dog.age },
                         { label: "Zbarvení", value: dog.color },
                         { label: "Hmotnost", value: dog.weight },
                         { label: "Výška", value: dog.height },
                       ].map((item, i) => (
-                        <motion.div 
+                        <motion.div
                           key={item.label}
                           className="bg-secondary/50 rounded-xl p-4"
                           whileHover={prefersReducedMotion ? {} : { y: -3, transition: { duration: 0.2 } }}
@@ -301,21 +269,15 @@ const Dogs = () => {
 
                     {/* Titles */}
                     {dog.titles.length > 0 && (
-                      <motion.div 
-                        className="card-warm"
-                        variants={fadeInUp}
-                        transition={{ duration: 0.5 }}
-                      >
+                      <motion.div className="card-warm" variants={fadeInUp} transition={{ duration: 0.5 }}>
                         <div className="flex items-center gap-2 mb-3">
                           <Trophy className="w-5 h-5 text-primary" />
-                          <h3 className="font-display text-lg font-semibold text-foreground">
-                            Výstavní úspěchy
-                          </h3>
+                          <h3 className="font-display text-lg font-semibold text-foreground">Výstavní úspěchy</h3>
                         </div>
                         <ul className="space-y-2">
                           {dog.titles.map((title, i) => (
-                            <motion.li 
-                              key={i} 
+                            <motion.li
+                              key={i}
                               className="flex items-center gap-2 text-muted-foreground text-sm"
                               initial={{ opacity: 0, x: -10 }}
                               whileInView={{ opacity: 1, x: 0 }}
@@ -332,21 +294,15 @@ const Dogs = () => {
 
                     {/* Health Tests */}
                     {dog.healthTests.length > 0 && (
-                      <motion.div 
-                        className="card-warm"
-                        variants={fadeInUp}
-                        transition={{ duration: 0.5 }}
-                      >
+                      <motion.div className="card-warm" variants={fadeInUp} transition={{ duration: 0.5 }}>
                         <div className="flex items-center gap-2 mb-3">
                           <Heart className="w-5 h-5 text-primary" />
-                          <h3 className="font-display text-lg font-semibold text-foreground">
-                            Zdravotní testy
-                          </h3>
+                          <h3 className="font-display text-lg font-semibold text-foreground">Zdravotní testy</h3>
                         </div>
                         <ul className="space-y-2">
                           {dog.healthTests.map((test, i) => (
-                            <motion.li 
-                              key={i} 
+                            <motion.li
+                              key={i}
                               className="flex items-center gap-2 text-muted-foreground text-sm"
                               initial={{ opacity: 0, x: -10 }}
                               whileInView={{ opacity: 1, x: 0 }}
@@ -363,16 +319,10 @@ const Dogs = () => {
 
                     {/* Litters */}
                     {dog.litters.length > 0 && (
-                      <motion.div 
-                        className="card-warm"
-                        variants={fadeInUp}
-                        transition={{ duration: 0.5 }}
-                      >
+                      <motion.div className="card-warm" variants={fadeInUp} transition={{ duration: 0.5 }}>
                         <div className="flex items-center gap-2 mb-3">
                           <Camera className="w-5 h-5 text-primary" />
-                          <h3 className="font-display text-lg font-semibold text-foreground">
-                            Vrhy
-                          </h3>
+                          <h3 className="font-display text-lg font-semibold text-foreground">Vrhy</h3>
                         </div>
                         <ul className="space-y-2">
                           {dog.litters.map((litter: any, i: number) => (
@@ -394,28 +344,28 @@ const Dogs = () => {
         {/* CTA Section */}
         <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
-            <motion.div 
+            <motion.div
               className="text-center"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={staggerContainer}
             >
-              <motion.h2 
+              <motion.h2
                 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4"
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
               >
                 Máte zájem o štěně?
               </motion.h2>
-              <motion.p 
+              <motion.p
                 className="text-muted-foreground max-w-2xl mx-auto mb-8"
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
               >
                 Rádi vám poskytneme více informací o našich psech a plánovaných vrzích
               </motion.p>
-              <motion.div 
+              <motion.div
                 className="flex flex-col sm:flex-row gap-4 justify-center"
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
@@ -432,7 +382,10 @@ const Dogs = () => {
                   whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
                   whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
                 >
-                  <Link to="/kontakt" className="inline-block px-8 py-3 rounded-full border-2 border-primary text-primary font-medium hover:bg-primary hover:text-primary-foreground transition-colors">
+                  <Link
+                    to="/kontakt"
+                    className="inline-block px-8 py-3 rounded-full border-2 border-primary text-primary font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
                     Kontaktovat nás
                   </Link>
                 </motion.div>
@@ -455,23 +408,29 @@ const Dogs = () => {
                 className="w-full max-h-[85vh] object-contain"
               />
             )}
-            
+
             {/* Navigation buttons */}
             <button
-              onClick={(e) => { e.stopPropagation(); prevImage(); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                prevImage();
+              }}
               className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
               aria-label="Předchozí fotka"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
-              onClick={(e) => { e.stopPropagation(); nextImage(); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                nextImage();
+              }}
               className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
               aria-label="Další fotka"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
-            
+
             {/* Image counter */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-background/80 text-sm">
               {currentImageIndex + 1} / {lightboxImages.length}
