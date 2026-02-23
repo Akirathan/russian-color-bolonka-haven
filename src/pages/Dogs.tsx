@@ -138,7 +138,7 @@ const Dogs = () => {
                 Seznamte se s našimi psy
               </motion.h1>
               <motion.p className="section-subheading mx-auto" variants={fadeInUp} transition={{ duration: 0.6 }}>
-                Každý náš mazlíček je členem rodiny. Pečlivě dbáme na zdraví a socializaci všech psů.
+                Každý náš pes je členem rodiny. Pečlivě dbáme na zdraví a socializaci všech psů.
               </motion.p>
 
               {/* Animated Paw Trail */}
