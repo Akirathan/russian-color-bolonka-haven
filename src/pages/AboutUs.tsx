@@ -377,8 +377,8 @@ const AboutUs = () => {
                       },
                       {
                         icon: Heart,
-                        title: "Snadná péče o srst",
-                        desc: "Pravidelná chvilka péče o srst není zatěžující — je to chvíle pohody. A když se nechce česat? Srst lze stříhat.",
+                        title: "Nádherná nelínává srst",
+                        desc: "Pravidelná chvilka péče o srst není velmi zatěžující. A když se nechce česat? Srst lze stříhat.",
                       },
                     ].map((item, index) => (
                       <motion.div
