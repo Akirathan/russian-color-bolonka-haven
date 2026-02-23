@@ -17,13 +17,12 @@ const Articles = () => {
   const [selectedCategory, setSelectedCategory] = useState("Všechny");
   const prefersReducedMotion = useReducedMotion();
 
-  const filteredArticles = selectedCategory === "Všechny"
-    ? articles
-    : articles.filter(article => article.category === selectedCategory);
+  const filteredArticles =
+    selectedCategory === "Všechny" ? articles : articles.filter((article) => article.category === selectedCategory);
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 }
+    visible: { opacity: 1, y: 0 },
   };
 
   const staggerContainer = {
@@ -31,14 +30,14 @@ const Articles = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: prefersReducedMotion ? 0 : 0.1
-      }
-    }
+        staggerChildren: prefersReducedMotion ? 0 : 0.1,
+      },
+    },
   };
 
   const scaleIn = {
     hidden: { opacity: 0, scale: 0.95 },
-    visible: { opacity: 1, scale: 1 }
+    visible: { opacity: 1, scale: 1 },
   };
 
   return (
@@ -59,37 +58,24 @@ const Articles = () => {
         <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
             <Breadcrumbs items={breadcrumbs} className="mb-8 justify-center" />
-            <motion.div 
-              className="text-center mb-12"
-              initial="hidden"
-              animate="visible"
-              variants={staggerContainer}
-            >
-              <motion.span 
+            <motion.div className="text-center mb-12" initial="hidden" animate="visible" variants={staggerContainer}>
+              <motion.span
                 className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4"
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
               >
                 Články
               </motion.span>
-              <motion.h1 
-                className="section-heading mb-4"
-                variants={fadeInUp}
-                transition={{ duration: 0.6 }}
-              >
+              <motion.h1 className="section-heading mb-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
                 Užitečné články o Bolonkách
               </motion.h1>
-              <motion.p 
-                className="section-subheading mx-auto"
-                variants={fadeInUp}
-                transition={{ duration: 0.6 }}
-              >
+              <motion.p className="section-subheading mx-auto" variants={fadeInUp} transition={{ duration: 0.6 }}>
                 Praktické rady a tipy pro majitele i zájemce o toto úžasné plemeno
               </motion.p>
             </motion.div>
 
             {/* Categories */}
-            <motion.div 
+            <motion.div
               className="flex flex-wrap justify-center gap-3 mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -120,7 +106,7 @@ const Articles = () => {
         {/* Articles Grid */}
         <section className="py-16 bg-background overflow-hidden">
           <div className="container mx-auto px-6">
-            <motion.div 
+            <motion.div
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
               initial="hidden"
               whileInView="visible"
@@ -129,20 +115,20 @@ const Articles = () => {
               key={selectedCategory}
             >
               {filteredArticles.map((article, index) => (
-                <motion.div
-                  key={article.id}
-                  variants={scaleIn}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
+                <motion.div key={article.id} variants={scaleIn} transition={{ duration: 0.5, delay: index * 0.1 }}>
                   <Link to={`/clanky/${article.slug}`}>
-                    <motion.article 
+                    <motion.article
                       className="card-warm group cursor-pointer h-full"
                       whileHover={prefersReducedMotion ? {} : { y: -8, transition: { duration: 0.2 } }}
                     >
                       <div className="flex items-center gap-3 mb-4">
-                        <motion.div 
+                        <motion.div
                           className="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center"
-                          whileHover={prefersReducedMotion ? {} : { scale: 1.1, rotate: [0, -5, 5, 0], transition: { duration: 0.3 } }}
+                          whileHover={
+                            prefersReducedMotion
+                              ? {}
+                              : { scale: 1.1, rotate: [0, -5, 5, 0], transition: { duration: 0.3 } }
+                          }
                         >
                           <article.icon className="w-6 h-6 text-primary-foreground" />
                         </motion.div>
@@ -155,9 +141,7 @@ const Articles = () => {
                         {article.title}
                       </h3>
 
-                      <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
-                        {article.excerpt}
-                      </p>
+                      <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{article.excerpt}</p>
 
                       <div className="flex items-center justify-between text-sm text-muted-foreground">
                         <div className="flex items-center gap-4">
@@ -173,7 +157,7 @@ const Articles = () => {
                       </div>
 
                       <div className="mt-4 pt-4 border-t border-border">
-                        <motion.span 
+                        <motion.span
                           className="text-primary font-medium text-sm flex items-center gap-2"
                           whileHover={prefersReducedMotion ? {} : { x: 5 }}
                           transition={{ duration: 0.2 }}
@@ -192,26 +176,22 @@ const Articles = () => {
         {/* CTA */}
         <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
-            <motion.div 
+            <motion.div
               className="max-w-2xl mx-auto text-center"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={staggerContainer}
             >
-              <motion.h2 
+              <motion.h2
                 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4"
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
               >
                 Máte dotaz?
               </motion.h2>
-              <motion.p 
-                className="text-muted-foreground mb-8"
-                variants={fadeInUp}
-                transition={{ duration: 0.5 }}
-              >
-                Napište nám – rádi Vám poradíme s čímkoli ohledně bolonky
+              <motion.p className="text-muted-foreground mb-8" variants={fadeInUp} transition={{ duration: 0.5 }}>
+                Napište nám – rádi Vám poradíme.
               </motion.p>
               <motion.div
                 variants={fadeInUp}
