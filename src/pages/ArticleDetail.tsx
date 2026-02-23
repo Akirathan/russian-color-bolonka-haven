@@ -89,7 +89,7 @@ const ArticleDetail = () => {
                 <div>
                   <p className="text-sm font-medium text-foreground mb-1">O autorovi</p>
                   <p className="text-sm text-muted-foreground">
-                    Články připravuje <strong>CHS Pikaro® (Plzeň)</strong>. Zaměřujeme se na{" "}
+                   <p> Články připravuje <strong>CHS Pikaro® (Plzeň)</strong>. Zaměřujeme se na{" "}
                     <strong>ruskou barevnou bolonku</strong> a na klidný, moderní přístup k výchově (rutina, pozitivní
                     motivace, zvládnutelné kroky).
                   </p>
