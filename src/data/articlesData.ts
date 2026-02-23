@@ -52,7 +52,7 @@ export const articles: Article[] = [
     metaDescription:
       "Praktický a laskavý průvodce výchovou bolonky. Rutina, čistota, socializace, samota, kousání i puberta – krok za krokem, zvládnutelně.",
     excerpt:
-      "Ruská barevná bolonka je typicky citlivý, společenský pes. To je výhoda: učí se rychle a ráda spolupracuje. Základem je rutina, krátké tréninky, hodně spánku a práce s emocemi.",
+      "Ruská barevná bolonka bývá citlivý, společenský pes. To je výhoda: často se učí rychle a ráda spolupracuje. Základem je rutina, krátké tréninky, hodně spánku a práce s emocemi.",
     category: "Výchova",
     readTime: "12 min",
     date: "25. ledna 2025",
@@ -63,22 +63,22 @@ export const articles: Article[] = [
       "Když štěně zlobí, často potřebuje víc spánku, ne víc procházky",
     ],
     vetBox: [
-      "Štěně panikaří při samotě, ničí věci, slintá nebo zvrací ze stresu",
-      "Agresivní reakce ze strachu",
-      "Náhlá změna chování (vyloučit bolest / zdravotní problém)",
-      "Při jakýchkoliv pochybách nečekejte a kontaktujte veterináře – lepší zbytečný telefonát než neštěstí.",
+      "Štěně panikaří při samotě, ničí věci, výrazně sliní nebo zvrací ze stresu (nejdřív veterinář; po vyloučení zdravotní příčiny behaviorista)",
+      "Agresivní reakce ze strachu nebo náhlé zhoršení chování (nejdřív veterinář kvůli bolesti / zdravotní příčině, potom behaviorista)",
+      "Náhlá změna chování (vyloučit bolest / zdravotní problém u veterináře)",
+      "Při jakýchkoli pochybnostech nečekejte a kontaktujte veterináře. Lepší zbytečný telefonát než neštěstí.",
     ],
     sections: [
       {
         id: "proc-mene-casteji",
         title: "Proč u bolonky funguje méně a častěji",
         content:
-          "Bolonka se učí rychle, ale snadno se přetíží. Když je přetažená, začne kousat, běhat, štěkat nebo zlobit – ve skutečnosti jen nezvládá stres a únavu.",
+          "Bolonka se často učí rychle, ale může se snadno přetížit. Když je přetažená, začne kousat, běhat, štěkat nebo zlobit – často ve skutečnosti jen nezvládá stres a únavu.",
         subsections: [
           {
             title: "Jak na to",
             content:
-              "Trénink 1-3 minuty, několikrát denně. Po každé nové zkušenosti pauza a spánek. Odměňujte klid a spolupráci, ne jen výkon.",
+              "Trénink 1-3 minuty, několikrát denně. Po každé nové zkušenosti pauza a spánek. Odměňovat klid a spolupráci, ne jen výkon.",
           },
           {
             title: "Zlaté pravidlo",
@@ -88,9 +88,8 @@ export const articles: Article[] = [
       },
       {
         id: "obdobi-0-16-tydnu",
-        title: "0-16 týdnů: období, které rozhoduje o budoucí pohodě",
-        content:
-          "Jde o velmi důležité období pro socializaci a nastavení správných návyků; nejcitlivější část socializace bývá přibližně mezi 3.-14. týdnem věku.",
+        title: "0-16 týdnů: období, které výrazně ovlivňuje budoucí pohodu",
+        content: "Jde o důležité období pro socializaci a nastavování základních návyků.",
         subsections: [
           {
             title: "Příprava domova",
@@ -107,7 +106,7 @@ export const articles: Article[] = [
       {
         id: "cistota",
         title: "Čistota: jak naučit venčení bez stresu",
-        content: "Bolonka je chytrá – čistotu zvládne rychle, když jí dáte šanci uspět.",
+        content: "Bolonka bývá chytrá – čistotu často zvládne rychle, když jí dáte šanci uspět.",
         subsections: [
           {
             title: "Kdy chodit ven",
@@ -122,7 +121,7 @@ export const articles: Article[] = [
           {
             title: "Co dělat doma, když se to nepovede",
             content:
-              "Beze slov uklidit. Žádné tresty (zvyšují stres a mohou vést k tomu, že se štěně bude bát vykonat potřebu před Vámi).",
+              "Beze slov uklidit. Žádné tresty (zvyšují stres a mohou vést k tomu, že se štěně bude bát udělat to před Vámi).",
           },
         ],
       },
@@ -130,7 +129,7 @@ export const articles: Article[] = [
         id: "spanek",
         title: "Spánek: největší tajná zbraň výchovy",
         content:
-          "Mnoho problémů u štěňat souvisí s únavou. Typicky potřebují velmi vysoký podíl spánku a klidu. Pokud štěně divoce kouše, lítá po bytě a nejde vypnout, často nepomůže víc procházky, ale víc klidu.",
+          "Mnoho problémů u štěňat souvisí s únavou. Typicky potřebují velmi vysoký podíl spánku a klidu. Pokud štěně divoce kouše, lítá po bytě a nejde vypnout – často nepomůže víc procházky, ale víc klidu.",
         subsections: [
           {
             title: "Praktický tip",
@@ -141,12 +140,13 @@ export const articles: Article[] = [
       {
         id: "socializace",
         title: "Socializace: bezpečně, řízeně, po dávkách",
-        content: "Socializace není „ať si ho pohladí každý“. Socializace znamená: svět je předvídatelný a bezpečný.",
+        content:
+          "Socializace není „ať si ho pohladí každý“. Socializace znamená, že svět je pro štěně postupně předvídatelný a bezpečný.",
         subsections: [
           {
             title: "Co socializovat (a jak)",
             content:
-              "Různé povrchy (dlažba, koberec, výtah), zvuky (tramvaj z dálky, fén potichu), lidi (muži, děti, brýle, čepice), manipulaci (tlapky, uši, kartáč), prostředí (krátká návštěva města, pak spánek).",
+              "Různé povrchy (dlažba, koberec, výtah), zvuky (tramvaj z dálky, fén potichu), lidi (muži, děti, brýle, čepice), manipulace (tlapky, uši, kartáč), prostředí (krátká návštěva města, pak spánek).",
           },
           {
             title: "Setkání se psy",
@@ -158,7 +158,7 @@ export const articles: Article[] = [
       {
         id: "samota",
         title: "Samota: prevence separačních potíží",
-        content: "Bolonka je kontaktní. Samota se musí učit.",
+        content: "Bolonka bývá kontaktní. Samota se proto vyplatí učit cíleně a po malých krocích.",
         subsections: [
           {
             title: "Mikrokroky (fungují nejlépe)",
@@ -200,7 +200,7 @@ export const articles: Article[] = [
         id: "puberta",
         title: "4-12 měsíců: puberta a stabilizace",
         content:
-          "V pubertě často přijde horší přivolání, víc štěkání, větší citlivost a „zapomínání“. To neznamená, že jste něco pokazili.",
+          "V pubertě často přijde horší přivolání, víc štěkání, větší citlivost nebo „zapomínání“. To neznamená, že jste něco pokazili.",
         subsections: [
           {
             title: "Jak reagovat",
@@ -209,7 +209,7 @@ export const articles: Article[] = [
           {
             title: "Co do 12 měsíců opravdu chcete",
             content:
-              "Klid v domácnosti (umí odpočívat). Zvládnutelná samota (postupně). Bezpečná manipulace (srst, vet, tlapky). Přivolání v běžných situacích (ne vždy a všude).",
+              "Klid v domácnosti (umí odpočívat). Zvládnutelná samota (postupně). Bezpečná manipulace (srst, veterinář, tlapky). Přivolání v běžných situacích (ne vždy a všude).",
           },
         ],
       },
@@ -227,13 +227,12 @@ export const articles: Article[] = [
       },
       {
         question: "Kolik má štěně spát?",
-        answer: "Hodně. U štěňat je velká část dne spánek a klid – je to normální a zdravé.",
+        answer: "Hodně. U štěňat tvoří spánek a klid velkou část dne – je to normální a zdravé.",
       },
       { question: "Kdy začít s vodítkem?", answer: "Hned doma na pár vteřin až minut – nejdřív zvyk, pak chůze." },
       {
         question: "Mám ho brát mezi lidi před ukončením očkování?",
-        answer:
-          "Ano, ale bezpečně a ideálně po domluvě s veterinářem: čistá místa, prověřené kontakty, žádné psí parky.",
+        answer: "Ano, ale bezpečně: čistá místa, prověřené kontakty, žádné psí parky.",
       },
       {
         question: "Co když kouše děti?",
@@ -241,7 +240,8 @@ export const articles: Article[] = [
       },
       {
         question: "Kdy začne puberta?",
-        answer: "U malých plemen často dřív než u velkých – sledujte změny a vraťte se o krok zpět v tréninku.",
+        answer:
+          "U malých plemen často dřív než u velkých – sledujte změny a případně se vraťte o krok zpět v tréninku.",
       },
       {
         question: "Jak často trénovat přivolání?",
@@ -253,7 +253,7 @@ export const articles: Article[] = [
       },
       {
         question: "Kdy řešit štěkání?",
-        answer: "Pokud ruší byt/sousedy nebo se zhoršuje. Čím dřív nastavíte rutinu a klid, tím lépe.",
+        answer: "Pokud ruší byt / sousedy nebo se zhoršuje. Čím dřív nastavíte rutinu a klid, tím lépe.",
       },
       { question: "Co je nejdůležitější věc v prvním měsíci?", answer: "Rutina + spánek + bezpečná socializace." },
     ],
@@ -266,27 +266,27 @@ export const articles: Article[] = [
     metaDescription:
       "Ruská barevná bolonka je skvělá do bytu – když víte, jak pracovat se samotou, citlivostí a štěkáním. Praktické tipy bez stresu.",
     excerpt:
-      "Bolonka bývá skvělý bytový pes, protože je kontaktní, dobře se učí rutinu a nepotřebuje hektary zahrady. Zároveň je férové říct: vyžaduje blízkost lidí, trénink samoty a klidové návyky.",
+      "Bolonka bývá skvělý bytový pes, protože je kontaktní, dobře se učí rutinu a nepotřebuje hektary zahrady. Zároveň je fér říct: vyžaduje blízkost lidí, trénink samoty a klidové návyky.",
     category: "Životní styl",
     readTime: "8 min",
     date: "20. ledna 2025",
     icon: Home,
     canDoBox: [
       "Bolonka se v bytě často cítí skvěle díky blízkosti rodiny",
-      "Stačí pravidelné procházky a mentální práce doma",
+      "Stačí krátké procházky a mentální práce doma",
       "Rutina je klíč – předvídatelný režim = spokojený pes",
     ],
     vetBox: [
-      "Pes se při samotě zraňuje nebo ničí věci",
-      "Štěkání, které nereaguje na běžné úpravy",
-      "Apatie, nechutenství nebo jiné náhlé změny",
-      "Při jakýchkoliv pochybách nečekejte a kontaktujte veterináře – lepší zbytečný telefonát než neštěstí.",
+      "Pes se při samotě zraňuje nebo ničí věci (nejdřív veterinář; po vyloučení zdravotní příčiny behaviorista)",
+      "Štěkání, které nereaguje na běžné úpravy režimu a management podnětů (po vyloučení bolesti trenér / behaviorista podle příčiny)",
+      "Apatie, nechutenství nebo jiné náhlé změny = veterinář",
+      "Při jakýchkoli pochybnostech nečekejte a kontaktujte veterináře. Lepší zbytečný telefonát než neštěstí.",
     ],
     sections: [
       {
         id: "proc-bolonka-v-byte",
         title: "Proč bolonka v bytě často prospívá",
-        content: "Bolonka má několik vlastností, které ji předurčují ke spokojenému bytovému životu.",
+        content: "Bolonka má několik vlastností, které ji předurčují pro spokojený bytový život.",
         subsections: [
           {
             title: "Společenská povaha",
@@ -300,24 +300,24 @@ export const articles: Article[] = [
           },
           {
             title: "Dobře funguje na rutinu",
-            content: "Bytový režim (ráno–odpoledne–večer) je pro bolonku ideální, když je předvídatelný.",
+            content: "Bytový režim (ráno–odpoledne–večer) bývá pro bolonku vhodný, když je předvídatelný.",
           },
         ],
       },
       {
         id: "limity",
         title: "Limity (a jak je zvládnout)",
-        content: "Každé plemeno má své výzvy. U bolonky je důležité znát je předem.",
+        content: "Každé plemeno má své výzvy. U bolonky je dobré znát je předem.",
         subsections: [
           {
-            title: "Samota: nejčastější téma",
+            title: "Samota: časté bolončí téma",
             content:
-              "Bolonka může být citlivá na odloučení. Řešení je: začít trénink brzy, jít po mikrokrocích, využít klidové aktivity (např. lízací podložku) a dělat odchody i příchody nudně. Samota se trénuje jako sval – po troškách.",
+              "Bolonka může být citlivá na odloučení. Řešení je: začít trénink brzy, mikrokroky, klidové aktivity (lízací podložka), odchody a příchody dělat nudně. Samota se trénuje jako sval – po troškách.",
           },
           {
             title: "Citlivost",
             content:
-              "U citlivých psů tresty často zvyšují nejistotu. Mnohem lépe fungují jasné hranice, odměňování žádoucího chování a management prostředí.",
+              "U citlivých psů tresty často zvyšují nejistotu. Mnohem lépe funguje: jasné hranice, odměňování žádoucího chování a management prostředí.",
           },
         ],
       },
@@ -333,7 +333,7 @@ export const articles: Article[] = [
           },
           {
             title: "Co často zhorší situaci",
-            content: "Křik, chaotické uklidňování a dlouhé „vyběhávání“ přetaženého štěněte.",
+            content: "Křik, chaotické uklidňování, dlouhé vyběhávání přetaženého štěněte.",
           },
         ],
       },
@@ -341,7 +341,7 @@ export const articles: Article[] = [
         id: "pohyb",
         title: "Kolik pohybu bolonka potřebuje",
         content:
-          "Bolonka nepotřebuje maratony. Potřebuje pravidelné procházky, čichání, mentální práci doma a hlavně klid.",
+          "Bolonka nepotřebuje maratony. Potřebuje pravidelné krátké procházky, čichání, mentální práci doma a také dostatek klidu.",
         subsections: [
           {
             title: "Měřítko",
@@ -354,13 +354,13 @@ export const articles: Article[] = [
         id: "deti",
         title: "Bolonka a děti v bytě",
         content:
-          "Bolonka může být skvělý rodinný pes, pokud děti mají pravidla (nesahat, když pes spí / jí), interakce jsou krátké a pod dohledem a pes má možnost odejít do klidového kouta.",
+          "Bolonka může být skvělý rodinný pes, pokud děti mají pravidla (nesahat, když spí / jí), interakce jsou krátké a pod dohledem a pes má možnost odejít do klidového kouta.",
       },
       {
         id: "pro-koho-ne",
         title: "Pro koho bolonka do bytu není ideální",
         content:
-          "Férově: pokud víte, že bude často a dlouho sama bez možnosti tréninku, nebo v prostředí s velkým chaosem bez režimu, může být lepší jiné plemeno nebo jiné nastavení dne.",
+          "Férově: pokud víte, že bude často a dlouho sama bez možnosti tréninku, nebo v prostředí s velkým chaosem bez režimu, může být vhodnější jiné plemeno nebo jiné nastavení dne.",
       },
     ],
     faq: [
@@ -372,7 +372,7 @@ export const articles: Article[] = [
       },
       {
         question: "Je vhodná pro alergiky?",
-        answer: "Neexistuje 100% hypoalergenní pes. U některých lidí může být snesitelnější, ale nelze to garantovat.",
+        answer: "Neexistuje 100% hypoalergenní pes. U některých lidí může být snesitelnější, ale negarantujte to.",
       },
       { question: "Jak často ven?", answer: "U štěněte často, u dospělého podle režimu – důležitá je pravidelnost." },
       {
@@ -395,22 +395,22 @@ export const articles: Article[] = [
     date: "15. ledna 2025",
     icon: Scissors,
     canDoBox: [
-      "5-10 minut 2-4× týdně udrží srst v dobrém stavu",
-      "Česejte po sekcích, od konečků ke kořínkům",
-      "Naučte manipulaci co nejdříve – štěně to přijme snáz",
+      "5-10 minut 2-4× týdně může udržet srst krásnou",
+      "Česat po sekcích, od konečků ke kořínkům",
+      "Naučte manipulaci co nejdříve – štěně to obvykle přijme snáz",
     ],
     vetBox: [
-      "Zacuchání, které nejde rozčesat bez bolesti – řešte v salonu",
-      "Zápach, zarudnutí kůže nebo svědění – veterinář",
-      "Pes se při česání výrazně brání – nejdřív vyloučit bolest / kožní problém u veterináře, pak případně trenér/behaviorista",
-      "Při jakýchkoliv pochybách nečekejte a kontaktujte veterináře – lepší zbytečný telefonát než neštěstí.",
+      "Zacuchání, které nejde rozčesat bez bolesti – groomer / salon",
+      "Zápach, zarudnutí kůže, svědění – veterinář",
+      "Pes se při česání silně brání nebo reaguje strachem (nejdřív veterinář kvůli bolesti / kůži, potom trenér / behaviorista)",
+      "Při jakýchkoli pochybnostech nečekejte a kontaktujte veterináře. Lepší zbytečný telefonát než neštěstí.",
     ],
     sections: [
       {
         id: "co-cekat",
         title: "Co od srsti bolonky čekat",
         content:
-          "Srst bolonky se snadno cuchá v třecích zónách (pod postrojem, za ušima, v tříslech). Po koupání bez správného vysušení se cuchá rychleji. Když se česání odkládá, vzniká boj a stres.",
+          "Srst bolonky se snadno cuchá v třecích zónách (pod postrojem, za ušima, v tříslech). Po koupání bez správného vysušení se může cuchat rychleji. Když se česání odkládá, snadno vznikne boj a stres.",
       },
       {
         id: "vybava",
@@ -428,7 +428,7 @@ export const articles: Article[] = [
         id: "rutina",
         title: "Rutina: nejjednodušší plán",
         content:
-          "5-10 minut 2-4× týdně (podle délky srsti a střihu). Jednou za čas kontrolní den: třecí zóny (pod postrojem, za ušima).",
+          "5-10 minut 2-4× týdně (podle délky a střihu). Jednou za čas kontrolní den: třecí zóny (pod postrojem, za ušima).",
         subsections: [
           {
             title: "Nejlepší moment na česání",
@@ -444,7 +444,7 @@ export const articles: Article[] = [
           {
             title: "Po sekcích, ne po povrchu",
             content:
-              "Rozdělte srst na malé části. Češte od konečků ke kořínkům. Hřebínek použijte jako kontrolu: když projde, je hotovo.",
+              "Rozdělte srst na malé části. Česejte od konečků ke kořínkům. Hřebínek použijte jako kontrolu: když projde, je hotovo.",
           },
           {
             title: "Když se pes ošívá",
@@ -453,7 +453,7 @@ export const articles: Article[] = [
           {
             title: "Jak řešit zacuchání",
             content:
-              "Nikdy netrhejte na sucho. Použijte kondicionér/rozčesávač. Prsty nejdřív uvolněte uzlík, až pak kartáč/hřebínek. Když je to velké: raději salon než bolestivý boj.",
+              "Nikdy netrhat na sucho. Použijte kondicionér / rozčesávač. Prsty nejdřív uvolněte uzlík, až pak kartáč / hřebínek. Když je to velké: raději salon než bolestivý boj.",
           },
         ],
       },
@@ -461,24 +461,24 @@ export const articles: Article[] = [
         id: "koupani",
         title: "Koupání a sušení",
         content:
-          "Koupejte podle potřeby (často 1× za 3-6 týdnů, individuálně). Po koupání srst důkladně vysušte, jinak se rychle zacuchá. Fén učte postupně: nejdřív zvuk na dálku + pamlsky.",
+          "Koupejte podle potřeby (často 1× za 3-6 týdnů, individuálně). Po koupání srst důkladně vysušte, jinak se může rychleji zacuchat. Fén učte postupně: nejdřív zvuk na dálku + pamlsky.",
       },
       {
         id: "salon",
         title: "Salon vs domácí péče",
         content:
-          "Domácí péče je skvělá pro rutinu. Salon je skvělý pro střih, záchranu zacuchané srsti a udržovací plán, když máte málo času. Ideál: doma udržujete, salon 1× za čas nastaví základ.",
+          "Domácí péče je skvělá pro rutinu. Salon je skvělý pro střih, záchranu zacuchané srsti a udržovací plán, když máte málo času. Ideál: doma udržujete, salon občas nastaví základ.",
       },
       {
         id: "manipulace",
         title: "Naučte bolonku na manipulaci",
         content:
-          "20-60 vteřin denně: kartáč, odměna, konec. Tlapky a uši po vteřinách. Čím dřív, tím lépe (u štěněte je to nejrychlejší). Tajemství pohodové srsti je v tom, že pes spolupracuje.",
+          "20-60 vteřin denně: kartáč, odměna, konec. Tlapky a uši po vteřinách. Čím dřív, tím lépe (u štěněte to bývá nejrychlejší). Tajemství pohodové srsti je v tom, že pes spolupracuje.",
       },
     ],
     faq: [
       { question: "Jak často česat štěně?", answer: "Krátce a často – i 1-2 minuty denně jsou skvělé." },
-      { question: "Je nutné fénovat?", answer: "U delší srsti je to velmi užitečné, aby se netvořily zacuchaniny." },
+      { question: "Je nutné fénovat?", answer: "U delší srsti je to velmi užitečné, aby se netvořily zacuchance." },
       { question: "Co postroj?", answer: "Zvyšuje tření – po každé delší procházce zkontrolujte srst pod postrojem." },
       {
         question: "Kdy do salonu poprvé?",
@@ -486,7 +486,7 @@ export const articles: Article[] = [
       },
       {
         question: "Mám chloupky v uších trhat?",
-        answer: "Individuálně – často je lepší řešit to s groomerem/veterinářem podle konkrétního ucha.",
+        answer: "Individuálně; často je lepší řešit to s groomerem nebo veterinářem podle konkrétního ucha.",
       },
       {
         question: "Jak poznám, že česání bolí?",
@@ -502,7 +502,7 @@ export const articles: Article[] = [
     metaDescription:
       "Praktický průvodce krmením bolonky. Kolik porcí, jak vybrat kompletní krmivo, přechod na nové, pamlsky ve výchově a co dělat při citlivém bříšku.",
     excerpt:
-      "U malých plemen dělá výživa obrovský rozdíl: energie, kondice, zuby i srst. Nemusíte být nutriční specialista – stačí jednoduchý systém a konzistence.",
+      "U malých plemen dělá výživa velký rozdíl: energie, kondice, zuby i srst. Nemusíte být nutriční specialista – stačí jednoduchý systém a konzistence.",
     category: "Výživa",
     readTime: "6 min",
     date: "10. ledna 2025",
@@ -513,22 +513,21 @@ export const articles: Article[] = [
       "Změny krmiva vždy postupně (7-10 dní)",
     ],
     vetBox: [
-      "Opakované průjmy nebo zvracení",
-      "Nechutenství (u štěněte nebo malého psa řešit včas, nečekat dlouho)",
-      "Svědění, problémy s kůží nebo ušima",
-      "Při jakýchkoliv pochybách nečekejte a kontaktujte veterináře – lepší zbytečný telefonát než neštěstí.",
+      "Opakované průjmy nebo zvracení = veterinář",
+      "Nechutenství u štěněte nebo malého psa řešte neodkladně (zvlášť při apatii, zvracení nebo průjmu)",
+      "Svědění, problémy s kůží nebo ušima = veterinář",
+      "Při jakýchkoli pochybnostech nečekejte a kontaktujte veterináře. Lepší zbytečný telefonát než neštěstí.",
     ],
     sections: [
       {
         id: "zakladni-princip",
         title: "Základní princip",
         content:
-          "Cíl je: stabilní stolice, dobrá kondice (ne nadváha), kvalitní srst a chuť k jídlu bez přejídání. Kondice je důležitější než „dokonalá značka“.",
+          "Cíl je: stabilní stolice, dobrá kondice (ne nadváha), lesklá srst a chuť k jídlu bez přejídání. Kondice je důležitější než „dokonalá“ značka krmiva.",
         subsections: [
           {
             title: "Praktická pomůcka",
-            content:
-              "Hlídejte tělesnou kondici (žebra by měla být nahmatatelná, ale ne trčet; pas by měl být patrný z boku i shora).",
+            content: "Hlídejte tělesnou kondici (žebra by měla být nahmatatelná, ale ne trčet; pas z boku i shora).",
           },
         ],
       },
@@ -545,7 +544,7 @@ export const articles: Article[] = [
           {
             title: "Přechod na nové krmivo",
             content:
-              "7-10 dní postupně míchat. Neřešit jednorázovou měkčí stolici panikou, ale trend. Při průjmu, zvracení nebo apatii konzultovat veterináře.",
+              "7-10 dní postupně míchat. Neřešit jednorázovou měkčí stolici panikou, ale sledovat trend. Při průjmu, apatii nebo zvracení konzultovat veterináře.",
           },
         ],
       },
@@ -553,13 +552,13 @@ export const articles: Article[] = [
         id: "dospely",
         title: "Dospělý pes",
         content:
-          "Jednoduché pravidlo pro udržení kondice: krmná dávka podle kondice, ne jen podle tabulky. Pamlsky započítávejte do denního energetického příjmu.",
+          "Jednoduché pravidlo pro udržení kondice: krmná dávka podle kondice, ne jen podle tabulky. Pamlsky započítávat do denní energie.",
       },
       {
         id: "pamlsky",
         title: "Pamlsky ve výchově",
         content:
-          "Používejte miniaturní pamlsky (drobky). Odměňujte i běžným krmivem, když to jde. Orientačně držte pamlsky v rozumné části denního příjmu (a když je tréninkový den, uberte část běžné dávky).",
+          "Používejte miniaturní pamlsky (drobky). Odměňujte i běžným krmivem, když to jde. Orientačně držte pamlsky v rozumné části denního příjmu (a když je tréninkový den, uberte večeři).",
       },
       {
         id: "citlive-traveni",
@@ -570,7 +569,7 @@ export const articles: Article[] = [
           {
             title: "Praktický postup",
             content:
-              "Zklidnit režim (víc spánku, méně podnětů). Na pár dní zjednodušit pamlsky. Žádné rychlé skokové změny. Při opakovaných potížích řešit s veterinářem (včetně parazitologického vyšetření dle doporučení).",
+              "Zklidnit režim (víc spánku, méně podnětů). Na pár dní zjednodušit pamlsky. Žádné rychlé skokové změny. Při opakovaných potížích řešit s veterinářem (včetně parazitologického vyšetření podle potřeby).",
           },
         ],
       },
@@ -578,31 +577,31 @@ export const articles: Article[] = [
         id: "voda-zvykani-doplnky",
         title: "Voda, žvýkání, doplňky",
         content:
-          "Voda má být dostupná stále. Žvýkání je fajn, ale vybírejte bezpečné varianty (ne extrémně tvrdé věci, které mohou poškodit zuby). Doplňky mají smysl cíleně – nesypejte „pro jistotu“ všechno možné.",
+          "Voda má být dostupná stále. Žvýkání je fajn, ale vybírejte bezpečné varianty (ne extrémně tvrdé věci, které mohou poškodit zuby). Doplňky mají smysl hlavně cíleně – nesypejte preventivně vše možné.",
       },
     ],
     faq: [
       {
         question: "Je lepší granule, konzerva nebo BARF?",
-        answer: "Pes může prospívat na různých přístupech. Klíčová je vyváženost, bezpečnost a stabilita.",
+        answer:
+          "Použitelné mohou být různé směry, pokud je krmení vyvážené a pes prospívá. U BARF je důležité hlídat nutriční vyváženost (zejména u štěňat) a hygienická rizika syrového masa; u štěněte je rozumné postup konzultovat s veterinářem nebo veterinárním nutričním specialistou.",
       },
       {
         question: "Může bolonka tloustnout snadno?",
-        answer: "Ano – malé plemeno má malé energetické „okno“. Sledujte kondici.",
+        answer: "Ano – malé plemeno má malé energetické okno. Sledujte kondici.",
       },
       {
         question: "Co dělat, když štěně nechce jíst?",
         answer:
-          "Zkontrolujte zdraví, režim, pamlsky a stres. Někdy pomůže pravidelnost a nepřemlouvat. U malého štěněte ale nečekejte dlouho a při apatii / zvracení / průjmu řešte veterináře.",
+          "Zkontrolujte zdraví, režim, pamlsky a stres. U malého štěněte nečekejte dlouho – zvlášť při apatii, zvracení nebo průjmu řešte veterináře ještě tentýž den.",
       },
       {
         question: "Jak poznám alergii?",
-        answer:
-          "Podezření bývá při svědění, potížích s ušima/kůží nebo opakovaných průjmech, ale příznaky nejsou specifické – diagnózu řešte s veterinářem.",
+        answer: "Často svědění, uši, kůže nebo opakované zažívací potíže – řešit s veterinářem.",
       },
       {
         question: "Mám dávat vitamíny?",
-        answer: "U kompletního krmiva obvykle ne, pokud k tomu není konkrétní důvod.",
+        answer: "U kompletního krmiva obvykle ne, pokud k tomu není konkrétní důvod doporučený veterinářem.",
       },
     ],
   },
@@ -614,7 +613,7 @@ export const articles: Article[] = [
     metaDescription:
       "Přehled prevence pro ruskou bolonku: očkování a veterinární plán, paraziti, péče o zuby, kolena (patella) a kdy vyrazit k veterináři hned.",
     excerpt:
-      "Profesionální chov a spokojený život se psem stojí na prevenci. Ne proto, abyste se báli – ale aby většina věcí byla včas a v klidu.",
+      "Spokojený život se psem stojí na prevenci. Ne proto, abyste se báli – ale aby většina věcí byla včas a v klidu.",
     category: "Zdraví",
     readTime: "7 min",
     date: "5. ledna 2025",
@@ -629,7 +628,7 @@ export const articles: Article[] = [
       "Krev ve stolici nebo zvratcích",
       "Potíže s dýcháním nebo náhlá bolest",
       "Podezření na otravu",
-      "Při jakýchkoliv pochybách nečekejte a kontaktujte veterináře – lepší zbytečný telefonát než neštěstí.",
+      "Při jakýchkoli pochybnostech nečekejte a kontaktujte veterináře. Lepší zbytečný telefonát než neštěstí.",
     ],
     sections: [
       {
@@ -655,23 +654,23 @@ export const articles: Article[] = [
         id: "zuby",
         title: "Zuby: u malých plemen kritické",
         content:
-          "U malých psů je častější zubní kámen a záněty dásní. Nejlepší prevence: naučit kartáček (krátce, pravidelně), kontrola tlamy doma (např. 1× týdně), veterinární dentální kontrola dle potřeby.",
+          "U malých psů je častější zubní kámen a záněty dásní. Nejlepší prevence: naučit kartáček (krátce, pravidelně), kontrola tlamy doma (např. 1× týdně) a veterinární dentální kontrola dle potřeby.",
         subsections: [
           {
             title: "Signály problému",
-            content: "Zápach z tlamy, krvácení dásní, nechutenství, pouštění hraček.",
+            content: "Zápach, krvácení dásní, nechutenství, pouštění hraček.",
           },
         ],
       },
       {
         id: "kolena",
         title: "Kolena (patella): na co si dát pozor",
-        content: "U malých plemen se může objevit luxace čéšky (pately).",
+        content: "U malých plemen se může objevit luxace pately.",
         subsections: [
           {
             title: "Sledujte",
             content:
-              "Občasné poskočení na třech nohách, opakované odlehčování nohy, citlivost při manipulaci. Když se to opakuje, řešte to s veterinářem – čím dřív se ví, tím lépe se plánuje režim.",
+              "Občasné poskočení na třech, opakované odlehčování nohy, citlivost při manipulaci. Když se to opakuje, řešte s veterinářem – čím dřív se ví, tím lépe se plánuje režim.",
           },
         ],
       },
@@ -679,7 +678,7 @@ export const articles: Article[] = [
         id: "oci-usi-kuze",
         title: "Oči, uši, kůže: běžná prevence doma",
         content:
-          "Oči: jemně otírat podle potřeby, sledovat výtok a zarudnutí. Uši: kontrola, zápach nebo třepání hlavou = veterinář. Kůže: svědění a šupiny často souvisí s dietou, parazity nebo alergií.",
+          "Oči: pravidelně otírat, sledovat výtok a zarudnutí. Uši: kontrola, zápach nebo třepání hlavou = veterinář. Kůže: svědění a šupiny často souvisí s dietou, parazity nebo alergií.",
       },
       {
         id: "kdy-hned",
@@ -691,7 +690,7 @@ export const articles: Article[] = [
     faq: [
       {
         question: "Mám řešit preventivní prohlídky, když je pes zdravý?",
-        answer: "Ano – prevence je levnější a méně stresující než řešit akutní problém.",
+        answer: "Ano – prevence bývá levnější a méně stresující než řešit akutní problém.",
       },
       {
         question: "Jak poznám bolest u psa?",
@@ -699,11 +698,11 @@ export const articles: Article[] = [
       },
       {
         question: "Co když štěně často jí trávu?",
-        answer: "Někdy je to normální, ale při zvracení, apatii nebo častém opakování to řešte s veterinářem.",
+        answer: "Někdy to může být v normě, ale při zvracení, apatii nebo dalších potížích řešte veterináře.",
       },
       {
         question: "Je normální, že štěně občas kulhá po hře?",
-        answer: "Může se přetížit – pokud se to opakuje, řešte to s veterinářem.",
+        answer: "Může se přetížit – pokud se to opakuje, řešte s veterinářem.",
       },
     ],
   },
@@ -721,23 +720,23 @@ export const articles: Article[] = [
     date: "1. ledna 2025",
     icon: Dog,
     canDoBox: [
-      "Bolonka se často dobře přizpůsobí životnímu stylu rodiny",
+      "Bolonka se často přizpůsobí Vašemu životnímu stylu",
       "Může být vhodná pro začátečníky i zkušené chovatele",
-      "Často je skvělým společníkem do bytu i domu (při správném režimu)",
+      "Často je skvělý společník do bytu i domu",
     ],
     vetBox: [
       "Výběr plemene konzultujte upřímně – ne každý režim sedí každému psu",
-      "Při jakýchkoliv pochybách nečekejte a kontaktujte veterináře – lepší zbytečný telefonát než neštěstí.",
+      "Při jakýchkoli pochybnostech o zdravotním stavu psa nečekejte a kontaktujte veterináře. Lepší zbytečný telefonát než neštěstí.",
     ],
     sections: [
       {
         id: "10-duvodu",
         title: "10 důvodů, proč milovat bolonku",
-        content: "Každý důvod má svou světlou stránku i věc, na kterou je dobré dát pozor.",
+        content: "Každý důvod má svou světlou stránku i věc, na kterou dát pozor.",
         subsections: [
           {
             title: "1) Je to skutečný společenský pes",
-            content: "Pro: chce být u Vás a s Vámi. Pozor: učte samotu postupně, jinak může být ve stresu.",
+            content: "Pro: chce být u Vás a s Vámi. Pozor: učte samotu postupně, jinak může být stresová.",
           },
           {
             title: "2) Skvěle se hodí do bytu",
@@ -746,7 +745,7 @@ export const articles: Article[] = [
           {
             title: "3) Dobře se učí",
             content:
-              "Pro: spolupráce bolonku baví (když je výcvik krátký a pozitivní). Pozor: dlouhé lekce ji přetíží.",
+              "Pro: spolupráce bolonku baví (když je výcvik krátký a pozitivní). Pozor: dlouhé lekce ji mohou přetížit.",
           },
           {
             title: "4) Dá se z ní udělat pohodový rodinný pes",
@@ -763,20 +762,20 @@ export const articles: Article[] = [
           },
           {
             title: "7) Umí být aktivní i domácí pohodář",
-            content: "Pro: přizpůsobí se dni. Pozor: unavený pes není totéž co přetažený pes. Hlídejte spánek.",
+            content: "Pro: může se přizpůsobit dni. Pozor: unavený pes není totéž co přetažený pes. Hlídejte spánek.",
           },
           {
             title: "8) Dělá radost lidem, kteří chtějí parťáka",
             content: "Pro: silná vazba, společné rituály. Pozor: stanovte hranice (místo, klid, samota).",
           },
           {
-            title: "9) Při správné prevenci může být velmi nenáročná",
-            content: "Pro: když je prevence, bývá klid. Pozor: zuby a kolena u malých plemen nepodceňujte.",
+            title: "9) Při správné prevenci může být péče dobře zvládnutelná",
+            content: "Pro: když je prevence, bývá víc klidu. Pozor: zuby a kolena u malých plemen nepodceňujte.",
           },
           {
-            title: "10) Je to plemeno, které se dá vychovat „normálně“",
+            title: "10) Je to plemeno, které se dá vychovat normálně",
             content:
-              "Pro: rutina + laskavá důslednost = funguje. Pozor: chaos a tresty dělají z citlivého psa nejistého psa.",
+              "Pro: rutina + laskavá důslednost často fungují dobře. Pozor: chaos a tresty mohou z citlivého psa dělat nejistého psa.",
           },
         ],
       },
@@ -784,7 +783,7 @@ export const articles: Article[] = [
         id: "pro-koho",
         title: "Pro koho se bolonka hodí nejvíc",
         content:
-          "Lidé, kteří chtějí psa do rodiny a doma mu věnují čas. Lidé, kteří zvládnou krátkou rutinu péče o srst. Domácnosti, kde se dá samota trénovat postupně.",
+          "Lidé, kteří chtějí psa do rodiny a doma mu věnují čas. Lidé, kteří zvládnou krátkou rutinu péče o srst. Domácnosti, kde se dá trénovat samota postupně.",
       },
       {
         id: "pro-koho-ne",
@@ -796,9 +795,9 @@ export const articles: Article[] = [
     faq: [
       { question: "Je bolonka pro začátečníky?", answer: "Často ano – když přijmete rutinu a pozitivní přístup." },
       { question: "Je vhodná k dětem?", answer: "Ano, ale s pravidly a dohledem." },
-      { question: "Je náročná na pohyb?", answer: "Spíš na kontakt, mentální zaměstnání a klid než na kilometry." },
+      { question: "Je náročná na pohyb?", answer: "Spíš na kontakt a klid než na kilometry." },
       { question: "Je vhodná pro alergiky?", answer: "Nelze garantovat – vždy individuální." },
-      { question: "Kolik péče vyžaduje srst?", answer: "Krátkou, ale pravidelnou rutinu." },
+      { question: "Kolik péče vyžaduje srst?", answer: "Spíš krátkou, ale pravidelnou rutinu." },
     ],
   },
   {
@@ -809,7 +808,7 @@ export const articles: Article[] = [
     metaDescription:
       "Praktický plán nácviku samoty pro ruskou bolonku: mikrokroky, chyby, signály stresu, jak nastavit odchody a co dělat, když to nejde.",
     excerpt:
-      "Ruská barevná bolonka je kontaktní a často velmi navázaná na člověka. To je její kouzlo — a zároveň důvod, proč je potřeba samotu učit cíleně. Dobrá zpráva: když začnete brzy a po malých dávkách, dá se samota zvládnout bez dramat.",
+      "Ruská barevná bolonka je kontaktní a často velmi na člověka. To je její kouzlo — a zároveň důvod, proč je potřeba samotu učit cíleně. Dobrá zpráva: když začnete brzy a po malých dávkách, dá se samota zvládnout bez dramat.",
     category: "Výchova",
     readTime: "10 min",
     date: "28. ledna 2025",
@@ -820,23 +819,23 @@ export const articles: Article[] = [
       "Odchody i příchody nudně – žádné drama",
     ],
     vetBox: [
-      "Panické chování (intenzivní štěkání, ničení, slinění)",
-      "Štěně se nedokáže zklidnit ani při velmi krátkém odchodu",
-      "Problém trvá i po týdnech postupného tréninku",
-      "Při jakýchkoliv pochybách nečekejte a kontaktujte veterináře – lepší zbytečný telefonát než neštěstí.",
+      "Panické chování (intenzivní štěkání, ničení, slinění) – nejdřív veterinář, po vyloučení zdravotní příčiny behaviorista",
+      "Štěně se nedokáže zklidnit ani při velmi krátkém odchodu (po vyloučení bolesti / zdravotní příčiny behaviorista)",
+      "Problém trvá i po týdnech postupného tréninku (behaviorista)",
+      "Při jakýchkoli pochybnostech nečekejte a kontaktujte veterináře. Lepší zbytečný telefonát než neštěstí.",
     ],
     sections: [
       {
         id: "proc-bolonka-resi-samotu",
         title: "Proč bolonka samotu někdy řeší víc než jiná plemena",
         content:
-          "Bolonka často vyrůstá v blízkosti lidí a má silnou motivaci být u Vás. Pokud se samota nechá na náhodě, může se z ní stát stresový spouštěč. Cíl tréninku samoty není „aby to vydržela“, ale aby se štěně naučilo: odchod = bezpečná nuda.",
+          "Bolonka často vyrůstá v blízkosti lidí a má silnou motivaci být u Vás. Pokud se samota nechá na náhodě, může se z ní stát stresový spouštěč. Cíl tréninku samoty není, „aby to vydržela“, ale aby se štěně učilo: odchod = bezpečná nuda.",
       },
       {
         id: "test-pripravenosti",
         title: "Nejdřív rychlý test: je štěně připravené trénovat samotu?",
         content:
-          "Trénink samoty dělejte ideálně, když je štěně vyvenčené, má za sebou krátkou aktivitu (mentální, ne vyčerpání), je nakrmené a má šanci vypnout. Pokud štěně jede na doraz, odchod spíš spustí paniku.",
+          "Trénink samoty dělejte ideálně, když štěně je vyvenčené, má za sebou krátkou aktivitu (mentální, ne vyčerpání), je nakrmené a má šanci vypnout. Pokud štěně jede na doraz, odchod spíš spustí paniku.",
       },
       {
         id: "5-pravidel",
@@ -852,7 +851,7 @@ export const articles: Article[] = [
           {
             title: "Den 1–3: mikrokroky (5–30 vteřin)",
             content:
-              "10–20 krátkých odchodů denně. Odchod = vy jdete za dveře / do jiné místnosti. Návrat = tichý, neutrální. Cíl: štěně si ani nestihne říct, kde jste.",
+              "10–20 krátkých odchodů denně. Odchod = Vy jdete za dveře / do jiné místnosti. Návrat = tichý, neutrální. Cíl: štěně si ani nestihne říct, kde jste.",
           },
           {
             title: "Den 4–7: krátké minuty (30–120 vteřin)",
@@ -873,19 +872,19 @@ export const articles: Article[] = [
         id: "co-dat-bolonce",
         title: "Co dát bolonce, když odcházíte",
         content:
-          "Volte jen bezpečné věci: lízací podložka (klidová aktivita), čichací hra (pár granulí do ručníku), případně bezpečné žvýkání. Proč lízání funguje: zpomaluje tělo a pomáhá přepnout do klidového režimu.",
+          "Volte jen bezpečné věci: lízací podložka (klidová aktivita), čichací hra (pár granulí do ručníku), případně bezpečné žvýkání. Proč lízání může fungovat: pomáhá některým psům zpomalit a přepnout do klidovějšího režimu.",
       },
       {
         id: "signaly-stresu",
         title: "Jak poznáte, že už je to stres",
         content:
-          "Signály, že jste šli moc rychle: kňučení/štěkání hned po odchodu, škrábání dveří, neklidné pobíhání, zrychlené dýchání, slinění, odmítání pamlsku. Co udělat: další trénink zkrátit a vrátit se o 1–2 úrovně zpět.",
+          "Signály, že jste šli moc rychle: kňučení / štěkání hned po odchodu, škrábání dveří, neklidné pobíhání, zrychlené dýchání, slinění, odmítání pamlsku. Co udělat: další trénink zkrátit, vrátit se o 1–2 úrovně zpět.",
       },
       {
         id: "nejcastejsi-chyby",
         title: "Nejčastější chyby (a rychlé opravy)",
         content:
-          "„Zkusíme to rovnou na hodinu“ – vraťte se k vteřinám. „Ať si zvykne, nebudu se vracet“ – u citlivých plemen to často zhorší paniku. Samotu trénujete, když je štěně přetažené – zkraťte podněty, přidejte spánek. Velká emoce při odchodu/příchodu – odchody i příchody jako by nic.",
+          "„Zkusíme to rovnou na hodinu“ – vraťte se k vteřinám. „Ať si zvykne, nebudu se vracet“ – u citlivých plemen to často zhorší paniku. Samotu trénujete, když je štěně přetažené – zkraťte podněty, přidejte spánek. Velká emoce při odchodu / příchodu – odchody i příchody jako by nic.",
       },
     ],
     faq: [
@@ -893,7 +892,10 @@ export const articles: Article[] = [
         question: "Má štěně být při samotě v kleci?",
         answer: "Může, pokud ji vnímá jako bezpečný domeček. Pokud klec stresuje, začněte ohrádkou bez zavírání.",
       },
-      { question: "Pomůže druhý pes?", answer: "Někdy ano, někdy ne. Separace je vztah k člověku, ne jen „být sám“." },
+      {
+        question: "Pomůže druhý pes?",
+        answer: "Někdy ano, někdy ne. Separace je vztah k člověku, ne jen otázka „být sám“.",
+      },
       { question: "Jak rychle přidávat čas?", answer: "Jen když předchozí krok probíhá klidně. Raději pomaleji." },
       {
         question: "Co když štěně štěká hned, jak zavřu dveře?",
@@ -909,7 +911,7 @@ export const articles: Article[] = [
     metaDescription:
       "Jak naučit štěně bolonky venčit venku: frekvence, signály, odměny, noční režim, podložky a řešení nehod doma.",
     excerpt:
-      "Čistota není o poslušnosti. Je to kombinace biologie (malý měchýř), rutiny a správného načasování. Když štěněti dáte šanci uspět, bývá bolonka velmi rychle čistotná.",
+      "Čistota není o poslušnosti. Je to kombinace biologie (malý měchýř), rutiny a správného načasování. Když štěněti dáte šanci uspět, bývá bolonka často čistotná poměrně rychle.",
     category: "Výchova",
     readTime: "7 min",
     date: "27. ledna 2025",
@@ -920,17 +922,17 @@ export const articles: Article[] = [
       "Nehody uklidit beze slov, bez trestů",
     ],
     vetBox: [
-      "Extrémně časté močení nebo bolest",
-      "Krev v moči nebo stolici",
-      "Apatie, nechutenství, náhlá změna",
-      "Při jakýchkoliv pochybách nečekejte a kontaktujte veterináře – lepší zbytečný telefonát než neštěstí.",
+      "Extrémně časté močení, bolest nebo tlačení při močení = veterinář",
+      "Krev v moči nebo stolici = veterinář",
+      "Apatie, nechutenství, náhlá změna = veterinář",
+      "Při jakýchkoli pochybnostech nečekejte a kontaktujte veterináře. Lepší zbytečný telefonát než neštěstí.",
     ],
     sections: [
       {
         id: "nejcastejsi-duvod",
         title: "Nejčastější důvod nehod: štěně to nestihne",
         content:
-          "U malého štěněte je normální, že po spánku musí ven téměř hned, po jídle to přijde rychle a po hře se to spustí během chvilky. Pokud nehody pokračují, často to znamená, že chodíme ven pozdě – ne že to štěně nechápe.",
+          "U malého štěněte je normální, že po spánku musí ven téměř hned, po jídle to může přijít rychle a po hře se to spustí během chvilky. Pokud nehody pokračují, často to znamená, že chodíme ven pozdě – ne že štěně „to nechápe“.",
       },
       {
         id: "kdy-chodit-ven",
@@ -960,7 +962,7 @@ export const articles: Article[] = [
         id: "podlozky",
         title: "Podložky: ano, ne, kdy a jak",
         content:
-          "Podložka může být užitečná: když bydlíte vysoko a štěně to fyzicky nestíhá, při nemoci, nebo jako přechodné řešení. Riziko: štěně si zvykne vykonávat potřebu na textilii. Jak tomu předejít: podložku dávejte jen na jedno místo a jakmile to jde, přenášejte návyk ven.",
+          "Podložka může být užitečná: když bydlíte vysoko a štěně to fyzicky nestíhá, při nemoci, jako přechodné řešení. Riziko: štěně si zvykne vykonávat potřebu na textilii. Jak tomu předejít: podložku dávejte jen na jedno místo a jakmile to jde, přenášejte návyk ven.",
       },
       {
         id: "nocni-rezim",
@@ -972,7 +974,7 @@ export const articles: Article[] = [
         id: "kdyz-se-zasekne",
         title: "Když se čistota zasekne",
         content:
-          "Mini-audit: Chodíte ven opravdu po spánku/jídle/hře? Odměňujete venku opravdu hned? Není štěně přetažené a ve stresu? Má po večerním pití dost šancí jít ven? (Vodu běžně neomezujte.) Není tu zdravotní důvod?",
+          "Mini-audit: Chodíte ven opravdu po spánku / jídle / hře? Odměňujete venku opravdu hned? Není štěně přetažené a ve stresu? Nedostává večer moc vody / málo venčení? Není tu zdravotní důvod?",
       },
     ],
     faq: [
@@ -988,7 +990,7 @@ export const articles: Article[] = [
         question: "Je normální, že se občas „zapomene“?",
         answer: "Ano, hlavně při změně režimu, návštěvě nebo přetažení.",
       },
-      { question: "Mám omezit vodu?", answer: "Ne. Vodu běžně neomezujte, raději přidejte venčení a upravte režim." },
+      { question: "Mám omezit vodu?", answer: "Ne. Vodu neomezujte, raději přidejte venčení." },
     ],
   },
   {
@@ -1010,17 +1012,17 @@ export const articles: Article[] = [
       "Přepis zvonku: zvonek = pamlsky na deku",
     ],
     vetBox: [
-      "Štěkání spojené s agresí nebo panikou",
-      "Náhlá změna chování bez zjevné příčiny",
-      "Štěkání doprovázené bolestí nebo nepohodou",
-      "Při jakýchkoliv pochybách nečekejte a kontaktujte veterináře – lepší zbytečný telefonát než neštěstí.",
+      "Štěkání spojené s panikou, výrazným strachem nebo agresí (nejdřív veterinář, potom behaviorista)",
+      "Náhlá změna chování bez zjevné příčiny = veterinář",
+      "Štěkání doprovázené bolestí nebo nepohodou = veterinář",
+      "Při jakýchkoli pochybnostech nečekejte a kontaktujte veterináře. Lepší zbytečný telefonát než neštěstí.",
     ],
     sections: [
       {
         id: "proc-steka",
         title: "Proč bolonka štěká (nejčastější důvody)",
         content:
-          "Hlídání zvuků: chodba, výtah, sousedi. Zvonek: vzrušení, očekávání návštěvy. Okno: pohyb lidí/psů venku. Přetažení nebo frustrace z nudy: pes je unavený a neumí vypnout. Nejistota: pes se snaží zahnat podnět. Nezačínejte tím, že budete štěkání jen zakazovat. Začněte tím, že psovi dáte alternativu.",
+          "Hlídání zvuků: chodba, výtah, sousedi. Zvonek: vzrušení, očekávání návštěvy. Okno: pohyb lidí / psů venku. Přetažení / nuda: pes je unavený a neumí vypnout. Nejistota: pes se snaží zahnat podnět. Nezačínejte tím, že budete štěkání jen zakazovat. Začněte tím, že psovi dáte alternativu.",
       },
       {
         id: "nejrychlejsi-kombinace",
@@ -1052,29 +1054,32 @@ export const articles: Article[] = [
         id: "v-momente-stekani",
         title: "Co dělat v momentě štěkání",
         content:
-          "Zachovejte klid, žádné křičení. Přerušte přístup k podnětu (zavřít dveře, stáhnout roletu). Nabídněte místo a odměňte první vteřiny ticha. Proč nekřičet: často to pes vyhodnotí jako „štěkáme spolu“.",
+          "Zachovejte klid, žádné křičení. Přerušte přístup k podnětu (zavřít dveře, stáhnout roletu). Nabídněte místo a odměňte první vteřiny ticha. Proč nekřičet: pes to může vyhodnotit jako „štěkáme spolu“.",
       },
       {
         id: "nejcastejsi-chyby",
         title: "Nejčastější chyby",
         content:
-          "Odměňování štěkání pozorností (‚co je? ticho!‘). Příliš rychlé zvyšování obtížnosti. Žádný klidový režim (přetažený pes = hlasitější pes). Nekonzistence (jednou se štěká, jednou ne).",
+          "Odměňování štěkání pozorností („co je? ticho!“). Příliš rychlé zvyšování obtížnosti. Žádný klidový režim (přetažený pes = hlasitější pes). Nekonzistence (jednou se štěká, jednou ne).",
       },
     ],
     faq: [
       {
         question: "Mám štěkání ignorovat?",
-        answer: "Někdy ano, ale v bytě často potřebujete kombinaci managementu + naučení alternativy.",
+        answer: "Někdy ano, ale v bytě často potřebujete kombinaci managementu + naučit alternativu.",
       },
       {
         question: "Pomůže antištěkací obojek?",
-        answer: "Nedoporučujeme jako první volbu. U citlivých psů může zvýšit stres a problém zhoršit.",
+        answer: "Nedoporučujeme jako první volbu. U citlivých psů může zvýšit stres.",
       },
       {
         question: "Co když štěká jen večer?",
         answer: "Často jde o přetažení. Zkraťte podněty, přidejte klidové aktivity a spánek.",
       },
-      { question: "Jak rychle se to zlepší?", answer: "Často do 1–2 týdnů uvidíte posun, když je plán konzistentní." },
+      {
+        question: "Jak rychle se to zlepší?",
+        answer: "Často je posun vidět během 1–2 týdnů, když je plán konzistentní.",
+      },
     ],
   },
   {
@@ -1096,16 +1101,17 @@ export const articles: Article[] = [
       "1–3 minuty denně stačí, ale pravidelně",
     ],
     vetBox: [
-      "Pes se nedokáže uvolnit ani v klidném prostředí",
-      "Výrazný neklid spojený s bolestí nebo nepohodou",
-      "Při jakýchkoliv pochybách nečekejte a kontaktujte veterináře – lepší zbytečný telefonát než neštěstí.",
+      "Pes se nedokáže uvolnit ani v klidném prostředí (nejdřív veterinář k vyloučení bolesti / zdravotní příčiny)",
+      "Výrazný neklid spojený s bolestí nebo nepohodou = veterinář",
+      "Přetrvávající úzkost / panika po vyloučení zdravotní příčiny = behaviorista",
+      "Při jakýchkoli pochybnostech nečekejte a kontaktujte veterináře. Lepší zbytečný telefonát než neštěstí.",
     ],
     sections: [
       {
         id: "co-je-klid",
         title: "Co je klid na dece",
         content:
-          "Nejde o to, že pes leží. Jde o to, že zpomalí dech, uvolní tělo a přestane skenovat okolí. To je skutečný klid.",
+          "Nejde jen o to, že pes leží. Jde o to, že zpomalí dech, uvolní tělo a méně skenuje okolí. To je skutečný klid.",
       },
       {
         id: "jak-zacit",
@@ -1117,7 +1123,7 @@ export const articles: Article[] = [
         id: "budovani-vydrze",
         title: "Budování výdrže (po vteřinách)",
         content:
-          "Když už pes na dece stojí nebo si lehne: odměňte klid (ticho, uvolnění), prodlužujte po 1–3 vteřinách, raději 10 krátkých úspěchů než jeden dlouhý neúspěch. Tip: odměňujte nejdřív často. Jakmile pes chápe, odměny postupně řiďte.",
+          "Když už pes na dece stojí nebo si lehne: odměňte klid (ticho, uvolnění), prodlužujte po 1–3 vteřinách, raději 10 krátkých úspěchů než jeden dlouhý neúspěch. Tip: Odměňujte nejdřív často. Jakmile pes chápe, odměny postupně řídněte.",
       },
       {
         id: "pridejte-signal",
@@ -1134,7 +1140,7 @@ export const articles: Article[] = [
         id: "nejcastejsi-chyby",
         title: "Nejčastější chyby",
         content:
-          "Chtít, aby vydržel na dece 10 minut hned první den. Odměňovat jen „lehni“, ne skutečný klid. Používat deku jako trest (‚běž na místo!‘). Deka je pokaždé jinde (na začátku držte stejné místo).",
+          "Chtít, aby vydržel na dece 10 minut hned první den. Odměňovat jen „lehni“, ne skutečný klid. Používat deku jako trest („běž na místo!“). Deka je pokaždé jinde (na začátku držte stejné místo).",
       },
     ],
     faq: [
@@ -1163,10 +1169,10 @@ export const articles: Article[] = [
       "Očekávejte podporu i po odběru štěněte",
     ],
     vetBox: [
-      "Nátlak na rychlé rozhodnutí nebo zálohu",
-      "Žádné informace o prostředí nebo rodičích",
-      "Neochota odpovídat na otázky",
-      "Při jakýchkoliv pochybách nečekejte a kontaktujte veterináře – lepší zbytečný telefonát než neštěstí.",
+      "Nátlak na rychlé rozhodnutí nebo zálohu = varovný signál",
+      "Žádné informace o prostředí nebo rodičích = varovný signál",
+      "Neochota odpovídat na otázky = varovný signál",
+      "Při jakýchkoli pochybnostech o zdravotním stavu štěněte po odběru nečekejte a kontaktujte veterináře. Lepší zbytečný telefonát než neštěstí.",
     ],
     sections: [
       {
@@ -1185,13 +1191,13 @@ export const articles: Article[] = [
         id: "zdravi",
         title: "3) Zdraví: co je standard a co je navíc",
         content:
-          "U malých plemen dává smysl řešit: preventivní prohlídky, plán očkování a odčervení, konzultace k zubům, kondici a pohybu, případně zdravotní vyšetření rodičů podle doporučení chovatelského klubu / veterináře. Seriózní chovatel bude umět vysvětlit, co sleduje a proč.",
+          "U malých plemen dává smysl řešit: preventivní prohlídky, plán očkování a odčervení, konzultace k zubům, kondici, pohybu a případně zdravotní vyšetření rodičů. Seriózní chovatel bude umět vysvětlit, co sleduje a proč.",
       },
       {
         id: "smlouva",
         title: "4) Smlouva, předání, dokumenty",
         content:
-          "Seriózní chovatel předává štěně s jasnou smlouvou, dá vám instrukce k režimu, krmení a péči, a zajímá se, kam štěně jde (ne „komukoli“). Varovné signály: žádná smlouva, nejasné informace, ochota předat štěně hned bez ohledu na věk a stav.",
+          "Seriózní chovatel předává štěně s jasnou smlouvou, dá vám instrukce k režimu, krmení a péči a zajímá se, kam štěně jde (ne komukoli). Varovné signály: žádná smlouva, nejasné informace, ochota předat štěně hned bez ohledu na věk.",
       },
       {
         id: "podpora",
@@ -1203,13 +1209,13 @@ export const articles: Article[] = [
         id: "cena",
         title: "6) Cena: levné štěně bývá drahé později",
         content:
-          "V ceně bývá péče o vrh i matku, krmení, veterinární péče, čas socializace, dokumenty a administrativa – a hlavně odpovědnost. Nejde o to, aby bylo štěně nejdražší. Jde o to, aby bylo poctivě odchované.",
+          "V ceně bývá chov, péče o matku, krmení, veterinární péče, čas socializace, dokumenty, administrativa a hlavně odpovědnost. Nejde o to, aby bylo štěně nejdražší. Jde o to, aby bylo poctivě odchované.",
       },
       {
         id: "checklist",
         title: "Checklist (rychlá verze)",
         content:
-          "✅ ukázané prostředí a způsob odchovu ✅ konkrétní plán socializace a manipulace ✅ smlouva a jasné podmínky předání ✅ chovatel se ptá na váš režim (samota, děti, zkušenosti) ✅ podpora po odběru ⚠️ nátlak, tajnosti, „rychle pošlete zálohu“, neochota odpovídat",
+          "✅ ukázané prostředí a způsob odchovu ✅ konkrétní plán socializace a manipulace ✅ smlouva a jasné podmínky předání ✅ chovatel se ptá na váš režim (samota, děti, zkušenosti) ✅ podpora po odběru ⚠️ nátlak, tajnosti, „rychle poslat zálohu“, neochota odpovídat",
       },
     ],
     faq: [
@@ -1219,14 +1225,9 @@ export const articles: Article[] = [
       },
       {
         question: "Je důležitý průkaz původu?",
-        answer:
-          "Ano, je to doklad o původu a kontrole chovu. Není to ale automatická záruka povahy nebo kvality odchovu.",
+        answer: "Ano, je to doklad o původu a kontrole chovu. Není to ale záruka povahy.",
       },
-      {
-        question: "Mohu navštívit chovatele předem?",
-        answer:
-          "Seriózní chovatel návštěvu po domluvě často umožní, ale může ji kvůli ochraně vrhu (biosecurity) omezit a nabídnout video / průběžné materiály.",
-      },
+      { question: "Mohu navštívit chovatele předem?", answer: "Seriózní chovatel návštěvu po domluvě obvykle umožní." },
       {
         question: "Co když chovatel nechce odpovídat?",
         answer: "Varovný signál. Seriózní chovatel se otázkám nevyhýbá.",
@@ -1248,27 +1249,27 @@ export const articles: Article[] = [
     icon: Sparkles,
     canDoBox: [
       "Postup po vteřinách – nejdřív spolupráce, pak čištění",
-      "Používejte psí pastu (nikdy lidskou, zvlášť ne s xylitolem)",
+      "Psí pasta bez lidských sladidel",
       "Kratší intervaly jsou lepší než dlouhé zápasy",
     ],
     vetBox: [
-      "Zápach z tlamy, krvácení dásní",
-      "Bolest při jídle, pouštění hraček",
-      "Viditelný zubní kámen nebo otok",
-      "Při jakýchkoliv pochybách nečekejte a kontaktujte veterináře – lepší zbytečný telefonát než neštěstí.",
+      "Zápach z tlamy, krvácení dásní = veterinář",
+      "Bolest při jídle, pouštění hraček = veterinář",
+      "Viditelný zubní kámen nebo otok = veterinář",
+      "Při jakýchkoli pochybnostech nečekejte a kontaktujte veterináře. Lepší zbytečný telefonát než neštěstí.",
     ],
     sections: [
       {
         id: "proc-dulezite",
         title: "Proč je u bolonky péče o zuby důležitá",
         content:
-          "Malá tlama, často těsnější postavení zubů a sklon k tvorbě zubního kamene znamenají, že prevence dává velký smysl. Nejvíc funguje krátké, pravidelné čištění, zvykání od štěněte, klid a spolupráce.",
+          "Malá tlama, často těsnější zuby a sklon k tvorbě zubního kamene znamenají, že prevence dává velký smysl. Nejvíc funguje krátké, pravidelné čištění, zvykání od štěněte, klid a spolupráce.",
       },
       {
         id: "pomucky",
         title: "Pomůcky (jednoduše)",
         content:
-          "Psí zubní pasta (nikdy lidská pasta, zvlášť ne s xylitolem), malý měkký kartáček / prstový kartáček (na start), pamlsky na odměnu (mini), klidné místo (ideálně deka). Neřešte první týden dokonalé vyčištění. Řešte nácvik spolupráce.",
+          "Psí zubní pasta (bez lidských sladidel), malý měkký kartáček / prstový kartáček (na start), pamlsky na odměnu (mini), klidné místo (ideálně deka). Neřešte první týden dokonalé vyčištění. Řešte nácvik spolupráce.",
       },
       {
         id: "14denni-plan",
@@ -1277,7 +1278,7 @@ export const articles: Article[] = [
         subsections: [
           {
             title: "Dny 1–3: pasta je dobrá",
-            content: "Jen ochutnání pasty z prstu. 5–10 vteřin, 1× denně. Cíl: pes se těší, neutíká.",
+            content: "Jen ochutnání pasty z prstu. 5–10 vteřin, 1× denně. Cíl: pes se těší, ne utíká.",
           },
           {
             title: "Dny 4–6: dotyk zubů prstem",
@@ -1290,11 +1291,11 @@ export const articles: Article[] = [
           {
             title: "Dny 10–12: kartáček (krátce)",
             content:
-              "Měkký kartáček, 5–10 vteřin. Zaměřte se na vnější stranu zubů (tam se plak drží nejvíc). Odměna, konec.",
+              "Měkký kartáček, 5–10 vteřin. Zaměřit se na vnější stranu zubů (tam se plak drží nejčastěji). Odměna, konec.",
           },
           {
             title: "Dny 13–14: prodlužování",
-            content: "Přidejte pár vteřin. Stále raději kratší, ale klidné.",
+            content: "Přidat pár vteřin. Stále raději kratší, ale klidné.",
           },
         ],
       },
@@ -1302,7 +1303,7 @@ export const articles: Article[] = [
         id: "moc-rychle",
         title: "Jak poznáte, že jdete moc rychle",
         content:
-          "Pes uhýbá hlavou, ztuhne, olizuje se nebo se snaží odejít. To není vzdor. To je informace. Zkraťte krok, vraťte se o 1–2 dny zpět.",
+          "Pes uhýbá hlavou, ztuhne, olizuje se, snaží se odejít. To není vzdor. To je informace. Zkraťte krok a vraťte se o 1–2 dny zpět.",
       },
       {
         id: "motivace",
@@ -1318,19 +1319,13 @@ export const articles: Article[] = [
       },
     ],
     faq: [
-      {
-        question: "Jak často čistit?",
-        answer: "Ideálně denně. Když to nejde, tak co nejčastěji pravidelně (čím častěji, tím kratší a snadnější).",
-      },
-      {
-        question: "Pomůžou dentální pamlsky místo kartáčku?",
-        answer: "Jsou to doplňky, ale kartáček je nejúčinnější základ prevence.",
-      },
+      { question: "Jak často čistit?", answer: "Ideálně pravidelně (čím častěji, tím kratší a snazší to obvykle je)." },
+      { question: "Pomůžou dentální pamlsky místo kartáčku?", answer: "Jsou doplněk, ale kartáček bývá nejúčinnější." },
       {
         question: "Co když pes pastu nesnáší?",
         answer: "Zkuste jinou příchuť nebo začněte jen dotykem bez pasty a přidejte ji později.",
       },
-      { question: "Mám držet tlamu násilím?", answer: "Ne. Cílem je spolupráce, ne zápas." },
+      { question: "Mám držet tlamu násilím?", answer: "Ne. Cíl je spolupráce, ne zápas." },
     ],
   },
 ];
