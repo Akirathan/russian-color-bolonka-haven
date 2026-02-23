@@ -19,7 +19,7 @@ const features = [
   {
     icon: Sparkles,
     title: "Srst",
-    description: "Dlouhá, sametová,nelínavá, lesklá srst s dobře vyvinutou podsadou",
+    description: "Dlouhá, sametová, nelínavá, lesklá srst s dobře vyvinutou podsadou",
   },
   {
     icon: Smile,
@@ -281,7 +281,7 @@ const About = () => {
             </motion.div>
 
             <motion.div
-              className="grid md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto"
+              className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
