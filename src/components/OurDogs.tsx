@@ -63,7 +63,7 @@ const OurDogs = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
-            Naši mazlíčci
+            Naši pejsci
           </span>
           <h2 className="section-heading mb-4">Seznamte se s našimi psy</h2>
           <p className="section-subheading mx-auto">
