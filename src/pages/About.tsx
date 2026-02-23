@@ -125,15 +125,15 @@ const breedStandard = {
       "Výrazné znaky zakrslosti",
     ],
   },
-  history: `Při šlechtění barevné bolonky byli použiti francouzská bolonka, Shih-Tzu a Lhasa-apso. Vývoj plemene začal v r. 1951, kdy byly založeny sekce "dekorativní kynologie" při klubech loveckých a služebných plemen psů.
+  history: `Při vzniku plemene ruská barevná bolonka (Russkaya Tsvetnaya Bolonka) se podle starších historických textů podílela malá společenská plemena, nejčastěji uváděná jako boloňský psík (Bolognese), Shih-Tzu a Lhasa Apso. Novější oficiální popisy však konkrétní plemena nevyjmenovávají a uvádějí obecně, že plemeno vzniklo z malých psů neznámého původu, vybraných sovětskými kynology.
 
-Přísnou selekcí a výběrem do chovu v leningradském spolku myslivců a rybářů (LODiR) byla vybrána skupina exteriérově blízkých jedinců. Hlavními plemennými znaky byla malá velikost 20-24 cm a velice bohatá srst efektního jednobarevného zbarvení.
+Vývoj plemene začal v Leningradu v roce 1951. Přísnou selekcí, nejprve podle fenotypu a později i podle kvality potomstva, byla vytvořena skupina typově a exteriérově podobných jedinců. Hlavními znaky při šlechtění byla malá velikost, bohatá srst a efektní jednobarevné zbarvení.
 
-V r. 1964 byl napsán první standard plemene barevná bolonka. V r. 1966 Kynologická rada při Ministerstvu zemědělství uznala standard plemene barevná bolonka.
+První standard plemene barevná bolonka byl v SSSR schválen v roce 1966.
 
-V r. 1973 dle rozhodnutí sekce pokojových psíků Sverdlovského meziokresního spolku byl založen Moskevský městský spolek milovníků psů (MGOLS). Aktivní šlechtitelská práce a spolupráce s kynology Leningradu přenesla centrum selekce plemene do Moskvy.
+Starší historické texty dále uvádějí, že v roce 1973 vznikl v Moskvě městský spolek milovníků psů (MGOLS) a že díky aktivní chovatelské práci a spolupráci s kynology z Leningradu se Moskva stala hlavním centrem dalšího šlechtění plemene.
 
-V 80. letech rostla popularita plemene, zakládají se nové kluby a chovatelské stanice. Vytvořen je národní klub plemene barevná bolonka.`,
+V 70. a 80. letech 20. století popularita plemene rostla, vznikaly nové kluby a chovatelské stanice. Národní klub plemene byl založen v roce 1999.`,
 };
 
 const About = () => {
