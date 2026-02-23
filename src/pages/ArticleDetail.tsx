@@ -89,13 +89,26 @@ const ArticleDetail = () => {
                 <div>
                   <p className="text-sm font-medium text-foreground mb-1">O autorovi</p>
                   <p className="text-sm text-muted-foreground">
-                    Články připravuje CHS Pikaro® (Plzeň). Zaměřujeme se na ruskou barevnou bolonku a na klidný, moderní
-                    přístup k výchově (rutina, pozitivní motivace, zvládnutelné kroky). Informace v článcích vycházejí z
-                    dlouholetých zkušeností z chovu, z poznatků sdílených dalšími chovateli, z odborné literatury a z
-                    naší každodenní praxe. Snažíme se předávat užitečné a srozumitelné informace, které mohou pomoci v
-                    běžných situacích. Zároveň platí, že každý pes je jiný – liší se povahou, temperamentem, citlivostí
-                    i zdravotním stavem. To, co funguje u jednoho psa, nemusí fungovat stejně u jiného. Při podezření na
-                    nemoc ihned kontaktujte veterináře. Lepší zbytečný telefonát než neštěstí.
+                    Články připravuje <strong>CHS Pikaro® (Plzeň)</strong>. Zaměřujeme se na{" "}
+                    <strong>ruskou barevnou bolonku</strong> a na klidný, moderní přístup k výchově (rutina, pozitivní
+                    motivace, zvládnutelné kroky).
+                  </p>
+
+                  <p>
+                    Informace v článcích vycházejí z <strong>dlouholetých zkušeností z chovu</strong>, z poznatků
+                    sdílených <strong>dalšími chovateli</strong>, z <strong>odborné literatury</strong> a z naší
+                    každodenní praxe.
+                  </p>
+
+                  <p>
+                    Zároveň platí, že <strong>každý pes je jiný</strong> – liší se povahou, temperamentem, citlivostí i
+                    zdravotním stavem.
+                  </p>
+
+                  <p>
+                    <strong>
+                      Při podezření na nemoc ihned kontaktujte veterináře. Lepší zbytečný telefonát než neštěstí.
+                    </strong>
                   </p>
                 </div>
               </div>
