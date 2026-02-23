@@ -11,17 +11,19 @@ const steps = [
   {
     icon: FileText,
     title: "Osobní setkání",
-    description: "Navštivte nás a seznamte se s rodiči štěňat i samotnými štěňaty.",
+    description:
+      "Navštivte nás a seznamte se s maminkou štěňat, samotnými štěňaty a podrobnými informacemi o otci štěňátek.",
   },
   {
     icon: Heart,
     title: "Rezervace",
-    description: "Vyberete si konkrétní štěně a složíte zálohu na rezervaci.",
+    description: "Vyberete si konkrétní štěně (doporučíme i konkrétní pro vás) a složíte zálohu na rezervaci.",
   },
   {
     icon: Home,
     title: "Nový domov",
-    description: "Štěně si odvezete s očkovacím průkazem a PP.",
+    description:
+      "Štěně si odvezete s očkovacím průkazem, základní výbavičkou a psanými instrukcemi pro snadný začátek.",
   },
 ];
 
@@ -42,9 +44,7 @@ const ReservationStepper = () => {
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
             Jak to funguje
           </span>
-          <h2 className="section-heading text-3xl md:text-4xl mb-4">
-            Rezervace štěňátka ve 4 krocích
-          </h2>
+          <h2 className="section-heading text-3xl md:text-4xl mb-4">Rezervace štěňátka ve 4 krocích</h2>
           <p className="section-subheading max-w-2xl mx-auto">
             Od prvního kontaktu po šťastný příchod štěněte do vaší rodiny
           </p>
@@ -53,7 +53,7 @@ const ReservationStepper = () => {
         <div className="relative max-w-4xl mx-auto">
           {/* Connection line - behind everything */}
           <div className="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-0.5 bg-border z-0" />
-          
+
           {/* Progress line - behind content */}
           <motion.div
             className="hidden md:block absolute top-8 left-[12.5%] h-0.5 bg-primary z-0"
@@ -77,11 +77,11 @@ const ReservationStepper = () => {
                   className="relative mb-4"
                   initial={{ scale: 0 }}
                   animate={isInView ? { scale: 1 } : {}}
-                  transition={{ 
-                    duration: 0.4, 
+                  transition={{
+                    duration: 0.4,
                     delay: 0.5 + index * 0.2,
                     type: "spring",
-                    stiffness: 200
+                    stiffness: 200,
                   }}
                 >
                   <div className="w-16 h-16 rounded-full bg-card border-2 border-primary flex items-center justify-center shadow-lg">
@@ -93,12 +93,8 @@ const ReservationStepper = () => {
                 </motion.div>
 
                 {/* Content */}
-                <h3 className="font-display font-semibold text-foreground mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {step.description}
-                </p>
+                <h3 className="font-display font-semibold text-foreground mb-2">{step.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
               </motion.div>
             ))}
           </div>
