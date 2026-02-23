@@ -33,7 +33,7 @@ const dogs = [
     birthDate: "1. května 2019",
     color: "Hnědá se znaky",
     weight: "5,8 kg",
-    height: "26,ř cm",
+    height: "26,5 cm",
     titles: ["Velmi nadějná 1", "Výborný 1, vítěz třídy mladých", "Výborný 1 CAJC", "Klubový vítěz junior 2020", "BOS"],
     healthTests: ["Patella: 0/1", "Oči: bez nálezu na dědičné choroby"],
     character:
@@ -41,7 +41,7 @@ const dogs = [
     litters: [],
   },
   {
-    name: "Bekka",
+    name: "Rebeka",
     fullName: "Mery od Modlivého dolu",
     description: "Fenka s krásně klidnou, stabilní povahou a velkým srdcem. Skvělá máma a základ našeho chovu.",
     image: bekka1,
@@ -49,12 +49,12 @@ const dogs = [
     age: "4 roky",
     birthDate: "14. září 2020",
     color: "Černá",
-    weight: "3,5 kg",
-    height: "25 cm",
+    weight: "5 kg",
+    height: "24 cm",
     titles: ["Výborná 1", "CAJC", "BOJ"],
     healthTests: ["Patella: 0/0", "Oči: bez nálezu na dědičné choroby"],
     character:
-      "Rebekka je fenka s krásně klidnou, stabilní povahou a velkým srdcem. Je přátelská, jemná a velmi vnímavá – dokáže se rychle přizpůsobit a v domácnosti působí jako 'uklidňující kotva'. Jako máma je pečlivá a trpělivá, štěňatům dává pocit bezpečí a zároveň je přirozeně vede k samostatnosti. Právě tahle kombinace klidu a citlivosti je pro nás v chovu zásadní, protože vytváří skvělý základ pro budoucí rodinné parťáky.",
+      "Rebeka je fenka s krásně klidnou, stabilní povahou a velkým srdcem. Je přátelská, jemná a velmi vnímavá – dokáže se rychle přizpůsobit a v domácnosti působí jako 'uklidňující kotva'. Jako máma je pečlivá a trpělivá, štěňatům dává pocit bezpečí a zároveň je přirozeně vede k samostatnosti. Právě tahle kombinace klidu a citlivosti je pro nás v chovu zásadní, protože vytváří skvělý základ pro budoucí rodinné parťáky.",
     litters: [],
   },
   {
@@ -67,7 +67,7 @@ const dogs = [
     birthDate: "18. září 2014",
     color: "Černá",
     weight: "3,5 kg",
-    height: "25 cm",
+    height: "22,5 cm",
     titles: ["Výborná 1", "CAC", "BOB"],
     healthTests: ["Patella: 0/0", "Oči: bez nálezu na dědičné choroby"],
     character:
@@ -111,7 +111,7 @@ const Dogs = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Naši psi – ruská barevná bolonka | CHS Pikaro Plzeň"
-        description="Chovní jedinci ruské barevné bolonky. Výstavní šampioni s PP, zdravotní testy (patella, DNA). CHS Pikaro Plzeň."
+        description="Chovní jedinci ruské barevné bolonky. Výstavní šampioni s PP, zdravotní testy (patella, oči). CHS Pikaro Plzeň."
         keywords="chovní psi bolonka, ruská bolonka šampion, krycí pes bolonka Plzeň, zdravotní testy bolonka"
         url="/nasi-psi"
         breadcrumbs={[
