@@ -14,7 +14,7 @@ const breadcrumbs = [
 
 const currentLitters = [
   {
-    parents: "Merry od Modlivého vrchu × Zeus Země snů",
+    parents: "Merry od Modlivého dolu × Zeus Země snů",
     birthDate: "9. ledna 2026",
     available: 6,
     totalPuppies: 6,
@@ -35,7 +35,7 @@ const reservationSteps = [
   {
     icon: Calendar,
     title: "Osobní setkání",
-    description: "Navštivte nás a seznamte se s rodiči štěňat i samotnými štěňaty",
+    description: "Navštivte nás a seznamte se s maminkou štěňat i samotnými štěňaty",
   },
   {
     icon: CheckCircle,
@@ -53,17 +53,20 @@ const puppyCareTips = [
   {
     icon: Heart,
     title: "Socializace",
-    description: "Štěňata jsou od narození v kontaktu s lidmi, dětmi i dalšími zvířaty. Učíme je základním návykům a hygieně.",
+    description:
+      "Štěňata jsou od narození v kontaktu s lidmi, dětmi i dalšími zvířaty. Učíme je základním návykům a hygieně.",
   },
   {
     icon: Shield,
     title: "Zdravotní péče",
-    description: "Všechna štěňata jsou očkována, odčervena a čipována. Předáváme kompletní zdravotní dokumentaci.",
+    description:
+      "Všechna štěňata jsou očkována podle věku, odčervena a čipována. Předáváme kompletní zdravotní dokumentaci.",
   },
   {
     icon: Baby,
     title: "Výchova od začátku",
-    description: "Od raného věku štěňata citlivě navykáme na manipulaci a péči: hřeben/kartáč, tlapky, uši, tlamu, zvuky domácnosti a krátké zklidnění. Je to praktický základ pro pohodovou srst i veterinární ošetření.",
+    description:
+      "Od raného věku štěňata citlivě navykáme na manipulaci a péči: hřeben/kartáč, tlapky, uši, tlamu, zvuky domácnosti a krátké zklidnění. Je to praktický základ pro pohodovou srst i veterinární ošetření.",
   },
   {
     icon: Clock,
@@ -77,7 +80,7 @@ const Puppies = () => {
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 }
+    visible: { opacity: 1, y: 0 },
   };
 
   const staggerContainer = {
@@ -85,21 +88,21 @@ const Puppies = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: prefersReducedMotion ? 0 : 0.1
-      }
-    }
+        staggerChildren: prefersReducedMotion ? 0 : 0.1,
+      },
+    },
   };
 
   const scaleIn = {
     hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1 }
+    visible: { opacity: 1, scale: 1 },
   };
 
   return (
     <div className="min-h-screen bg-background">
       <SEO
         title="Štěňata ruské bolonky | CHS Pikaro Plzeň"
-        description="Štěňata ruské barevné bolonky k prodeji. Zdravá, socializovaná štěňata s PP, očkovaná, čipovaná. Aktuální vrhy od CHS Pikaro v Plzni."
+        description="Štěňata ruské barevné bolonky k prodeji. Zdravá, socializovaná štěňata s PP, očkovaná podle věku, čipovaná. Aktuální vrhy od CHS Pikaro v Plzni."
         keywords="štěňata ruské bolonky, štěně ruské barevné bolonky, bolonka zwetna štěňata, štěně bolonky Plzeň, ruská bolonka štěně"
         url="/stenata"
         breadcrumbs={[
@@ -113,33 +116,20 @@ const Puppies = () => {
         <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
             <Breadcrumbs items={breadcrumbs} className="mb-8 justify-center" />
-            <motion.div 
-              className="text-center mb-12"
-              initial="hidden"
-              animate="visible"
-              variants={staggerContainer}
-            >
-              <motion.span 
+            <motion.div className="text-center mb-12" initial="hidden" animate="visible" variants={staggerContainer}>
+              <motion.span
                 className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4"
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
               >
                 Štěňata
               </motion.span>
-              <motion.h1 
-                className="section-heading mb-4"
-                variants={fadeInUp}
-                transition={{ duration: 0.6 }}
-              >
+              <motion.h1 className="section-heading mb-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
                 Naše štěňata
               </motion.h1>
-              <motion.p 
-                className="section-subheading mx-auto"
-                variants={fadeInUp}
-                transition={{ duration: 0.6 }}
-              >
-                S láskou vychováváme štěňata Ruské barevné bolonky. 
-                Každé štěně odchází do nového domova připravené, socializované a zdravé.
+              <motion.p className="section-subheading mx-auto" variants={fadeInUp} transition={{ duration: 0.6 }}>
+                S láskou vychováváme štěňata Ruské barevné bolonky. Každé štěně odchází do nového domova připravené,
+                socializované a zdravé.
               </motion.p>
             </motion.div>
           </div>
@@ -148,23 +138,21 @@ const Puppies = () => {
         {/* Current Litters */}
         <section className="py-16 bg-background overflow-hidden">
           <div className="container mx-auto px-6">
-            <motion.div 
+            <motion.div
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">
-                Aktuální vrhy
-              </h2>
+              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Aktuální vrhy</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Přehled aktuálně dostupných štěňat a plánovaných vrhů
               </p>
             </motion.div>
 
             {currentLitters.length > 0 ? (
-              <motion.div 
+              <motion.div
                 className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
                 initial="hidden"
                 whileInView="visible"
@@ -172,22 +160,18 @@ const Puppies = () => {
                 variants={staggerContainer}
               >
                 {currentLitters.map((litter, index) => (
-                  <motion.div
-                    key={index}
-                    variants={scaleIn}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <Link 
+                  <motion.div key={index} variants={scaleIn} transition={{ duration: 0.5, delay: index * 0.1 }}>
+                    <Link
                       to={`/stenata/${litter.slug}`}
                       className="card-warm overflow-hidden group hover:shadow-lg transition-shadow block"
                     >
-                      <motion.div 
+                      <motion.div
                         className="aspect-video overflow-hidden rounded-xl mb-4"
                         whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <motion.img 
-                          src={litter.image} 
+                        <motion.img
+                          src={litter.image}
                           alt={`Vrh ${litter.parents}`}
                           className="w-full h-full object-cover"
                           whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
@@ -202,7 +186,8 @@ const Puppies = () => {
                           <span className="font-medium text-foreground">Datum narození:</span> {litter.birthDate}
                         </p>
                         <p className="text-muted-foreground">
-                          <span className="font-medium text-foreground">Počet štěňat:</span> {litter.totalPuppies} {litter.puppiesDetail && `(${litter.puppiesDetail})`}
+                          <span className="font-medium text-foreground">Počet štěňat:</span> {litter.totalPuppies}{" "}
+                          {litter.puppiesDetail && `(${litter.puppiesDetail})`}
                         </p>
                         <p className="text-muted-foreground">
                           <span className="font-medium text-foreground">Zbarvení:</span> {litter.colors.join(", ")}
@@ -211,7 +196,7 @@ const Puppies = () => {
                           <span className="font-medium text-foreground">K odběru od:</span> {litter.readyDate}
                         </p>
                       </div>
-                      <motion.span 
+                      <motion.span
                         className="btn-hero inline-block mt-4 text-center w-full"
                         whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
                         whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
@@ -223,7 +208,7 @@ const Puppies = () => {
                 ))}
               </motion.div>
             ) : (
-              <motion.div 
+              <motion.div
                 className="text-center py-12 card-warm max-w-2xl mx-auto"
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -248,7 +233,7 @@ const Puppies = () => {
         {/* Puppy Care */}
         <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
-            <motion.div 
+            <motion.div
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -263,7 +248,7 @@ const Puppies = () => {
               </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
               initial="hidden"
               whileInView="visible"
@@ -278,18 +263,16 @@ const Puppies = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={prefersReducedMotion ? {} : { y: -8, transition: { duration: 0.2 } }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="w-14 h-14 mx-auto mb-4 rounded-2xl gradient-accent flex items-center justify-center"
-                    whileHover={prefersReducedMotion ? {} : { scale: 1.1, rotate: [0, -5, 5, 0], transition: { duration: 0.3 } }}
+                    whileHover={
+                      prefersReducedMotion ? {} : { scale: 1.1, rotate: [0, -5, 5, 0], transition: { duration: 0.3 } }
+                    }
                   >
                     <tip.icon className="w-7 h-7 text-primary-foreground" />
                   </motion.div>
-                  <h3 className="font-display text-lg font-semibold mb-2 text-foreground">
-                    {tip.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {tip.description}
-                  </p>
+                  <h3 className="font-display text-lg font-semibold mb-2 text-foreground">{tip.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{tip.description}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -299,7 +282,7 @@ const Puppies = () => {
         {/* Reservation Process */}
         <section className="py-16 bg-background overflow-hidden">
           <div className="container mx-auto px-6">
-            <motion.div 
+            <motion.div
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -309,12 +292,10 @@ const Puppies = () => {
               <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">
                 Jak rezervovat štěně
               </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Jednoduchý proces v několika krocích
-              </p>
+              <p className="text-muted-foreground max-w-2xl mx-auto">Jednoduchý proces v několika krocích</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto"
               initial="hidden"
               whileInView="visible"
@@ -322,17 +303,17 @@ const Puppies = () => {
               variants={staggerContainer}
             >
               {reservationSteps.map((step, index) => (
-                <motion.div 
-                  key={step.title} 
+                <motion.div
+                  key={step.title}
                   className="relative"
                   variants={fadeInUp}
                   transition={{ duration: 0.5, delay: index * 0.15 }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="card-warm text-center h-full"
                     whileHover={prefersReducedMotion ? {} : { y: -5, transition: { duration: 0.2 } }}
                   >
-                    <motion.div 
+                    <motion.div
                       className="w-10 h-10 mx-auto mb-4 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold"
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
@@ -341,24 +322,22 @@ const Puppies = () => {
                     >
                       {index + 1}
                     </motion.div>
-                    <motion.div 
+                    <motion.div
                       className="w-12 h-12 mx-auto mb-4 rounded-xl bg-secondary flex items-center justify-center"
-                      whileHover={prefersReducedMotion ? {} : { rotate: [0, -10, 10, 0], transition: { duration: 0.4 } }}
+                      whileHover={
+                        prefersReducedMotion ? {} : { rotate: [0, -10, 10, 0], transition: { duration: 0.4 } }
+                      }
                     >
                       <step.icon className="w-6 h-6 text-primary" />
                     </motion.div>
-                    <h3 className="font-display text-lg font-semibold mb-2 text-foreground">
-                      {step.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {step.description}
-                    </p>
+                    <h3 className="font-display text-lg font-semibold mb-2 text-foreground">{step.title}</h3>
+                    <p className="text-muted-foreground text-sm">{step.description}</p>
                   </motion.div>
                 </motion.div>
               ))}
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="text-center mt-12"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -381,7 +360,7 @@ const Puppies = () => {
         <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto">
-              <motion.div 
+              <motion.div
                 className="text-center mb-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -393,7 +372,7 @@ const Puppies = () => {
                 </h2>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="card-warm"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -411,8 +390,8 @@ const Puppies = () => {
                     "Podrobné pokyny k péči a výživě",
                     "Celoživotní poradenskou podporu",
                   ].map((item, index) => (
-                    <motion.li 
-                      key={index} 
+                    <motion.li
+                      key={index}
                       className="flex items-start gap-3"
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
@@ -432,7 +411,7 @@ const Puppies = () => {
         {/* Useful Articles - Internal Linking */}
         <section className="py-16 bg-background overflow-hidden">
           <div className="container mx-auto px-6">
-            <motion.div 
+            <motion.div
               className="max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -444,7 +423,11 @@ const Puppies = () => {
               </h2>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {[
-                  { slug: "vychova-stenete-ruske-barevne-bolonky", title: "Výchova štěněte", desc: "Socializace, rutina, samota" },
+                  {
+                    slug: "vychova-stenete-ruske-barevne-bolonky",
+                    title: "Výchova štěněte",
+                    desc: "Socializace, rutina, samota",
+                  },
                   { slug: "bolonka-do-bytu", title: "Bolonka do bytu", desc: "Štěkání, citlivost, režim" },
                   { slug: "pece-o-srst-bolonky-bez-stresu", title: "Péče o srst", desc: "Česání, koupání, salon" },
                   { slug: "vyziva-stenete-bolonky", title: "Výživa štěněte", desc: "Krmení, dávkování, režim" },
