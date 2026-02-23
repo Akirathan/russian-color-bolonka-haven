@@ -23,7 +23,7 @@ const steps = [
     icon: Home,
     title: "Nový domov",
     description:
-      "Štěně si odvezete s očkovacím průkazem, lékařakou zprávou, základní výbavičkou a psanými instrukcemi pro snadný začátek.",
+      "Štěně si odvezete s očkovacím průkazem, lékařskou zprávou, základní výbavičkou a psanými instrukcemi pro snadný začátek.",
   },
 ];
 
