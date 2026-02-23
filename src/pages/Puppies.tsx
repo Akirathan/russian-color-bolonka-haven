@@ -381,8 +381,7 @@ const Puppies = () => {
               >
                 <ul className="space-y-4">
                   {[
-                    "Průkaz původu (PP) s rodokmenem",
-                    "Očkovací průkaz s kompletním očkováním",
+                    "Očkovací průkaz s dosavadním očkováním",
                     "Čip registrovaný v centrální databázi",
                     "Smlouvu o prodeji štěněte",
                     "Startovací balíček krmiva",
