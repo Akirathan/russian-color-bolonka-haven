@@ -12,7 +12,7 @@ const steps = [
     icon: FileText,
     title: "Osobní setkání",
     description:
-      "Navštivte nás a seznamte se s maminkou štěňat, samotnými štěňaty a podrobnými informacemi o otci štěňátek.",
+      "Navštivte nás a seznamte se s maminkou štěňat, samotnými štěňaty a podrobnými informacemi o otci štěňat.",
   },
   {
     icon: Heart,
