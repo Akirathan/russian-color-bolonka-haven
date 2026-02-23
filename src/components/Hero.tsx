@@ -76,6 +76,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
           >
+            <Link to="/o-nas" className="btn-outline-hero text-center">
+              Poznejte nás
+            </Link>
             <motion.div
               initial={{ scale: 1 }}
               animate={{ scale: [1, 1.05, 1] }}
@@ -89,9 +92,6 @@ const Hero = () => {
                 Dostupná štěňata
               </Link>
             </motion.div>
-            <Link to="/o-nas" className="btn-outline-hero text-center">
-              Poznejte nás
-            </Link>
           </motion.div>
         </div>
       </div>
