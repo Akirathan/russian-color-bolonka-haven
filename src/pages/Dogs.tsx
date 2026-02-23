@@ -32,9 +32,9 @@ const dogs = [
     age: "5 let",
     birthDate: "1. května 2019",
     color: "Hnědá se znaky",
-    weight: "3,5 kg",
-    height: "25 cm",
-    titles: ["Velmi nadějná 1", "Výborný 1 CAJC", "Klubový vítěz junior 2020", "BOS", "Výborný 1, vítěz třídy mladých"],
+    weight: "5,8 kg",
+    height: "26,ř cm",
+    titles: [Velmi nadějná 1“, „Výborný 1, vítěz třídy mladých“, „Výborný 1 CAJC“ , „Klubový vítěz junior 2020“, „BOS“],
     healthTests: ["Patella: 0/1", "Oči: bez nálezu na dědičné choroby"],
     character:
       "Oskar je náš krycí pes – klidný, přátelský a povahově velmi vyrovnaný parťák, se kterým je radost fungovat v každodenním režimu. Vyniká kontaktní, jemnou povahou a schopností se snadno zklidnit, což je přesně to, co u bolonky chceme předávat dál. V chovu se dlouhodobě osvědčuje – jeho potomci bývají zdravě stavění, krásně socializovatelní a povahově úžasní. Právě proto je Oskar pro nás důležitou součástí chovu a pečlivě vybíraným tatínkem budoucích vrhů.",
@@ -52,7 +52,7 @@ const dogs = [
     weight: "3,5 kg",
     height: "25 cm",
     titles: ["Výborná 1", "CAJC", "BOJ"],
-    healthTests: ["Patella: 0/0", "Oči: Clear"],
+    healthTests: ["Patella: 0/0", "Oči: bez nálezu na dědičné choroby"],
     character:
       "Rebekka je fenka s krásně klidnou, stabilní povahou a velkým srdcem. Je přátelská, jemná a velmi vnímavá – dokáže se rychle přizpůsobit a v domácnosti působí jako 'uklidňující kotva'. Jako máma je pečlivá a trpělivá, štěňatům dává pocit bezpečí a zároveň je přirozeně vede k samostatnosti. Právě tahle kombinace klidu a citlivosti je pro nás v chovu zásadní, protože vytváří skvělý základ pro budoucí rodinné parťáky.",
     litters: [],
@@ -61,7 +61,7 @@ const dogs = [
     name: "Kevina",
     fullName: "Amálka Hamvaley",
     description:
-      "Uchovněná fenka, dnes hlavně rodinná parťačka pro radost, klid a pohodu, která je stále vůdkyní naší smečky.",
+      "Uchovněná fenka, dnes hlavně rodinná parťačka pro radost, klid a pohodu..",
     image: kevina1,
     gallery: [kevina1, kevina1, kevina1],
     age: "10 let",
@@ -70,9 +70,9 @@ const dogs = [
     weight: "3,5 kg",
     height: "25 cm",
     titles: ["Výborná 1", "CAC", "BOB"],
-    healthTests: [],
+    healthTests: ["Patella: 0/0", "Oči: bez nálezu na dědičné choroby"],
     character:
-      "Kevina je uchovněná fenka, která už u nás není aktivně v chovu – dnes hlavně rodinná parťačka pro radost, klid a pohodu.",
+      "Kevina je uchovněná fenka, která už u nás není aktivně v chovu – dnes hlavně rodinná parťačka pro radost, klid a pohodu, která je stále vůdkyní naší smečky.",
     litters: [],
   },
 ];
