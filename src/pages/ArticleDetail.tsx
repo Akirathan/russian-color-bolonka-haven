@@ -20,7 +20,9 @@ const ArticleDetail = () => {
         <main className="pt-20 py-16">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-2xl font-display font-semibold mb-4">Článek nenalezen</h1>
-            <Link to="/clanky" className="text-primary hover:underline">Zpět na články</Link>
+            <Link to="/clanky" className="text-primary hover:underline">
+              Zpět na články
+            </Link>
           </div>
         </main>
         <Footer />
@@ -67,12 +69,17 @@ const ArticleDetail = () => {
           <div className="container mx-auto px-6">
             <Breadcrumbs items={breadcrumbs} className="mb-6" />
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">{article.category}</span>
-              <span className="flex items-center gap-1 text-sm text-muted-foreground"><Clock className="w-4 h-4" />{article.readTime}</span>
+              <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
+                {article.category}
+              </span>
+              <span className="flex items-center gap-1 text-sm text-muted-foreground">
+                <Clock className="w-4 h-4" />
+                {article.readTime}
+              </span>
             </div>
             <h1 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">{article.title}</h1>
             <p className="text-lg text-muted-foreground max-w-3xl mb-6">{article.excerpt}</p>
-            
+
             {/* Author Box */}
             <div className="max-w-3xl bg-card/50 rounded-xl p-4 border border-border/50">
               <div className="flex items-start gap-3">
@@ -82,7 +89,13 @@ const ArticleDetail = () => {
                 <div>
                   <p className="text-sm font-medium text-foreground mb-1">O autorovi</p>
                   <p className="text-sm text-muted-foreground">
-                    Články připravuje CHS Pikaro® (Plzeň) – zaměřujeme se na ruskou barevnou bolonku a klidný, moderní přístup k výchově (rutina, pozitivní motivace, zvládnutelné kroky).
+                    Články připravuje CHS Pikaro® (Plzeň). Zaměřujeme se na ruskou barevnou bolonku a na klidný, moderní
+                    přístup k výchově (rutina, pozitivní motivace, zvládnutelné kroky). Informace v článcích vycházejí z
+                    dlouholetých zkušeností z chovu, z poznatků sdílených dalšími chovateli, z odborné literatury a z
+                    naší každodenní praxe. Snažíme se předávat užitečné a srozumitelné informace, které mohou pomoci v
+                    běžných situacích. Zároveň platí, že každý pes je jiný – liší se povahou, temperamentem, citlivostí
+                    i zdravotním stavem. To, co funguje u jednoho psa, nemusí fungovat stejně u jiného. Při podezření na
+                    nemoc ihned kontaktujte veterináře. Lepší zbytečný telefonát než neštěstí.
                   </p>
                 </div>
               </div>
@@ -104,7 +117,8 @@ const ArticleDetail = () => {
                     <ul className="space-y-2">
                       {article.canDoBox.map((item, i) => (
                         <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0" />{item}
+                          <span className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0" />
+                          {item}
                         </li>
                       ))}
                     </ul>
@@ -119,7 +133,8 @@ const ArticleDetail = () => {
                     <ul className="space-y-2">
                       {article.vetBox.map((item, i) => (
                         <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0" />{item}
+                          <span className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0" />
+                          {item}
                         </li>
                       ))}
                     </ul>
@@ -136,7 +151,7 @@ const ArticleDetail = () => {
             <div className="max-w-5xl mx-auto flex gap-8">
               {/* TOC Sidebar */}
               <TableOfContents items={tocItems} className="w-64 flex-shrink-0" />
-              
+
               {/* Main Content */}
               <article className="flex-1 max-w-3xl space-y-10">
                 {article.sections.map((section) => (
@@ -161,11 +176,15 @@ const ArticleDetail = () => {
           <section id="faq" className="py-12 gradient-warm">
             <div className="container mx-auto px-6">
               <div className="max-w-3xl mx-auto">
-                <h2 className="font-display text-2xl font-semibold text-foreground mb-6 text-center">Často kladené otázky</h2>
+                <h2 className="font-display text-2xl font-semibold text-foreground mb-6 text-center">
+                  Často kladené otázky
+                </h2>
                 <Accordion type="single" collapsible className="space-y-3">
                   {article.faq.map((item, i) => (
                     <AccordionItem key={i} value={`faq-${i}`} className="card-warm border-none">
-                      <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">{item.question}</AccordionTrigger>
+                      <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">
+                        {item.question}
+                      </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground">{item.answer}</AccordionContent>
                     </AccordionItem>
                   ))}
@@ -181,7 +200,10 @@ const ArticleDetail = () => {
             <div className="max-w-3xl mx-auto">
               <h2 className="font-display text-xl font-semibold text-foreground mb-4">Další články</h2>
               <div className="flex flex-wrap gap-3">
-                <Link to="/clanky/vychova-stenete-ruske-barevne-bolonky" className="text-sm text-primary hover:underline">
+                <Link
+                  to="/clanky/vychova-stenete-ruske-barevne-bolonky"
+                  className="text-sm text-primary hover:underline"
+                >
                   Výchova štěněte
                 </Link>
                 <span className="text-muted-foreground">•</span>
@@ -211,19 +233,14 @@ const ArticleDetail = () => {
               <p className="text-muted-foreground mb-4">
                 Rádi vám pomůžeme s nastavením režimu, socializace, samoty i péče o srst.
               </p>
-              <div className="text-sm text-foreground font-medium mb-3">
-                CHS Pikaro® – Plzeň (návštěvy po domluvě)
-              </div>
+              <div className="text-sm text-foreground font-medium mb-3">CHS Pikaro® – Plzeň (návštěvy po domluvě)</div>
               <div className="flex flex-wrap gap-4">
-                <a 
-                  href="tel:+420724174659" 
-                  className="inline-flex items-center gap-2 text-primary hover:underline"
-                >
+                <a href="tel:+420724174659" className="inline-flex items-center gap-2 text-primary hover:underline">
                   <Phone className="w-4 h-4" />
                   +420 724 174 659
                 </a>
-                <a 
-                  href="mailto:ipikaro@gmail.com" 
+                <a
+                  href="mailto:ipikaro@gmail.com"
                   className="inline-flex items-center gap-2 text-primary hover:underline"
                 >
                   <Mail className="w-4 h-4" />
