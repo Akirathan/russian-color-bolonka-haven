@@ -19,10 +19,8 @@ const Footer = () => {
             <div className="font-display text-2xl font-semibold text-foreground mb-2">
               {SITE_CONFIG.shortName} – {SITE_CONFIG.address.city}
             </div>
-            <p className="text-sm text-muted-foreground mb-4">
-              Profesionální chov ruských barevných bolonek.
-            </p>
-            
+            <p className="text-sm text-muted-foreground mb-4">Chovatelská stanice ruských barevných bolonek.</p>
+
             {/* NAP (Name, Address, Phone) - consistent for local SEO */}
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-start gap-2">
@@ -31,14 +29,14 @@ const Footer = () => {
                   {SITE_CONFIG.address.street}, {SITE_CONFIG.address.postalCode} {SITE_CONFIG.address.city}
                 </address>
               </div>
-              <a 
+              <a
                 href={`tel:${SITE_CONFIG.phone}`}
                 className="flex items-center gap-2 hover:text-primary transition-colors"
               >
                 <Phone className="w-4 h-4 shrink-0" />
                 <span>{SITE_CONFIG.phoneFormatted}</span>
               </a>
-              <a 
+              <a
                 href={`mailto:${SITE_CONFIG.email}`}
                 className="flex items-center gap-2 hover:text-primary transition-colors"
               >
@@ -55,9 +53,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h3 className="font-display font-semibold text-foreground mb-4">
-              Rychlé odkazy
-            </h3>
+            <h3 className="font-display font-semibold text-foreground mb-4">Rychlé odkazy</h3>
             <nav className="flex flex-col gap-2">
               {[
                 { to: "/plemeno/ruska-barevna-bolonka", label: "O plemeni" },
@@ -66,9 +62,9 @@ const Footer = () => {
                 { to: "/clanky", label: "Články" },
                 { to: "/kontakt", label: "Kontakt" },
               ].map((link) => (
-                <Link 
+                <Link
                   key={link.to}
-                  to={link.to} 
+                  to={link.to}
                   className="text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-200"
                 >
                   {link.label}
@@ -76,10 +72,9 @@ const Footer = () => {
               ))}
             </nav>
           </motion.div>
-
         </div>
 
-        <motion.div 
+        <motion.div
           className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
