@@ -411,7 +411,10 @@ const Puppies = () => {
                   >
                     <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                     <span className="text-foreground">
-                      <Link to="/clanky/prukaz-puvodu-psa-bolonka" className="text-primary hover:underline">Průkaz původu</Link> – chovatelka zašle ihned po vyhotovení plemennou knihou
+                      <Link to="/clanky/prukaz-puvodu-psa-bolonka" className="text-primary hover:underline font-medium">
+                        Průkaz původu
+                      </Link>
+                      {" "}– chovatelka zašle ihned po vyhotovení plemennou knihou
                     </span>
                   </motion.li>
                 </ul>
