@@ -1328,6 +1328,124 @@ export const articles: Article[] = [
       { question: "Mám držet tlamu násilím?", answer: "Ne. Cíl je spolupráce, ne zápas." },
     ],
   },
+  {
+    id: 13,
+    slug: "prukaz-puvodu-psa-bolonka",
+    title: "Průkaz původu psa: co znamená a jak se vystavuje",
+    seoTitle: "Průkaz původu psa (PP): co znamená, kdy se vystavuje a proč často není při převzetí",
+    metaDescription:
+      "Srozumitelně o průkazu původu psa: co PP znamená, co negarantuje, kdy a jak se v ČR vystavuje, proč často není při převzetí štěněte a na co se ptát chovatele.",
+    excerpt:
+      "Průkaz původu (PP) je důležitý doklad o původu psa v řízeném chovu. Není to automatická záruka povahy ani zdraví, ale je to klíčový dokument k identitě a původu jedince.",
+    category: "O plemeni",
+    readTime: "8 min",
+    date: "24. února 2026",
+    icon: ShieldCheck,
+    canDoBox: [
+      "Ptejte se, kdy byla odeslána přihláška vrhu do plemenné knihy",
+      "Počítejte s tím, že PP při převzetí štěněte často ještě fyzicky není hotový",
+      "Nechte si vysvětlit, jak vám chovatel PP předá, jakmile ho obdrží",
+    ],
+    vetBox: [
+      "Průkaz původu není náhrada veterinární prohlídky ani záruka aktuálního zdravotního stavu",
+      "Při jakýchkoli pochybnostech o zdravotním stavu štěněte nečekejte a kontaktujte veterináře",
+      "Lepší zbytečný telefonát než neštěstí",
+    ],
+    sections: [
+      {
+        id: "co-je-pp",
+        title: "Co je průkaz původu (PP)",
+        content:
+          "Průkaz původu je oficiální doklad o původu psa v rámci organizovaného chovu. Obvykle obsahuje identifikační údaje jedince a předky (rodokmen) v rozsahu daném pravidly příslušné plemenné knihy a systému, ve kterém je pes zapsán.",
+      },
+      {
+        id: "co-pp-znamena-a-co-ne",
+        title: "Co PP znamená (a co sám o sobě neznamená)",
+        content:
+          "PP dokládá původ a zařazení psa do evidovaného chovu. Sám o sobě ale automaticky negarantuje povahu, kvalitu socializace ani to, že pes nikdy neonemocní. Proto je důležité hodnotit zároveň chovatele, podmínky odchovu, zdravotní přístup a komunikaci.",
+      },
+      {
+        id: "kdy-se-vystavuje",
+        title: "Kdy se průkaz původu vystavuje",
+        content:
+          "V českém systému (ČMKU) se PP nevystavuje při narození štěněte ani automaticky při jeho předání novému majiteli. Vystavení navazuje na administrativní proces zápisu vrhu do plemenné knihy po splnění požadovaných podkladů (např. přihláška vrhu a související dokumenty podle pravidel klubu a plemenné knihy).",
+        subsections: [
+          {
+            title: "Prakticky pro zájemce o štěně",
+            content:
+              "Proto se může stát, že při převzetí štěněte PP ještě není fyzicky k dispozici. To samo o sobě nemusí znamenat problém, pokud chovatel transparentně vysvětlí stav administrace a následné předání dokumentu.",
+          },
+        ],
+      },
+      {
+        id: "jak-se-vystavuje",
+        title: "Jak se průkaz původu vystavuje (zjednodušeně)",
+        content:
+          "Zjednodušeně: chovatel (ve spolupráci s klubem/poradcem chovu podle pravidel plemene) zajistí podklady pro zápis vrhu, příslušné pracoviště plemenné knihy provede zápis a následně vystaví průkazy původu. Vydané PP jsou zpravidla předány/zaslány chovateli, který je následně předá nabyvatelům štěňat.",
+      },
+      {
+        id: "proc-casto-neni-pri-prevzeti",
+        title: "Proč PP často není při převzetí štěněte",
+        content:
+          "Důvodem bývá časová návaznost administrace: štěně může být připravené k odběru dříve, než je dokončen proces zápisu vrhu a fyzické vystavení PP plemennou knihou. Rozdíl může být krátký i delší podle termínů, vytížení a toho, kdy byly odevzdány správné podklady.",
+      },
+      {
+        id: "na-co-se-ptat-chovatele",
+        title: "Na co se ptát chovatele (prakticky a věcně)",
+        content:
+          "Místo obecného dotazu Má PP? bývá užitečnější ptát se konkrétně: Je vrh už nahlášený a zapsaný? Byly podklady odeslané do plemenné knihy? Kdo vystavuje PP pro toto plemeno? Jakým způsobem mi PP předáte, až dorazí? Transparentní chovatel obvykle vysvětlí proces bez vyhýbání.",
+      },
+      {
+        id: "pozor-na-nepresne-formulace",
+        title: "Pozor na nepřesné formulace v inzerci",
+        content:
+          "Formulace typu rodiče s PP, štěně bez PP mohou znamenat, že štěně není zapsáno v organizovaném chovu a nebude mít oficiální průkaz původu, i když rodiče původ doložený mají. To je dobré si vyjasnit předem, protože to není totéž jako štěně s PP, který jen ještě není fyzicky vystavený/předaný.",
+      },
+      {
+        id: "co-si-prevzit-se-stenetem",
+        title: "Co si převzít se štěnětem, když PP ještě není fyzicky hotový",
+        content:
+          "Kromě samotného štěněte je rozumné mít kupní smlouvu, informace ke krmení a režimu, očkovací průkaz/pet pas podle situace, domluvu o předání PP a ideálně i jasně popsaný způsob komunikace (kdy a jak vám chovatel dá vědět, že PP dorazil).",
+      },
+      {
+        id: "shrnutí",
+        title: "Shrnutí bez mýtů",
+        content:
+          "PP je důležitý dokument o původu psa. Je běžné, že při odběru štěněte ještě není vždy fyzicky k dispozici, protože jeho vystavení následuje po administrativním zápisu vrhu. Klíčové je, aby chovatel proces uměl srozumitelně vysvětlit a průkaz původu po jeho obdržení bez zbytečného odkladu předal.",
+      },
+    ],
+    faq: [
+      {
+        question: "Je průkaz původu totéž co záruka zdraví?",
+        answer:
+          "Ne. PP dokládá původ a evidenci v organizovaném chovu. Zdravotní stav je potřeba hodnotit zvlášť (vyšetření, péče chovatele, veterinární dokumentace, aktuální kondice štěněte).",
+      },
+      {
+        question: "Je problém, když při převzetí štěněte ještě nemám PP v ruce?",
+        answer:
+          "Nemusí být. Důležité je, zda chovatel transparentně vysvětlí, v jaké fázi je zápis vrhu a jak vám PP po obdržení předá.",
+      },
+      {
+        question: "Kdo průkaz původu vystavuje?",
+        answer:
+          "V systému ČMKU jej vystavuje příslušné pracoviště plemenné knihy ČMKU (na základě pravidel a podkladů pro zápis vrhu).",
+      },
+      {
+        question: "Komu je PP nejdřív předán?",
+        answer: "Typicky chovateli, který jej následně předává nabyvateli štěněte.",
+      },
+      {
+        question: "Může mít štěně rodiče s PP a samo být bez PP?",
+        answer:
+          "Ano, může. Proto je důležité rozlišit mezi štěnětem, které PP teprve čeká po administraci, a štěnětem, které do evidovaného chovu zapsané není.",
+      },
+      {
+        question: "Když mám pochybnosti o zdravotním stavu štěněte při převzetí, mám čekat na vyjádření chovatele?",
+        answer:
+          "Spíš ne. Při pochybnostech je rozumné kontaktovat veterináře co nejdřív — lepší zbytečný telefonát než pozdní řešení problému.",
+      },
+    ],
+  },
 ];
 
 export const categories = ["Všechny", "Výchova", "Životní styl", "Péče", "Výživa", "Zdraví", "O plemeni"];
