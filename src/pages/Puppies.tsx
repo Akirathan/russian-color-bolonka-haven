@@ -389,7 +389,6 @@ const Puppies = () => {
                     "Základní výbavička - krmení do začátku, oblíbená hračka, savé podložky...",
                     "Podrobné pokyny k péči a výživě",
                     "Celoživotní poradenskou podporu",
-                    "Průkaz původu-chovatelka zašle ihned po vyhotovení plemennou knihou",
                   ].map((item, index) => (
                     <motion.li
                       key={index}
@@ -403,6 +402,18 @@ const Puppies = () => {
                       <span className="text-foreground">{item}</span>
                     </motion.li>
                   ))}
+                  <motion.li
+                    className="flex items-start gap-3"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 8 * 0.08 }}
+                  >
+                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span className="text-foreground">
+                      <Link to="/clanky/prukaz-puvodu-psa-bolonka" className="text-primary hover:underline">Průkaz původu</Link> – chovatelka zašle ihned po vyhotovení plemennou knihou
+                    </span>
+                  </motion.li>
                 </ul>
               </motion.div>
             </div>
