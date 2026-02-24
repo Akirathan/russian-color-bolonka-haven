@@ -381,8 +381,8 @@ const Puppies = () => {
               >
                 <ul className="space-y-4">
                   {[
-                    "Očkovací průkaz s dosavadním očkováním",
-                    "Čip registrovaný v centrální databázi",
+                    "Očkovací průkaz s dosavadním očkováním a záznamy o odčervení",
+                    "Čip",
                     "Smlouvu o prodeji štěněte",
                     "Startovací balíček krmiva",
                     "Oblíbenou hračku štěněte",
