@@ -383,11 +383,13 @@ const Puppies = () => {
                   {[
                     "Očkovací průkaz s dosavadním očkováním a záznamy o odčervení",
                     "Čip",
+                    "Převodní list štěněte",
                     "Smlouvu o prodeji štěněte",
-                    "Startovací balíček krmiva",
-                    "Oblíbenou hračku štěněte",
+                    "Potvrzení veterinárního lékaře o zdravotním stavu štěněte",
+                    "Základní výbavička - krmení do začátku, oblíbená hračka, savé podložky...",
                     "Podrobné pokyny k péči a výživě",
                     "Celoživotní poradenskou podporu",
+                    "Průkaz původu-chovatelka zašle ihned po vyhotovení plemennou knihou",
                   ].map((item, index) => (
                     <motion.li
                       key={index}
