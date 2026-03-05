@@ -4,12 +4,70 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
-import { Calendar, Baby, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { Calendar, Baby, ChevronLeft, ChevronRight, Dog, Weight, Palette } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { motion } from "framer-motion";
 import litterA from "@/assets/litter-2026-01-a.jpg";
 import litterB from "@/assets/litter-2026-01-b.jpg";
 import litterC from "@/assets/litter-2026-01-c.jpg";
 import litterMain from "@/assets/litter-2026-01.jpg";
+import puppy1 from "@/assets/puppy-1.jpg";
+import puppy2 from "@/assets/puppy-2.jpg";
+import puppy3 from "@/assets/puppy-3.jpg";
+import puppy4 from "@/assets/puppy-4.jpg";
+import puppy5 from "@/assets/puppy-5.jpg";
+import puppy6 from "@/assets/puppy-6.jpg";
+
+const puppies = [
+  {
+    name: "Bára",
+    photo: puppy1,
+    sex: "fenka",
+    weight: "320 g",
+    color: "Černá",
+    description: "Zvědavá a odvážná slečna, která jako první prozkoumává nové hračky. Miluje drbání za ouškem.",
+  },
+  {
+    name: "Bruno",
+    photo: puppy2,
+    sex: "pejsek",
+    weight: "350 g",
+    color: "Čokoládová",
+    description: "Klidný a mazlivý chlapeček s nádhernou vlnitou srstí. Nejraději usíná v náručí.",
+  },
+  {
+    name: "Bella",
+    photo: puppy3,
+    sex: "fenka",
+    weight: "290 g",
+    color: "Krémová",
+    description: "Nejmenší ze sourozenců, ale největší osobnost. Hravá a společenská, vždy u všeho.",
+  },
+  {
+    name: "Beny",
+    photo: puppy4,
+    sex: "pejsek",
+    weight: "340 g",
+    color: "Černá s pálením",
+    description: "Aktivní a hravý kluk s výrazným zbarvením. Rád se honí za míčkem a baví celou smečku.",
+  },
+  {
+    name: "Bibi",
+    photo: puppy5,
+    sex: "fenka",
+    weight: "310 g",
+    color: "Hnědá",
+    description: "Jemná a citlivá fenka s krásným kudrnatým kožíškem. Miluje blízkost lidí a mazlení.",
+  },
+  {
+    name: "Bětka",
+    photo: puppy6,
+    sex: "fenka",
+    weight: "305 g",
+    color: "Šedá",
+    description: "Klidná pozorovatelka s roztomilým výrazem. Ráda sleduje dění kolem a pak se přidá k zábavě.",
+  },
+];
 
 const LitterDetail = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -102,6 +160,46 @@ const LitterDetail = () => {
                   <p className="text-sm text-muted-foreground mb-1">Počet štěňat</p>
                   <p className="font-semibold text-foreground">2 pejsci, 4 fenky</p>
                 </div>
+              </div>
+
+              {/* Puppies Section */}
+              <h2 className="font-display text-2xl font-semibold text-foreground mb-6">Naše štěňátka</h2>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                {puppies.map((puppy, i) => (
+                  <motion.div
+                    key={puppy.name}
+                    className="card-warm overflow-hidden"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                  >
+                    <div className="image-frame overflow-hidden mb-4 -mx-6 -mt-6">
+                      <img
+                        src={puppy.photo}
+                        alt={`Štěně ${puppy.name}`}
+                        className="w-full aspect-square object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="font-display text-lg font-semibold text-foreground">{puppy.name}</h3>
+                      <span className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">
+                        {puppy.sex}
+                      </span>
+                    </div>
+                    <div className="flex flex-wrap gap-3 text-sm text-muted-foreground mb-3">
+                      <span className="flex items-center gap-1">
+                        <Weight className="w-3.5 h-3.5 text-primary" />
+                        {puppy.weight}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Palette className="w-3.5 h-3.5 text-primary" />
+                        {puppy.color}
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{puppy.description}</p>
+                  </motion.div>
+                ))}
               </div>
 
               {/* Gallery */}
