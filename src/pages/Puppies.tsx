@@ -35,9 +35,9 @@ const plannedLitters = [
     status: "Plánovaný",
   },
   {
-    parents: "Kevina Pikaro × výběr krycího psa probíhá",
-    expectedDate: "Podzim 2026",
-    description: "Plánujeme podzimní vrh s naší fenkou Kevinou. Aktuálně vybíráme vhodného krycího psa s ohledem na zdraví a povahu.",
+    parents: "Coco Pikaro × vybíráme ženicha",
+    expectedDate: "2026",
+    description: "Plánujeme vrh s naší fenkou Coco. Aktuálně pečlivě vybíráme vhodného krycího psa s ohledem na zdraví, povahu a exteriér.",
     colors: ["Bude upřesněno"],
     status: "V přípravě",
   },
