@@ -26,6 +26,23 @@ const currentLitters = [
   },
 ];
 
+const plannedLitters = [
+  {
+    parents: "Bekka Pikaro × Oskar z Hájeckého dvora",
+    expectedDate: "Léto 2026",
+    description: "Očekáváme vrh v letních měsících. Oba rodiče jsou plně zdravotně vyšetřeni a mají výstavní hodnocení výborný.",
+    colors: ["Hnědá", "Černá", "Krémová"],
+    status: "Plánovaný",
+  },
+  {
+    parents: "Kevina Pikaro × výběr krycího psa probíhá",
+    expectedDate: "Podzim 2026",
+    description: "Plánujeme podzimní vrh s naší fenkou Kevinou. Aktuálně vybíráme vhodného krycího psa s ohledem na zdraví a povahu.",
+    colors: ["Bude upřesněno"],
+    status: "V přípravě",
+  },
+];
+
 const reservationSteps = [
   {
     icon: Phone,
@@ -227,6 +244,73 @@ const Puppies = () => {
                 </Link>
               </motion.div>
             )}
+           </div>
+        </section>
+
+        {/* Planned Litters */}
+        <section className="py-16 gradient-warm overflow-hidden">
+          <div className="container mx-auto px-6">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Plánované vrhy</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Připravujeme další vrhy – pokud máte zájem, zapište se do čekací listiny
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+            >
+              {plannedLitters.map((litter, index) => (
+                <motion.div
+                  key={index}
+                  className="card-warm relative overflow-hidden"
+                  variants={scaleIn}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="inline-block px-3 py-1 rounded-full bg-secondary text-muted-foreground font-medium text-xs">
+                      {litter.status}
+                    </span>
+                    <span className="flex items-center gap-1.5 text-sm text-primary font-medium">
+                      <Calendar className="w-4 h-4" />
+                      {litter.expectedDate}
+                    </span>
+                  </div>
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-3">
+                    {litter.parents}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    {litter.description}
+                  </p>
+                  <div className="text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">Očekávaná zbarvení:</span>{" "}
+                    {litter.colors.join(", ")}
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            <motion.div
+              className="text-center mt-10"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <Link to="/kontakt" className="btn-outline-hero inline-block">
+                Zapsat se do čekací listiny
+              </Link>
+            </motion.div>
           </div>
         </section>
 
