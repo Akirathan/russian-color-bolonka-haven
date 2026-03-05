@@ -28,13 +28,6 @@ const currentLitters = [
 
 const plannedLitters = [
   {
-    parents: "Bekka Pikaro × Oskar z Hájeckého dvora",
-    expectedDate: "Léto 2026",
-    description: "Očekáváme vrh v letních měsících. Oba rodiče jsou plně zdravotně vyšetřeni a mají výstavní hodnocení výborný.",
-    colors: ["Hnědá", "Černá", "Krémová"],
-    status: "Plánovaný",
-  },
-  {
     parents: "Coco Pikaro × vybíráme ženicha",
     expectedDate: "2026",
     description: "Plánujeme vrh s naší fenkou Coco. Aktuálně pečlivě vybíráme vhodného krycího psa s ohledem na zdraví, povahu a exteriér.",
