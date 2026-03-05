@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Heart, MapPin, Phone, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { SITE_CONFIG } from "@/lib/seo";
+import pikaroLogo from "@/assets/pikaro-logo.png";
 
 const Footer = () => {
   return (
@@ -16,8 +17,11 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="font-display text-2xl font-semibold text-foreground mb-2">
-              {SITE_CONFIG.shortName} – {SITE_CONFIG.address.city}
+            <div className="flex items-center gap-3 mb-2">
+              <img src={pikaroLogo} alt="Logo Pikaro" className="w-12 h-12 rounded-full object-cover" />
+              <div className="font-display text-2xl font-semibold text-foreground">
+                {SITE_CONFIG.shortName} – {SITE_CONFIG.address.city}
+              </div>
             </div>
             <p className="text-sm text-muted-foreground mb-4">Chovatelská stanice ruských barevných bolonek.</p>
 

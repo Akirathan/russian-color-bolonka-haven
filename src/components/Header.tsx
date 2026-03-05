@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, PawPrint } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
+import pikaroLogo from "@/assets/pikaro-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,12 +29,7 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
           <Link to="/" className="font-display text-xl md:text-2xl font-semibold text-foreground flex items-center gap-2">
-            <motion.div
-              animate={{ scale: [1, 1.15, 1] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <PawPrint className="w-6 h-6 text-primary" />
-            </motion.div>
+            <img src={pikaroLogo} alt="Logo Pikaro" className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover" />
             <span><span className="hidden sm:inline">Chovatelská stanice </span>Pikaro</span>
           </Link>
 
