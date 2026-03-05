@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { motion, useReducedMotion } from "framer-motion";
+import pikaroLogo from "@/assets/pikaro-logo.png";
 
 const breadcrumbs = [
   { name: "Domů", url: "/" },
@@ -191,9 +192,12 @@ const ContactPage = () => {
                   variants={fadeInUp}
                   transition={{ duration: 0.5 }}
                 >
-                  <h2 className="font-display text-xl font-semibold text-foreground mb-4">
-                    Chovatelská stanice Pikaro
-                  </h2>
+                  <div className="flex items-center gap-3 mb-4">
+                    <img src={pikaroLogo} alt="Logo Pikaro" className="w-14 h-14 rounded-full object-cover" />
+                    <h2 className="font-display text-xl font-semibold text-foreground">
+                      Chovatelská stanice Pikaro
+                    </h2>
+                  </div>
                   <p className="text-muted-foreground text-sm mb-6">
                     Chov psů s láskou od roku 1988. 
                     Mezinárodně chráněný název stanice od roku 1997.
