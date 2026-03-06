@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { Heart, Users, Award, Calendar, Dog, Home, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
+import OptimizedImage from "@/components/OptimizedImage";
 import heroDog from "@/assets/hero-dog.jpg";
 
 const breadcrumbs = [
@@ -137,12 +138,10 @@ const AboutUs = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.7, ease: "easeOut" }}
               >
-                <motion.img
+                <OptimizedImage
                   src={heroDog}
                   alt="Chovatelská stanice Pikaro"
-                  className="w-full aspect-[4/3] object-cover"
-                  whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
-                  transition={{ duration: 0.4 }}
+                  className="w-full aspect-[4/3]"
                 />
               </motion.div>
 

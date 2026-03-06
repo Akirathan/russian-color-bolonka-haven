@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { Heart, Calendar, CheckCircle, Phone, Clock, Shield, Baby, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
+import OptimizedImage from "@/components/OptimizedImage";
 import litter202601 from "@/assets/litter-2026-01.jpg";
 
 const breadcrumbs = [
@@ -199,12 +200,10 @@ const Puppies = () => {
                         whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <motion.img
+                        <OptimizedImage
                           src={litter.image}
                           alt={`Vrh ${litter.parents}`}
-                          className="w-full h-full object-cover"
-                          whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
-                          transition={{ duration: 0.4 }}
+                          className="w-full h-full"
                         />
                       </motion.div>
                       <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
@@ -369,12 +368,10 @@ const Puppies = () => {
                     whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <motion.img
+                    <OptimizedImage
                       src={litter202601}
                       alt="Vrh leden 2026"
-                      className="w-full h-full object-cover"
-                      whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
-                      transition={{ duration: 0.4 }}
+                      className="w-full h-full"
                     />
                   </motion.div>
                   <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
