@@ -122,6 +122,7 @@ const puppies = [
 
 const LitterDetail = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const prefersReducedMotion = useReducedMotion();
   const images = [litterMain, litterA, litterB, litterC, faye2, gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11];
 
   const openLightbox = (index: number) => setSelectedImage(index);
@@ -129,6 +130,26 @@ const LitterDetail = () => {
   const nextImage = () => setSelectedImage((prev) => (prev !== null ? (prev + 1) % images.length : null));
   const prevImage = () =>
     setSelectedImage((prev) => (prev !== null ? (prev - 1 + images.length) % images.length : null));
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: prefersReducedMotion ? 0 : 0.1,
+      },
+    },
+  };
+
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1 },
+  };
 
   const breadcrumbs = [
     { name: "Domů", url: "/" },
@@ -148,42 +169,60 @@ const LitterDetail = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-12 gradient-warm">
+        <section className="py-12 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
             <Breadcrumbs items={breadcrumbs} className="mb-6" />
-            <div className="flex items-center gap-4 mb-4">
-              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm">
-                Vrh leden 2026
-              </span>
-            </div>
-            <h1 className="section-heading mb-4">Merry od Modlivého dolu × Zeus Země snů</h1>
-            <div className="flex flex-wrap gap-6 text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-primary" />
-                <span>9. ledna 2026</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Baby className="w-5 h-5 text-primary" />
-                <span>6 štěňat (2 pejsci, 4 fenky)</span>
-              </div>
-            </div>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+            >
+              <motion.div className="flex items-center gap-4 mb-4" variants={fadeInUp} transition={{ duration: 0.5 }}>
+                <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm">
+                  Vrh leden 2026
+                </span>
+              </motion.div>
+              <motion.h1 className="section-heading mb-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
+                Merry od Modlivého dolu × Zeus Země snů
+              </motion.h1>
+              <motion.div className="flex flex-wrap gap-6 text-muted-foreground" variants={fadeInUp} transition={{ duration: 0.6 }}>
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-5 h-5 text-primary" />
+                  <span>9. ledna 2026</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Baby className="w-5 h-5 text-primary" />
+                  <span>6 štěňat (2 pejsci, 4 fenky)</span>
+                </div>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
 
         {/* Content */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-background overflow-hidden">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               {/* Main Image */}
-              <div
+              <motion.div
                 className="image-frame overflow-hidden mb-8 cursor-pointer hover:opacity-90 transition-opacity"
                 onClick={() => openLightbox(0)}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
               >
                 <img src={litterMain} alt="Štěňata s maminkou" className="w-full aspect-video object-cover" />
-              </div>
+              </motion.div>
 
               {/* Text */}
-              <div className="prose prose-lg max-w-none mb-12">
+              <motion.div
+                className="prose prose-lg max-w-none mb-12"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              >
                 <p className="text-foreground leading-relaxed text-lg">
                   V naší chovatelské stanici Pikaro (Plzeň) se 9. ledna 2026 narodilo 6 štěňátek ruské barevné bolonky –
                   2 pejsci a 4 fenky. Všichni se mají krásně k světu, jsou čilí, dobře prospívají a každý den je radost
@@ -195,43 +234,72 @@ const LitterDetail = () => {
                   na tlapkách, zvuky domácnosti). Na této stránce budeme průběžně přidávat nové fotografie a krátké
                   aktuality, jak rostou a vyvíjí se jejich osobnosti.
                 </p>
-              </div>
+              </motion.div>
 
               {/* Info Cards */}
-              <div className="grid sm:grid-cols-3 gap-4 mb-12">
-                <div className="card-warm text-center">
-                  <p className="text-sm text-muted-foreground mb-1">Zbarvení</p>
-                  <p className="font-semibold text-foreground">Černá, hnědá, světlá</p>
-                </div>
-                <div className="card-warm text-center">
-                  <p className="text-sm text-muted-foreground mb-1">K odběru od</p>
-                  <p className="font-semibold text-foreground">7. března 2026</p>
-                </div>
-                <div className="card-warm text-center">
-                  <p className="text-sm text-muted-foreground mb-1">Počet štěňat</p>
-                  <p className="font-semibold text-foreground">2 pejsci, 4 fenky</p>
-                </div>
-              </div>
+              <motion.div
+                className="grid sm:grid-cols-3 gap-4 mb-12"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={staggerContainer}
+              >
+                {[
+                  { label: "Zbarvení", value: "Černá, hnědá, světlá" },
+                  { label: "K odběru od", value: "7. března 2026" },
+                  { label: "Počet štěňat", value: "2 pejsci, 4 fenky" },
+                ].map((card, i) => (
+                  <motion.div
+                    key={card.label}
+                    className="card-warm text-center"
+                    variants={scaleIn}
+                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                    whileHover={prefersReducedMotion ? {} : { y: -4, transition: { duration: 0.2 } }}
+                  >
+                    <p className="text-sm text-muted-foreground mb-1">{card.label}</p>
+                    <p className="font-semibold text-foreground">{card.value}</p>
+                  </motion.div>
+                ))}
+              </motion.div>
 
               {/* Puppies Section */}
-              <h2 className="font-display text-2xl font-semibold text-foreground mb-6">Naše štěňátka</h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              <motion.h2
+                className="font-display text-2xl font-semibold text-foreground mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                Naše štěňátka
+              </motion.h2>
+              <motion.div
+                className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={staggerContainer}
+              >
                 {puppies.map((puppy, i) => (
                   <motion.div
                     key={puppy.name}
                     className="card-warm overflow-hidden"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
+                    variants={scaleIn}
                     transition={{ duration: 0.5, delay: i * 0.1 }}
+                    whileHover={prefersReducedMotion ? {} : { y: -6, transition: { duration: 0.2 } }}
                   >
-                    <div className="image-frame overflow-hidden mb-4 -mx-6 -mt-6">
-                      <img
+                    <motion.div
+                      className="image-frame overflow-hidden mb-4 -mx-6 -mt-6"
+                      whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <motion.img
                         src={puppy.photo}
                         alt={`Štěně ${puppy.name}`}
-                        className="w-full aspect-square object-cover hover:scale-105 transition-transform duration-300"
+                        className="w-full aspect-square object-cover"
+                        whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
+                        transition={{ duration: 0.4 }}
                       />
-                    </div>
+                    </motion.div>
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="font-display text-lg font-semibold text-foreground">{puppy.name}</h3>
                       <span className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">
@@ -268,21 +336,38 @@ const LitterDetail = () => {
                     <p className="text-sm text-muted-foreground leading-relaxed">{puppy.description}</p>
                   </motion.div>
                 ))}
-              </div>
+              </motion.div>
 
               {/* Gallery */}
-              <h2 className="font-display text-2xl font-semibold text-foreground mb-6">Fotogalerie</h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+              <motion.h2
+                className="font-display text-2xl font-semibold text-foreground mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                Fotogalerie
+              </motion.h2>
+              <motion.div
+                className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={staggerContainer}
+              >
                 {images.map((img, i) => (
-                  <div
+                  <motion.div
                     key={i}
                     className="image-frame overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                     onClick={() => openLightbox(i)}
+                    variants={scaleIn}
+                    transition={{ duration: 0.4, delay: i * 0.05 }}
+                    whileHover={prefersReducedMotion ? {} : { scale: 1.03, transition: { duration: 0.2 } }}
                   >
                     <img src={img} alt={`Štěňata - foto ${i + 1}`} className="w-full aspect-square object-cover" />
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
 
               {/* Lightbox Dialog */}
               <Dialog open={selectedImage !== null} onOpenChange={closeLightbox}>
@@ -330,17 +415,29 @@ const LitterDetail = () => {
               </Dialog>
 
               {/* CTA */}
-              <div className="card-warm text-center">
+              <motion.div
+                className="card-warm text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
                 <h3 className="font-display text-xl font-semibold text-foreground mb-2">
                   Máte zájem o štěně z tohoto vrhu?
                 </h3>
                 <p className="text-muted-foreground mb-4">
                   Kontaktujte nás pro více informací o dostupnosti a rezervaci
                 </p>
-                <Link to="/kontakt" className="btn-hero inline-block">
-                  Kontaktovat nás
-                </Link>
-              </div>
+                <motion.div
+                  whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
+                  whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
+                  className="inline-block"
+                >
+                  <Link to="/kontakt" className="btn-hero inline-block">
+                    Kontaktovat nás
+                  </Link>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
         </section>
