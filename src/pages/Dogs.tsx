@@ -11,6 +11,10 @@ import oskar1 from "@/assets/oskar-1.jpg";
 import oskar2 from "@/assets/oskar-2.jpg";
 import oskar3 from "@/assets/oskar-3.jpg";
 import oskar4 from "@/assets/oskar-4.jpg";
+import oskar5 from "@/assets/oskar-5.jpg";
+import oskar6 from "@/assets/oskar-6.jpg";
+import oskar7 from "@/assets/oskar-7.jpg";
+import oskar8 from "@/assets/oskar-8.jpg";
 import bekka1 from "@/assets/bekka-1.jpg";
 import bekka3 from "@/assets/bekka-3.jpg";
 import bekka4 from "@/assets/bekka-4.jpg";
@@ -28,7 +32,7 @@ const dogs = [
     fullName: "Luk-Cvet Vinný vrch",
     description: "Krásná fenka s výbornou povahou a úspěchy na výstavách. Klubová vítězka junior 2020.",
     image: oskar4,
-    gallery: [oskar1, oskar2, oskar3],
+    gallery: [oskar1, oskar2, oskar3, oskar5, oskar6, oskar7, oskar8],
     age: "5 let",
     birthDate: "1. května 2019",
     color: "Hnědá se znaky",
