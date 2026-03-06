@@ -2,12 +2,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import FAQSection from "@/components/FAQSection";
+import CrossLinks from "@/components/CrossLinks";
 import { Heart, Shield, Smile, Sparkles, Ruler, Weight, Dog, Palette } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 
 const breadcrumbs = [
   { name: "Domů", url: "/" },
-  { name: "O plemeni", url: "/plemeno/ruska-barevna-bolonka" },
+  { name: "O plemeni", url: "/o-plemeni" },
 ];
 
 const features = [
@@ -162,13 +164,13 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Ruská barevná bolonka: povaha, péče, byt | CHS Pikaro Plzeň"
-        description="Ruská barevná bolonka: povaha, nároky na péči, vhodnost do bytu. Standard plemene FCI, historie. Vše od zkušeného chovatele v Plzni."
-        keywords="ruská barevná bolonka povaha, bolonka do bytu, ruská bolonka nároky, standard plemene, bolonka zkušenosti"
-        url="/plemeno/ruska-barevna-bolonka"
+        title="Ruská barevná bolonka – povaha, výchova, srst | Pikaro"
+        description="Povaha do rodiny i bytu, výchova a péče o srst. Praktické info pro zájemce o ruskou barevnou bolonku."
+        keywords="ruská barevná bolonka povaha, bolonka do bytu, ruská bolonka nároky, malý rodinný pes, málo línající pes"
+        url="/o-plemeni"
         breadcrumbs={[
           { name: "Domů", url: "/" },
-          { name: "O plemeni", url: "/plemeno/ruska-barevna-bolonka" },
+          { name: "O plemeni", url: "/o-plemeni" },
         ]}
       />
       <Header />
