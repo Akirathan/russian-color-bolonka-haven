@@ -6,7 +6,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import { Calendar, Baby, ChevronLeft, ChevronRight, Dog, Weight, Palette } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import litterA from "@/assets/litter-2026-01-a.jpg";
 import litterB from "@/assets/litter-2026-01-b.jpg";
 import litterC from "@/assets/litter-2026-01-c.jpg";
