@@ -250,6 +250,10 @@ const ArticleDetail = () => {
                 <Link to="/clanky/vyziva-bolonky" className="text-sm text-primary hover:underline">
                   Výživa bolonky
                 </Link>
+                <span className="text-muted-foreground">•</span>
+                <Link to="/clanky/co-dostanete-se-stenetem" className="text-sm text-primary hover:underline">
+                  Co dostanete se štěnětem
+                </Link>
               </div>
             </div>
           </div>
