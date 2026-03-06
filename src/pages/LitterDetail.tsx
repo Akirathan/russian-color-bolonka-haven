@@ -29,12 +29,14 @@ const puppyStatusConfig: Record<PuppyStatus, { label: string; emoji: string; cla
   available: {
     label: "Volný/á",
     emoji: "💚",
-    className: "bg-emerald-100 text-emerald-700 border-emerald-200 dark:bg-emerald-950 dark:text-emerald-300 dark:border-emerald-800",
+    className:
+      "bg-emerald-100 text-emerald-700 border-emerald-200 dark:bg-emerald-950 dark:text-emerald-300 dark:border-emerald-800",
   },
   waitlist: {
     label: "V evidenci zájemců",
     emoji: "📋",
-    className: "bg-amber-100 text-amber-700 border-amber-200 dark:bg-amber-950 dark:text-amber-300 dark:border-amber-800",
+    className:
+      "bg-amber-100 text-amber-700 border-amber-200 dark:bg-amber-950 dark:text-amber-300 dark:border-amber-800",
   },
   "new-home": {
     label: "V novém domově",
@@ -45,20 +47,21 @@ const puppyStatusConfig: Record<PuppyStatus, { label: string; emoji: string; cla
 
 const puppies = [
   {
-    name: "Bára",
+    name: "Fifo",
     photo: puppy1,
-    sex: "fenka",
+    sex: "pejsek",
     weight: "320 g",
     color: "Černá",
-    description: "Zvědavá a odvážná slečna, která jako první prozkoumává nové hračky. Miluje drbání za ouškem.",
+    description:
+      "Černý pejsek je malý pohodář, který se rád drží nablízku. Je klidný, mazlivý a zvědavý — všechno si nejdřív prohlédne, a pak si přijde pro pohlazení.",
     status: "new-home" as PuppyStatus,
   },
   {
-    name: "Bruno",
+    name: "Freddy",
     photo: puppy2,
     sex: "pejsek",
     weight: "350 g",
-    color: "Čokoládová",
+    color: "Černá se znaky",
     description: "Klidný a mazlivý chlapeček s nádhernou vlnitou srstí. Nejraději usíná v náručí.",
     status: "new-home" as PuppyStatus,
   },
@@ -220,9 +223,19 @@ const LitterDetail = () => {
                     </div>
                     {/* Status Badge */}
                     <div className="mb-3">
-                      <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold border ${puppyStatusConfig[puppy.status].className}`}>
+                      <span
+                        className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold border ${puppyStatusConfig[puppy.status].className}`}
+                      >
                         <span>{puppyStatusConfig[puppy.status].emoji}</span>
-                        {puppy.status === "available" ? (puppy.sex === "fenka" ? "Volná" : "Volný") : puppy.status === "reserved" ? (puppy.sex === "fenka" ? "Zamluvena" : "Zamluven") : puppyStatusConfig[puppy.status].label}
+                        {puppy.status === "available"
+                          ? puppy.sex === "fenka"
+                            ? "Volná"
+                            : "Volný"
+                          : puppy.status === "reserved"
+                            ? puppy.sex === "fenka"
+                              ? "Zamluvena"
+                              : "Zamluven"
+                            : puppyStatusConfig[puppy.status].label}
                       </span>
                     </div>
                     <div className="flex flex-wrap gap-3 text-sm text-muted-foreground mb-3">
