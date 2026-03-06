@@ -130,8 +130,8 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Kontakt | CHS Pikaro Plzeň"
-        description="Kontaktujte CHS Pikaro v Plzni. Tel: +420 724 174 659, email: ipikaro@gmail.com. Adresa: U Černého mostu 131/13, 312 00 Plzeň."
+        title="Kontakt | CHS ruské barevné bolonky Pikaro (Plzeň)"
+        description="Napište nám ohledně vrhů, štěňat a informací o plemeni ruská barevná bolonka. Plzeň, ČR."
         keywords="kontakt chovatelská stanice Plzeň, ruská bolonka Plzeň, štěně bolonky kontakt, CHS Pikaro"
         url="/kontakt"
         breadcrumbs={[
