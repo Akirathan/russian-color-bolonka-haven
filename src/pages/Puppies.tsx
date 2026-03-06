@@ -455,6 +455,18 @@ const Puppies = () => {
                 </motion.div>
               ))}
             </motion.div>
+
+            <motion.div
+              className="text-center mt-10"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <Link to="/clanky/co-dostanete-se-stenetem" className="btn-outline-hero inline-block">
+                Co dostanete se štěnětem
+              </Link>
+            </motion.div>
           </div>
         </section>
 
