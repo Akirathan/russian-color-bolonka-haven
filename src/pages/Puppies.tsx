@@ -32,20 +32,18 @@ const litterStatusConfig: Record<LitterStatus, { label: string; emoji: string; c
   },
 };
 
-const currentLitters = [
-  {
-    parents: "Merry od Modlivého dolu × Zeus Země snů",
-    birthDate: "9. ledna 2026",
-    available: 6,
-    totalPuppies: 6,
-    puppiesDetail: "2 pejsci, 4 fenky",
-    colors: ["Černá", "Hnědá", "Světlá"],
-    readyDate: "7. března 2026",
-    image: litter202601,
-    slug: "vrh-leden-2026",
-    status: "waitlist" as LitterStatus,
-  },
-];
+const currentLitters: {
+  parents: string;
+  birthDate: string;
+  available: number;
+  totalPuppies: number;
+  puppiesDetail: string;
+  colors: string[];
+  readyDate: string;
+  image: string;
+  slug: string;
+  status: LitterStatus;
+}[] = [];
 
 const plannedLitters = [
   {
