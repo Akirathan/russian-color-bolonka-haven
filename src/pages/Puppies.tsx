@@ -627,7 +627,13 @@ const Puppies = () => {
               <h2 className="font-display text-2xl font-semibold text-foreground mb-6 text-center">
                 Užitečné články pro budoucí majitele
               </h2>
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <motion.div
+                className="grid sm:grid-cols-2 md:grid-cols-3 gap-4"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={staggerContainer}
+              >
                 {[
                   {
                     slug: "vychova-stenete-ruske-barevne-bolonky",
@@ -638,19 +644,25 @@ const Puppies = () => {
                   { slug: "pece-o-srst-bolonky-bez-stresu", title: "Péče o srst", desc: "Česání, koupání, salon" },
                   { slug: "vyziva-stenete-bolonky", title: "Výživa štěněte", desc: "Krmení, dávkování, režim" },
                   { slug: "zdravi-bolonky-prevence", title: "Zdraví a prevence", desc: "Patella, oči, zuby" },
-                ].map((article) => (
-                  <Link
+                ].map((article, index) => (
+                  <motion.div
                     key={article.slug}
-                    to={`/clanky/${article.slug}`}
-                    className="card-warm group hover:border-primary/30 transition-colors p-4"
+                    variants={scaleIn}
+                    transition={{ duration: 0.4, delay: index * 0.08 }}
+                    whileHover={prefersReducedMotion ? {} : { y: -4, transition: { duration: 0.2 } }}
                   >
-                    <h3 className="font-medium text-foreground group-hover:text-primary transition-colors text-sm">
-                      {article.title}
-                    </h3>
-                    <p className="text-xs text-muted-foreground mt-1">{article.desc}</p>
-                  </Link>
+                    <Link
+                      to={`/clanky/${article.slug}`}
+                      className="card-warm group hover:border-primary/30 transition-colors p-4 block h-full"
+                    >
+                      <h3 className="font-medium text-foreground group-hover:text-primary transition-colors text-sm">
+                        {article.title}
+                      </h3>
+                      <p className="text-xs text-muted-foreground mt-1">{article.desc}</p>
+                    </Link>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
               <div className="text-center mt-6">
                 <Link to="/clanky" className="text-sm text-primary hover:underline">
                   Zobrazit všechny články →
