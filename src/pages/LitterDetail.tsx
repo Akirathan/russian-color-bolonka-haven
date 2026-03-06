@@ -63,7 +63,7 @@ const puppies = [
     name: "Fifo",
     photo: puppy1,
     sex: "pejsek",
-    weight: "320 g",
+    weight: "1490 g",
     color: "Černá",
     description:
       "Černý pejsek je malý pohodář, který se rád drží nablízku. Je klidný, mazlivý a zvědavý — všechno si nejdřív prohlédne, a pak si přijde pro pohlazení.",
@@ -73,7 +73,7 @@ const puppies = [
     name: "Freddy",
     photo: puppy2,
     sex: "pejsek",
-    weight: "350 g",
+    weight: "1595 g",
     color: "Černá se znaky",
     description:
       "Tenhle černobílý klučík je malý pohodář. Je klidný, vyrovnaný, zvědavě sleduje dění kolem a nejradši je tam, kde jsou lidi – a kde se může nechat pomazlit.",
@@ -83,7 +83,7 @@ const puppies = [
     name: "Faye",
     photo: puppy3,
     sex: "fenka",
-    weight: "290 g",
+    weight: "1050 g",
     color: "Vlkošedá",
     description:
       "Tahle vlkošedá holčička je malý „motor“ vrhu. Miluje hry, sama je často začne a umí strhnout celou smečku. Veselá, akční parťačka, se kterou doma nebude nuda.",
@@ -93,7 +93,7 @@ const puppies = [
     name: "Filiha",
     photo: puppy4,
     sex: "pejsek",
-    weight: "340 g",
+    weight: "1120 g",
     color: "Černá se znaky",
     description:
       "Tahle černá holčička se znaky je malý zdroj radosti. Je energická, hravá a pořád v pohybu, ale jakmile má chvilku, hned se přijde přitulit a vyžádat si pohlazení. Veselá parťačka do rodiny, se kterou bude doma pořád živo a zároveň hodně mazlení.",
@@ -103,7 +103,7 @@ const puppies = [
     name: "Francis",
     photo: puppy5,
     sex: "fenka",
-    weight: "310 g",
+    weight: "1500 g",
     color: "Černá se znaky",
     description:
       "černá fenka se znaky je akční hračička, která miluje společnost a zábavu. Ráda se zapojuje do her, umí strhnout ostatní a pak se s klidem nechá pomazlit v lidské náruči. Je to ten typ, který rozdává dobrou náladu a chce být u všeho.",
@@ -113,7 +113,7 @@ const puppies = [
     name: "Freya",
     photo: puppy6,
     sex: "fenka",
-    weight: "305 g",
+    weight: "920 g",
     color: "krémová, žíhaná",
     description:
       "Krémová žíhaná fenka je naše nejmenší šikulka – samostatná, veselá a plná života. Ve hře doslova poskakuje jako malý kozlík, všechno ji baví a s radostí se zapojuje do každé zábavy. Je to hravá holčička se sebevědomím většího pejska, která umí rozzářit celý vrh.",
@@ -124,7 +124,24 @@ const puppies = [
 const LitterDetail = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const prefersReducedMotion = useReducedMotion();
-  const images = [litterMain, litterA, litterB, litterC, faye2, gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11];
+  const images = [
+    litterMain,
+    litterA,
+    litterB,
+    litterC,
+    faye2,
+    gallery1,
+    gallery2,
+    gallery3,
+    gallery4,
+    gallery5,
+    gallery6,
+    gallery7,
+    gallery8,
+    gallery9,
+    gallery10,
+    gallery11,
+  ];
 
   const openLightbox = (index: number) => setSelectedImage(index);
   const closeLightbox = () => setSelectedImage(null);
@@ -173,11 +190,7 @@ const LitterDetail = () => {
         <section className="py-12 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
             <Breadcrumbs items={breadcrumbs} className="mb-6" />
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={staggerContainer}
-            >
+            <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
               <motion.div className="flex items-center gap-4 mb-4" variants={fadeInUp} transition={{ duration: 0.5 }}>
                 <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm">
                   Vrh leden 2026
@@ -186,7 +199,11 @@ const LitterDetail = () => {
               <motion.h1 className="section-heading mb-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
                 Merry od Modlivého dolu × Zeus Země snů
               </motion.h1>
-              <motion.div className="flex flex-wrap gap-6 text-muted-foreground" variants={fadeInUp} transition={{ duration: 0.6 }}>
+              <motion.div
+                className="flex flex-wrap gap-6 text-muted-foreground"
+                variants={fadeInUp}
+                transition={{ duration: 0.6 }}
+              >
                 <div className="flex items-center gap-2">
                   <Calendar className="w-5 h-5 text-primary" />
                   <span>9. ledna 2026</span>
@@ -293,11 +310,7 @@ const LitterDetail = () => {
                       whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <OptimizedImage
-                        src={puppy.photo}
-                        alt={`Štěně ${puppy.name}`}
-                        className="w-full aspect-square"
-                      />
+                      <OptimizedImage src={puppy.photo} alt={`Štěně ${puppy.name}`} className="w-full aspect-square" />
                     </motion.div>
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="font-display text-lg font-semibold text-foreground">{puppy.name}</h3>
