@@ -12,6 +12,10 @@ import litterB from "@/assets/litter-2026-01-b.jpg";
 import litterC from "@/assets/litter-2026-01-c.jpg";
 import litterMain from "@/assets/litter-2026-01.jpg";
 import faye2 from "@/assets/faye-2.jpg";
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
+import gallery4 from "@/assets/gallery-4.jpg";
 import puppy1 from "@/assets/puppy-1.jpg";
 import puppy2 from "@/assets/puppy-2.jpg";
 import puppy3 from "@/assets/puppy-3.jpg";
@@ -111,7 +115,7 @@ const puppies = [
 
 const LitterDetail = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  const images = [litterMain, litterA, litterB, litterC, faye2];
+  const images = [litterMain, litterA, litterB, litterC, faye2, gallery1, gallery2, gallery3, gallery4];
 
   const openLightbox = (index: number) => setSelectedImage(index);
   const closeLightbox = () => setSelectedImage(null);
