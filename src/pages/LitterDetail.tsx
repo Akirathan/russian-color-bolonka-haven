@@ -18,7 +18,7 @@ import puppy4 from "@/assets/puppy-4.jpg";
 import puppy5 from "@/assets/puppy-5.jpg";
 import puppy6 from "@/assets/puppy-6.jpg";
 
-type PuppyStatus = "reserved" | "available" | "waitlist";
+type PuppyStatus = "reserved" | "available" | "waitlist" | "new-home";
 
 const puppyStatusConfig: Record<PuppyStatus, { label: string; emoji: string; className: string }> = {
   reserved: {
@@ -35,6 +35,11 @@ const puppyStatusConfig: Record<PuppyStatus, { label: string; emoji: string; cla
     label: "V evidenci zájemců",
     emoji: "📋",
     className: "bg-amber-100 text-amber-700 border-amber-200 dark:bg-amber-950 dark:text-amber-300 dark:border-amber-800",
+  },
+  "new-home": {
+    label: "V novém domově",
+    emoji: "🏡",
+    className: "bg-sky-100 text-sky-700 border-sky-200 dark:bg-sky-950 dark:text-sky-300 dark:border-sky-800",
   },
 };
 
