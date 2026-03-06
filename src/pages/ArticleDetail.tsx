@@ -12,6 +12,7 @@ import { toISODate } from "@/lib/seo";
 import vybavickaImg from "@/assets/vybavicka.jpg";
 
 const ArticleDetail = () => {
+  const [showVybavicka, setShowVybavicka] = useState(false);
   const { slug } = useParams<{ slug: string }>();
   const article = getArticleBySlug(slug || "");
 
