@@ -673,6 +673,40 @@ const Puppies = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FAQSection
+          items={[
+            {
+              question: "Jak probíhá rezervace štěněte ruské barevné bolonky?",
+              answer: "Rezervace začíná kontaktem – napište nám nebo zavolejte. Domluvíme osobní setkání, kde se seznámíte s maminkou i štěňaty. Po vzájemné dohodě složíte zálohu a štěně bude rezervováno pro vás. K odběru je připravené po dovršení 8–10 týdnů.",
+            },
+            {
+              question: "Co je PP (průkaz původu) a proč je důležitý?",
+              answer: "Průkaz původu (PP) je jediný oficiální doklad potvrzující, že štěně pochází z kontrolovaného chovu s ověřeným rodokmenem. Zaručuje, že rodiče prošli zdravotními testy a splňují plemenný standard. Štěně bez PP nemá garantovaný původ ani zdravotní historii rodičů.",
+            },
+            {
+              question: "V jakém věku lze štěně bolonky odebrat?",
+              answer: "Štěňata ruské barevné bolonky odcházejí do nových domovů ve věku 8–10 týdnů. Do té doby potřebují být s maminkou a sourozenci pro správný vývoj a socializaci. Předčasný odběr může negativně ovlivnit povahu i zdraví štěněte.",
+            },
+            {
+              question: "Co dostanu se štěnětem od chovatele?",
+              answer: "Se štěnětem dostanete očkovací průkaz, čip, převodní list, smlouvu o prodeji, potvrzení od veterináře, základní výbavičku (krmení, hračka, savé podložky), pokyny k péči a výživě. Průkaz původu (PP) zašleme po vyhotovení plemennou knihou. Nabízíme celoživotní poradenskou podporu.",
+            },
+            {
+              question: "Jak poznat seriózního chovatele ruské bolonky?",
+              answer: "Seriózní chovatel vám umožní návštěvu, ukáže podmínky chovu, představí rodiče štěňat a doloží zdravotní testy (patella, oči). Štěňata prodává s PP, smlouvou a zajímá se o to, kam štěně půjde. Nikdy neinzeruje více plemen současně a netlačí na rychlé rozhodnutí.",
+            },
+            {
+              question: "Jsou štěňata očkovaná a čipovaná?",
+              answer: "Ano, všechna naše štěňata ruské barevné bolonky jsou očkována podle věku, odčervena a čipována. Předáváme kompletní zdravotní dokumentaci. Každé štěně je před odchodem prohlédnuto veterinárním lékařem.",
+            },
+          ]}
+          title="Často kladené otázky o štěňatech"
+          subtitle="Informace pro zájemce o štěně ruské barevné bolonky"
+        />
+
+        <CrossLinks exclude={["/stenata"]} />
       </main>
       <Footer />
     </div>
