@@ -1462,7 +1462,7 @@ export const articles: Article[] = [
       {
         id: "dokumenty",
         title: "Dokumenty a zdravotní záznamy",
-        content: "Ke každému štěněti předáváme kompletní dokumentaci: průkaz původu (PP) vydaný ČMKU, mezinárodní očkovací průkaz s razítkem veterináře, doklad o čipování a smlouvu o prodeji. V očkovacím průkazu najdete záznamy o provedených vakcinacích a odčervení podle věku.",
+        content: "Ke každému štěněti předáváme kompletní dokumentaci: mezinárodní očkovací průkaz s razítkem veterináře, doklad o čipování a smlouvu o prodeji. V očkovacím průkazu najdete záznamy o provedených vakcinacích a odčervení podle věku. Průkaz původu (PP) vydaný ČMKU zasíláme dodatečně po jeho vystavení — administrativní zpracování na straně ČMKU může trvat několik týdnů.",
       },
       {
         id: "vybavicka",
@@ -1493,7 +1493,7 @@ export const articles: Article[] = [
     faq: [
       {
         question: "Dostanu se štěnětem i průkaz původu?",
-        answer: "Ano, každé naše štěně má průkaz původu (PP) vydaný ČMKU. Průkaz předáváme při převzetí štěněte.",
+        answer: "Ano, každé naše štěně má průkaz původu (PP) vydaný ČMKU. Průkaz zasíláme dodatečně po jeho vystavení — administrativní zpracování na straně ČMKU může trvat několik týdnů po odběru štěněte.",
       },
       {
         question: "Co když chci štěněti změnit krmivo?",
