@@ -160,8 +160,8 @@ const Puppies = () => {
                 Štěňata ruské barevné bolonky s PP
               </motion.h1>
               <motion.p className="section-subheading mx-auto" variants={fadeInUp} transition={{ duration: 0.6 }}>
-                S láskou vychováváme štěňata Ruské barevné bolonky. Každé štěně odchází do nového domova připravené,
-                socializované a zdravé.
+                S láskou vychováváme štěňata ruské barevné bolonky (Russkaya Tsvetnaya Bolonka). Každé štěně odchází do nového domova
+                socializované, zdravé a s průkazem původu. Níže najdete přehled aktuálních i plánovaných vrhů.
               </motion.p>
             </motion.div>
           </div>
@@ -177,9 +177,10 @@ const Puppies = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Aktuální vrhy</h2>
+              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Aktuální vrhy ruské bolonky</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Tady sdílíme informace o vrzích, které právě probíhají — vývoj štěňátek, fotky a novinky z prvních týdnů. Dostupnost štěňátek se může lišit, protože část zájemců bývá domluvená dopředu; pokud vás některý vrh zaujme, napište nám a rádi vám řekneme aktuální stav.
+                Tady sdílíme informace o vrzích, které právě probíhají. Dostupnost štěňátek se může lišit, protože část zájemců bývá domluvená dopředu.{" "}
+                <Link to="/aktualni-vrhy" className="text-primary hover:underline">Zobrazit podrobnosti →</Link>
               </p>
             </motion.div>
 
@@ -277,9 +278,10 @@ const Puppies = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Plánované vrhy</h2>
+              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Plánované vrhy ruské barevné bolonky</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Zde najdete naše nejbližší chovatelské plány a plánovaná spojení. Termíny jsou orientační — vždy upřednostňujeme zdraví fenky i budoucích štěňátek.
+                Naše nejbližší chovatelské plány. Termíny jsou orientační – vždy upřednostňujeme zdraví fenky i budoucích štěňátek.{" "}
+                <Link to="/planovane-vrhy" className="text-primary hover:underline">Zobrazit podrobnosti →</Link>
               </p>
             </motion.div>
 
@@ -344,9 +346,10 @@ const Puppies = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Minulé vrhy</h2>
+              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Naše odchovy</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Přehled předchozích vrhů naší chovatelské stanice. Všechna štěňata jsou v milujících domovech.
+                Přehled předchozích vrhů naší chovatelské stanice. Všechna štěňata ruské barevné bolonky jsou v milujících domovech.{" "}
+                <Link to="/nase-odchovy" className="text-primary hover:underline">Zobrazit archiv →</Link>
               </p>
             </motion.div>
 
