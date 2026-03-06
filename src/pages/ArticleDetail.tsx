@@ -162,7 +162,33 @@ const ArticleDetail = () => {
               <article className="flex-1 max-w-3xl space-y-10">
                 {article.sections.map((section) => (
                   <div key={section.id} id={section.id}>
-                    <h2 className="font-display text-2xl font-semibold text-foreground mb-4">{section.title}</h2>
+                    <h2 className="font-display text-2xl font-semibold text-foreground mb-4">
+                      {section.title === "Základní výbavička" ? (
+                        <span className="relative inline-block">
+                          <span
+                            className="cursor-pointer border-b-2 border-dashed border-primary/40 hover:border-primary transition-colors"
+                            onMouseEnter={() => setShowVybavicka(true)}
+                            onMouseLeave={() => setShowVybavicka(false)}
+                          >
+                            {section.title}
+                          </span>
+                          {showVybavicka && (
+                            <span className="absolute left-0 top-full mt-3 z-50 w-80 md:w-96 rounded-xl overflow-hidden shadow-2xl border border-border bg-card animate-in fade-in-0 zoom-in-95 duration-200">
+                              <img
+                                src={vybavickaImg}
+                                alt="Základní výbavička pro štěně"
+                                className="w-full aspect-[4/3] object-cover"
+                              />
+                              <span className="block px-3 py-2 text-sm text-muted-foreground font-normal">
+                                Ukázka základní výbavičky, kterou dostanete se štěnětem
+                              </span>
+                            </span>
+                          )}
+                        </span>
+                      ) : (
+                        section.title
+                      )}
+                    </h2>
                     <p className="text-muted-foreground leading-relaxed mb-4">{section.content}</p>
                     {section.subsections?.map((sub, i) => (
                       <div key={i} className="ml-4 mb-4 pl-4 border-l-2 border-primary/20">
