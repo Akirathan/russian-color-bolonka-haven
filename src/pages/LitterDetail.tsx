@@ -62,11 +62,12 @@ const puppies = [
     sex: "pejsek",
     weight: "350 g",
     color: "Černá se znaky",
-    description: "Klidný a mazlivý chlapeček s nádhernou vlnitou srstí. Nejraději usíná v náručí.",
+    description:
+      "Tenhle černobílý klučík je malý pohodář. Je klidný, vyrovnaný, zvědavě sleduje dění kolem a nejradši je tam, kde jsou lidi – a kde se může nechat pomazlit.",
     status: "new-home" as PuppyStatus,
   },
   {
-    name: "Bella",
+    name: "Faye",
     photo: puppy3,
     sex: "fenka",
     weight: "290 g",
