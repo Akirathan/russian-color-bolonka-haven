@@ -157,7 +157,7 @@ const Puppies = () => {
             >
               <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Aktuální vrhy</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Přehled aktuálně dostupných štěňat a plánovaných vrhů
+                Tady sdílíme informace o vrzích, které právě probíhají — vývoj štěňátek, fotky a novinky z prvních týdnů. Dostupnost štěňátek se může lišit, protože část zájemců bývá domluvená dopředu; pokud vás některý vrh zaujme, napište nám a rádi vám řekneme aktuální stav.
               </p>
             </motion.div>
 
@@ -252,7 +252,7 @@ const Puppies = () => {
             >
               <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Plánované vrhy</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Připravujeme další vrhy – pokud máte zájem, zapište se do čekací listiny
+                Zde najdete naše nejbližší chovatelské plány a plánovaná spojení. Termíny jsou orientační — vždy upřednostňujeme zdraví fenky i budoucích štěňátek.
               </p>
             </motion.div>
 
