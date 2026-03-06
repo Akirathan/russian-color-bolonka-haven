@@ -482,6 +482,48 @@ const About = () => {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FAQSection
+          items={[
+            {
+              question: "Je ruská barevná bolonka vhodná do bytu?",
+              answer: "Ano, ruská barevná bolonka (barevný boloňský psík) je výborný byt pes. Díky malé velikosti, klidné povaze a nízké potřebě pohybu se v bytě cítí naprosto dobře. Stačí jí pravidelné procházky a hlavně blízkost své rodiny. Nezapáchá, obvykle málo líná a přizpůsobí se vašemu režimu.",
+            },
+            {
+              question: "Hodí se bolonka do rodiny s dětmi?",
+              answer: "Ruská bolonka je přátelský a trpělivý společenský pes, který se s dětmi zpravidla výborně snáší. Je důležité děti naučit správnému zacházení s malým psem – bolonka je mazlivá a kontaktní, ale kvůli své velikosti vyžaduje ohleduplné zacházení. Výchova dětí i psa by měly jít ruku v ruce.",
+            },
+            {
+              question: "Co znamená „málo línající" – bolonka opravdu nelíná?",
+              answer: "Ruská barevná bolonka patří mezi málo línající plemena. Její srst roste kontinuálně (podobně jako lidské vlasy) a neprochází klasickým sezonním línáním. Neznamená to ale, že nelíná vůbec – při česání se uvolňují odumřelé chlupy. Pravidelná péče o srst je proto důležitá.",
+            },
+            {
+              question: "Je ruská bolonka vhodná pro alergiky?",
+              answer: "Díky tomu, že ruská barevná bolonka obvykle málo líná, bývá někdy zmiňována jako pes pro alergiky. Alergická reakce je však vždy individuální – závisí na konkrétním člověku i konkrétním psovi. Doporučujeme osobní kontakt se psem před rozhodnutím. Rádi vám umožníme návštěvu naší chovatelské stanice.",
+            },
+            {
+              question: "Jak náročná je péče o srst bolonky?",
+              answer: "Srst ruské barevné bolonky vyžaduje pravidelné česání – ideálně 2–3× týdně, aby se netvořily zplstnatělé uzlíky. Koupání stačí přibližně 1× za 3–4 týdny. Pokud nechcete srst udržovat v plné délce, lze ji stříhat do kratšího účesu, což péči významně zjednoduší.",
+            },
+            {
+              question: "Je bolonka snadná na výcvik?",
+              answer: "Ruská barevná bolonka (Russkaya Tsvetnaya Bolonka) je inteligentní a ráda spolupracuje s majitelem, proto se výchova a základní výcvik zvládají poměrně snadno. Je vhodná i pro začátečníky. Důležitý je pozitivní přístup, trpělivost a správná socializace od štěněcího věku.",
+            },
+            {
+              question: "Kolik váží a měří ruská barevná bolonka?",
+              answer: "Dospělá ruská barevná bolonka váží přibližně 3–6 kg a měří do 26 cm v kohoutku. Jedná se o malého, kompaktně stavěného psa, který je ideální do bytu i do rodiny. Přes svou malou velikost je odolný a houževnatý.",
+            },
+            {
+              question: "Jak často česat bolonku a jak se starat o srst?",
+              answer: "Doporučujeme česat ruskou bolonku alespoň 2–3× týdně hřebenem a kartáčem. Po koupání srst vysušte fénem na nízkou teplotu. Začněte s péčí o srst již od štěněcího věku, aby si na to zvykla. V případě, že nechcete dlouhou srst, je stříhání skvělou alternativou.",
+            },
+          ]}
+          title="Často kladené otázky o ruské barevné bolonce"
+          subtitle="Odpovědi na nejčastější dotazy zájemců o toto společenské plemeno"
+        />
+
+        <CrossLinks exclude={["/o-plemeni"]} />
       </main>
       <Footer />
     </div>
