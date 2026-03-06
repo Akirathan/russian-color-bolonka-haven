@@ -9,6 +9,9 @@ import AboutUs from "./pages/AboutUs";
 import About from "./pages/About";
 import Dogs from "./pages/Dogs";
 import Puppies from "./pages/Puppies";
+import AktualniVrhy from "./pages/AktualniVrhy";
+import PlanovaneVrhy from "./pages/PlanovaneVrhy";
+import NaseOdchovy from "./pages/NaseOdchovy";
 import LitterDetail from "./pages/LitterDetail";
 import Articles from "./pages/Articles";
 import ArticleDetail from "./pages/ArticleDetail";
@@ -30,11 +33,17 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/o-nas" element={<AboutUs />} />
-          {/* SEO-friendly breed URL with redirect from old */}
-          <Route path="/plemeno/ruska-barevna-bolonka" element={<About />} />
-          <Route path="/o-plemeni" element={<Navigate to="/plemeno/ruska-barevna-bolonka" replace />} />
+          {/* SEO-friendly breed URL */}
+          <Route path="/o-plemeni" element={<About />} />
+          {/* Redirects from old URLs */}
+          <Route path="/plemeno/ruska-barevna-bolonka" element={<Navigate to="/o-plemeni" replace />} />
+          <Route path="/o-plemeni" element={<About />} />
           <Route path="/nasi-psi" element={<Dogs />} />
+          {/* Puppies hub */}
           <Route path="/stenata" element={<Puppies />} />
+          <Route path="/aktualni-vrhy" element={<AktualniVrhy />} />
+          <Route path="/planovane-vrhy" element={<PlanovaneVrhy />} />
+          <Route path="/nase-odchovy" element={<NaseOdchovy />} />
           <Route path="/stenata/vrh-leden-2026" element={<LitterDetail />} />
           <Route path="/clanky" element={<Articles />} />
           <Route path="/clanky/:slug" element={<ArticleDetail />} />
