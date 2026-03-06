@@ -6,6 +6,7 @@ import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Trophy, Heart, Camera, ChevronRight, ChevronLeft } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
+import OptimizedImage from "@/components/OptimizedImage";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import oskar1 from "@/assets/oskar-1.jpg";
 import oskar2 from "@/assets/oskar-2.jpg";
@@ -200,12 +201,10 @@ const Dogs = () => {
                       transition={{ duration: 0.3 }}
                       onClick={() => openLightbox([dog.image, ...dog.gallery], 0)}
                     >
-                      <motion.img
+                      <OptimizedImage
                         src={dog.image}
                         alt={dog.fullName}
-                        className="w-full aspect-square object-cover"
-                        whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
-                        transition={{ duration: 0.4 }}
+                        className="w-full aspect-square"
                       />
                     </motion.div>
                     <div className="grid grid-cols-3 gap-3">
@@ -220,10 +219,10 @@ const Dogs = () => {
                           whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
                           onClick={() => openLightbox([dog.image, ...dog.gallery], i + 1)}
                         >
-                          <img
+                          <OptimizedImage
                             src={img}
                             alt={`${dog.name} - foto ${i + 1}`}
-                            className="w-full aspect-square object-cover"
+                            className="w-full aspect-square"
                           />
                         </motion.div>
                       ))}

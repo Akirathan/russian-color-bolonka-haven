@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import OptimizedImage from "@/components/OptimizedImage";
 import oskar4 from "@/assets/oskar-4.jpg";
 import bekka1 from "@/assets/bekka-1.jpg";
 import kevina1 from "@/assets/kevina-1.jpg";
@@ -110,12 +111,10 @@ const OurDogs = () => {
               transition={{ duration: 0.3 }}
             >
               <div className="image-frame mb-5 overflow-hidden">
-                <motion.img
+                <OptimizedImage
                   src={dog.image}
                   alt={dog.name}
-                  className="w-full aspect-square object-cover"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.5 }}
+                  className="w-full aspect-square"
                 />
               </div>
               <div className="space-y-2">

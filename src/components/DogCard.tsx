@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import OptimizedImage from "@/components/OptimizedImage";
 
 interface DogCardProps {
   name: string;
@@ -18,12 +19,10 @@ const DogCard = ({ name, image, description, href = "#" }: DogCardProps) => {
       <Link to={href} className="block">
         {/* Image container with zoom effect */}
         <div className="relative aspect-square overflow-hidden">
-          <motion.img
+          <OptimizedImage
             src={image}
             alt={name}
-            className="w-full h-full object-cover"
-            whileHover={{ scale: 1.08 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            className="w-full h-full"
           />
           {/* Gradient overlay on hover */}
           <motion.div

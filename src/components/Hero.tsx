@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
+import OptimizedImage from "@/components/OptimizedImage";
 import heroDog from "@/assets/hero-dog.jpg";
 
 // Simple paw SVG icon
@@ -28,13 +29,11 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center pt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <motion.img
+        <OptimizedImage
           src={heroDog}
           alt="Ruská barevná bolonka"
-          className="w-full h-full object-cover"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="w-full h-full"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
       </div>
