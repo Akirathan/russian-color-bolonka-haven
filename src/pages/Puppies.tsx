@@ -2,6 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import FAQSection from "@/components/FAQSection";
+import CrossLinks from "@/components/CrossLinks";
 import { Heart, Calendar, CheckCircle, Phone, Clock, Shield, Baby, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
@@ -131,9 +133,9 @@ const Puppies = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Štěňata ruské bolonky | CHS Pikaro Plzeň"
-        description="Štěňata ruské barevné bolonky k prodeji. Zdravá, socializovaná štěňata s PP, očkovaná podle věku, čipovaná. Aktuální vrhy od CHS Pikaro v Plzni."
-        keywords="štěňata ruské bolonky, štěně ruské barevné bolonky, bolonka zwetna štěňata, štěně bolonky Plzeň, ruská bolonka štěně"
+        title="Štěňata ruské barevné bolonky s PP | Vrhy Pikaro"
+        description="Aktuální a plánované vrhy ruské barevné bolonky, informace pro zájemce a průběh rezervace. Plzeň, ČR."
+        keywords="ruská barevná bolonka štěňata, štěňata s PP, ruská bolonka štěně, bolonka zwetna štěňata"
         url="/stenata"
         breadcrumbs={[
           { name: "Domů", url: "/" },
@@ -155,7 +157,7 @@ const Puppies = () => {
                 Štěňata
               </motion.span>
               <motion.h1 className="section-heading mb-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
-                Naše štěňata
+                Štěňata ruské barevné bolonky s PP
               </motion.h1>
               <motion.p className="section-subheading mx-auto" variants={fadeInUp} transition={{ duration: 0.6 }}>
                 S láskou vychováváme štěňata Ruské barevné bolonky. Každé štěně odchází do nového domova připravené,
