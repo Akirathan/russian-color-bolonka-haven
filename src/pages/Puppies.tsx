@@ -32,20 +32,18 @@ const litterStatusConfig: Record<LitterStatus, { label: string; emoji: string; c
   },
 };
 
-const currentLitters = [
-  {
-    parents: "Merry od Modlivého dolu × Zeus Země snů",
-    birthDate: "9. ledna 2026",
-    available: 6,
-    totalPuppies: 6,
-    puppiesDetail: "2 pejsci, 4 fenky",
-    colors: ["Černá", "Hnědá", "Světlá"],
-    readyDate: "7. března 2026",
-    image: litter202601,
-    slug: "vrh-leden-2026",
-    status: "waitlist" as LitterStatus,
-  },
-];
+const currentLitters: {
+  parents: string;
+  birthDate: string;
+  available: number;
+  totalPuppies: number;
+  puppiesDetail: string;
+  colors: string[];
+  readyDate: string;
+  image: string;
+  slug: string;
+  status: LitterStatus;
+}[] = [];
 
 const plannedLitters = [
   {
@@ -335,7 +333,83 @@ const Puppies = () => {
           </div>
         </section>
 
-        {/* Puppy Care */}
+        {/* Past Litters */}
+        <section className="py-16 bg-background overflow-hidden">
+          <div className="container mx-auto px-6">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Minulé vrhy</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Přehled předchozích vrhů naší chovatelské stanice. Všechna štěňata jsou v milujících domovech.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+            >
+              <motion.div
+                variants={scaleIn}
+                transition={{ duration: 0.5 }}
+              >
+                <Link
+                  to="/stenata/vrh-leden-2026"
+                  className="card-warm overflow-hidden group hover:shadow-lg transition-shadow block"
+                >
+                  <motion.div
+                    className="aspect-video overflow-hidden rounded-xl mb-4"
+                    whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <motion.img
+                      src={litter202601}
+                      alt="Vrh leden 2026"
+                      className="w-full h-full object-cover"
+                      whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
+                      transition={{ duration: 0.4 }}
+                    />
+                  </motion.div>
+                  <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                    Merry od Modlivého dolu × Zeus Země snů
+                  </h3>
+                  <div className="mb-3">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border bg-sky-100 text-sky-700 border-sky-200 dark:bg-sky-950 dark:text-sky-300 dark:border-sky-800">
+                      <span>🏡</span>
+                      Všechna štěňata v nových domovech
+                    </span>
+                  </div>
+                  <div className="space-y-2 text-sm">
+                    <p className="text-muted-foreground">
+                      <span className="font-medium text-foreground">Datum narození:</span> 9. ledna 2026
+                    </p>
+                    <p className="text-muted-foreground">
+                      <span className="font-medium text-foreground">Počet štěňat:</span> 6 (2 pejsci, 4 fenky)
+                    </p>
+                    <p className="text-muted-foreground">
+                      <span className="font-medium text-foreground">Zbarvení:</span> Černá, Hnědá, Světlá
+                    </p>
+                  </div>
+                  <motion.span
+                    className="btn-hero inline-block mt-4 text-center w-full"
+                    whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
+                    whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
+                  >
+                    Zobrazit detail
+                  </motion.span>
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+
         <section className="py-16 gradient-warm overflow-hidden">
           <div className="container mx-auto px-6">
             <motion.div
