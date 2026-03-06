@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { Calendar, Baby, ChevronLeft, ChevronRight, Dog, Weight, Palette } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { motion, useReducedMotion } from "framer-motion";
+import OptimizedImage from "@/components/OptimizedImage";
 import litterA from "@/assets/litter-2026-01-a.jpg";
 import litterB from "@/assets/litter-2026-01-b.jpg";
 import litterC from "@/assets/litter-2026-01-c.jpg";
@@ -212,7 +213,7 @@ const LitterDetail = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <img src={litterMain} alt="Štěňata s maminkou" className="w-full aspect-video object-cover" />
+                <OptimizedImage src={litterMain} alt="Štěňata s maminkou" className="w-full aspect-video" priority />
               </motion.div>
 
               {/* Text */}
@@ -292,12 +293,10 @@ const LitterDetail = () => {
                       whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <motion.img
+                      <OptimizedImage
                         src={puppy.photo}
                         alt={`Štěně ${puppy.name}`}
-                        className="w-full aspect-square object-cover"
-                        whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
-                        transition={{ duration: 0.4 }}
+                        className="w-full aspect-square"
                       />
                     </motion.div>
                     <div className="flex items-center justify-between mb-2">
@@ -364,7 +363,7 @@ const LitterDetail = () => {
                     transition={{ duration: 0.4, delay: i * 0.05 }}
                     whileHover={prefersReducedMotion ? {} : { scale: 1.03, transition: { duration: 0.2 } }}
                   >
-                    <img src={img} alt={`Štěňata - foto ${i + 1}`} className="w-full aspect-square object-cover" />
+                    <OptimizedImage src={img} alt={`Štěňata - foto ${i + 1}`} className="w-full aspect-square" />
                   </motion.div>
                 ))}
               </motion.div>
