@@ -11,6 +11,7 @@ import {
   Sofa,
   ShieldCheck,
   Sparkles,
+  Package,
   LucideIcon,
 } from "lucide-react";
 
@@ -1443,6 +1444,64 @@ export const articles: Article[] = [
         question: "Když mám pochybnosti o zdravotním stavu štěněte při převzetí, mám čekat na vyjádření chovatele?",
         answer:
           "Spíš ne. Při pochybnostech je rozumné kontaktovat veterináře co nejdřív — lepší zbytečný telefonát než pozdní řešení problému.",
+      },
+    ],
+  },
+  {
+    id: 12,
+    slug: "co-dostanete-se-stenetem",
+    title: "Co dostanete se štěnětem od CHS Pikaro",
+    seoTitle: "Co dostanete se štěnětem od chovatele | CHS Pikaro Plzeň",
+    metaDescription: "Co vše dostanete se štěnětem ruské barevné bolonky od CHS Pikaro. Základní výbavička, dokumenty, krmivo, hračky a vše potřebné pro start v novém domově.",
+    excerpt: "Přehled toho, co vám předáme spolu se štěnětem — od dokumentů přes krmivo až po základní výbavičku pro pohodlný start v novém domově.",
+    category: "Péče",
+    readTime: "4 min",
+    date: "5. 3. 2026",
+    icon: Package,
+    sections: [
+      {
+        id: "dokumenty",
+        title: "Dokumenty a zdravotní záznamy",
+        content: "Ke každému štěněti předáváme kompletní dokumentaci: průkaz původu (PP) vydaný ČMKU, mezinárodní očkovací průkaz s razítkem veterináře, doklad o čipování a smlouvu o prodeji. V očkovacím průkazu najdete záznamy o provedených vakcinacích a odčervení podle věku.",
+      },
+      {
+        id: "vybavicka",
+        title: "Základní výbavička",
+        content: "Každé štěně od nás odchází s praktickou základní výbavičkou, která vám usnadní první dny v novém domově. Balíček obsahuje: krmivo, na které je štěně zvyklé (aby přechod na nové prostředí proběhl hladce), hračky na hraní i na uklidnění, hřeben a kartáč na pravidelnou péči o srst, vodítko s obojkem, přepravní tašku a dečku s vůní maminky a sourozenců — ta pomáhá štěněti cítit se v novém prostředí bezpečně.",
+      },
+      {
+        id: "krmivo",
+        title: "Krmivo a výživa",
+        content: "Štěně dostane zásobu krmiva, na které je zvyklé, aby přechod na nové prostředí nebyl komplikovaný i změnou stravy. Přibalíme i doporučení k výživě — jaké krmivo podáváme, v jakých dávkách a jak často. Pokud budete chtít krmivo později změnit, poradíme vám, jak na to postupně a šetrně.",
+      },
+      {
+        id: "hracky-a-doplnky",
+        title: "Hračky a doplňky",
+        content: "V balíčku najdete i pár oblíbených hraček, které štěně zná — plyšáky, pískací hračky nebo kousátka. Hračky pomáhají štěněti s adaptací a dávají mu pocit známého prostředí. Přibalíme také dečku nebo hadřík, který voní po mamince a sourozencích — je to malý detail, ale pro štěně v prvních nocích může znamenat hodně.",
+      },
+      {
+        id: "pece-o-srst",
+        title: "Pomůcky na péči o srst",
+        content: "Součástí výbavičky je hřeben a kartáč vhodný pro srst bolonky. Štěňata jsou od nás už od útlého věku zvyklá na pravidelné česání a manipulaci, takže byste na to měli navázat. Přidáme i stručný návod, jak o srst pečovat — jak často česat, na co si dát pozor a kdy je čas na první profesionální stříhání.",
+      },
+      {
+        id: "rady-na-cestu",
+        title: "Rady a podpora na cestu",
+        content: "Spolu se štěnětem dostanete i písemné rady k péči, výchově a režimu v prvních dnech. Jsme vám ale kdykoliv k dispozici i telefonicky nebo mailem — pokud si nebudete jistí s čímkoliv, klidně se ozvěte. Naše podpora nekončí předáním štěněte, rádi pomáháme i dlouho po odběru.",
+      },
+    ],
+    faq: [
+      {
+        question: "Dostanu se štěnětem i průkaz původu?",
+        answer: "Ano, každé naše štěně má průkaz původu (PP) vydaný ČMKU. Průkaz předáváme při převzetí štěněte.",
+      },
+      {
+        question: "Co když chci štěněti změnit krmivo?",
+        answer: "Doporučujeme změnu provádět postupně — přimícháváním nového krmiva k původnímu po dobu 7–10 dní. Rádi vám poradíme s výběrem vhodného krmiva.",
+      },
+      {
+        question: "Jak dlouho vydrží dečka s vůní maminky?",
+        answer: "Vůně vydrží obvykle několik dní až týden. Doporučujeme dečku neprat hned — nechte ji štěněti v pelíšku alespoň první týden, než si zvykne na nové prostředí.",
       },
     ],
   },
