@@ -12,6 +12,26 @@ const breadcrumbs = [
   { name: "Štěňata", url: "/stenata" },
 ];
 
+type LitterStatus = "sold-out" | "waitlist" | "available";
+
+const litterStatusConfig: Record<LitterStatus, { label: string; emoji: string; className: string }> = {
+  "sold-out": {
+    label: "Plně zamluveno",
+    emoji: "🐾",
+    className: "bg-rose-100 text-rose-700 border-rose-200 dark:bg-rose-950 dark:text-rose-300 dark:border-rose-800",
+  },
+  "waitlist": {
+    label: "V evidenci zájemců",
+    emoji: "📋",
+    className: "bg-amber-100 text-amber-700 border-amber-200 dark:bg-amber-950 dark:text-amber-300 dark:border-amber-800",
+  },
+  "available": {
+    label: "Volní pejsci/fenky",
+    emoji: "💛",
+    className: "bg-emerald-100 text-emerald-700 border-emerald-200 dark:bg-emerald-950 dark:text-emerald-300 dark:border-emerald-800",
+  },
+};
+
 const currentLitters = [
   {
     parents: "Merry od Modlivého dolu × Zeus Země snů",
@@ -23,6 +43,7 @@ const currentLitters = [
     readyDate: "7. března 2026",
     image: litter202601,
     slug: "vrh-leden-2026",
+    status: "waitlist" as LitterStatus,
   },
 ];
 
@@ -191,6 +212,13 @@ const Puppies = () => {
                       <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                         {litter.parents}
                       </h3>
+                      {/* Status Badge */}
+                      <div className="mb-3">
+                        <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border ${litterStatusConfig[litter.status].className}`}>
+                          <span>{litterStatusConfig[litter.status].emoji}</span>
+                          {litterStatusConfig[litter.status].label}
+                        </span>
+                      </div>
                       <div className="space-y-2 text-sm">
                         <p className="text-muted-foreground">
                           <span className="font-medium text-foreground">Datum narození:</span> {litter.birthDate}

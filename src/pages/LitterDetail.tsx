@@ -18,6 +18,26 @@ import puppy4 from "@/assets/puppy-4.jpg";
 import puppy5 from "@/assets/puppy-5.jpg";
 import puppy6 from "@/assets/puppy-6.jpg";
 
+type PuppyStatus = "reserved" | "available" | "waitlist";
+
+const puppyStatusConfig: Record<PuppyStatus, { label: string; emoji: string; className: string }> = {
+  reserved: {
+    label: "Zamluven/a",
+    emoji: "🎀",
+    className: "bg-rose-100 text-rose-700 border-rose-200 dark:bg-rose-950 dark:text-rose-300 dark:border-rose-800",
+  },
+  available: {
+    label: "Volný/á",
+    emoji: "💚",
+    className: "bg-emerald-100 text-emerald-700 border-emerald-200 dark:bg-emerald-950 dark:text-emerald-300 dark:border-emerald-800",
+  },
+  waitlist: {
+    label: "V evidenci zájemců",
+    emoji: "📋",
+    className: "bg-amber-100 text-amber-700 border-amber-200 dark:bg-amber-950 dark:text-amber-300 dark:border-amber-800",
+  },
+};
+
 const puppies = [
   {
     name: "Bára",
@@ -26,6 +46,7 @@ const puppies = [
     weight: "320 g",
     color: "Černá",
     description: "Zvědavá a odvážná slečna, která jako první prozkoumává nové hračky. Miluje drbání za ouškem.",
+    status: "waitlist" as PuppyStatus,
   },
   {
     name: "Bruno",
@@ -34,6 +55,7 @@ const puppies = [
     weight: "350 g",
     color: "Čokoládová",
     description: "Klidný a mazlivý chlapeček s nádhernou vlnitou srstí. Nejraději usíná v náručí.",
+    status: "waitlist" as PuppyStatus,
   },
   {
     name: "Bella",
@@ -42,6 +64,7 @@ const puppies = [
     weight: "290 g",
     color: "Krémová",
     description: "Nejmenší ze sourozenců, ale největší osobnost. Hravá a společenská, vždy u všeho.",
+    status: "waitlist" as PuppyStatus,
   },
   {
     name: "Beny",
@@ -50,6 +73,7 @@ const puppies = [
     weight: "340 g",
     color: "Černá s pálením",
     description: "Aktivní a hravý kluk s výrazným zbarvením. Rád se honí za míčkem a baví celou smečku.",
+    status: "waitlist" as PuppyStatus,
   },
   {
     name: "Bibi",
@@ -58,6 +82,7 @@ const puppies = [
     weight: "310 g",
     color: "Hnědá",
     description: "Jemná a citlivá fenka s krásným kudrnatým kožíškem. Miluje blízkost lidí a mazlení.",
+    status: "waitlist" as PuppyStatus,
   },
   {
     name: "Bětka",
@@ -66,6 +91,7 @@ const puppies = [
     weight: "305 g",
     color: "Šedá",
     description: "Klidná pozorovatelka s roztomilým výrazem. Ráda sleduje dění kolem a pak se přidá k zábavě.",
+    status: "waitlist" as PuppyStatus,
   },
 ];
 
@@ -185,6 +211,13 @@ const LitterDetail = () => {
                       <h3 className="font-display text-lg font-semibold text-foreground">{puppy.name}</h3>
                       <span className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">
                         {puppy.sex}
+                      </span>
+                    </div>
+                    {/* Status Badge */}
+                    <div className="mb-3">
+                      <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold border ${puppyStatusConfig[puppy.status].className}`}>
+                        <span>{puppyStatusConfig[puppy.status].emoji}</span>
+                        {puppy.status === "available" ? (puppy.sex === "fenka" ? "Volná" : "Volný") : puppy.status === "reserved" ? (puppy.sex === "fenka" ? "Zamluvena" : "Zamluven") : puppyStatusConfig[puppy.status].label}
                       </span>
                     </div>
                     <div className="flex flex-wrap gap-3 text-sm text-muted-foreground mb-3">
