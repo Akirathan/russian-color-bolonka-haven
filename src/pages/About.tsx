@@ -495,7 +495,7 @@ const About = () => {
               answer: "Ruská bolonka je přátelský a trpělivý společenský pes, který se s dětmi zpravidla výborně snáší. Je důležité děti naučit správnému zacházení s malým psem – bolonka je mazlivá a kontaktní, ale kvůli své velikosti vyžaduje ohleduplné zacházení. Výchova dětí i psa by měly jít ruku v ruce.",
             },
             {
-              question: "Co znamená „málo línající" – bolonka opravdu nelíná?",
+              question: 'Co znamená "málo línající" – bolonka opravdu nelíná?',
               answer: "Ruská barevná bolonka patří mezi málo línající plemena. Její srst roste kontinuálně (podobně jako lidské vlasy) a neprochází klasickým sezonním línáním. Neznamená to ale, že nelíná vůbec – při česání se uvolňují odumřelé chlupy. Pravidelná péče o srst je proto důležitá.",
             },
             {
