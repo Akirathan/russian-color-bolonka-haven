@@ -68,7 +68,7 @@ const dogs = [
     fullName: "Amálka Hamvaley",
     description: "Uchovněná fenka, dnes hlavně rodinná parťačka pro radost, klid a pohodu..",
     image: kevina1,
-    gallery: [kevina1, kevina1, kevina1],
+    gallery: [],
     age: "10 let",
     birthDate: "18. září 2014",
     color: "Černá",
