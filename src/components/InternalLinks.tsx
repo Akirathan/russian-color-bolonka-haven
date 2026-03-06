@@ -54,7 +54,7 @@ export const RelatedArticles = ({ currentSlug, maxArticles = 4 }: RelatedArticle
               to="/stenata"
               className="text-sm text-primary hover:underline flex items-center gap-1"
             >
-              Štěňata k prodeji <ArrowRight className="w-3 h-3" />
+              Štěňata s PP <ArrowRight className="w-3 h-3" />
             </Link>
             <Link
               to="/kontakt"
@@ -63,10 +63,22 @@ export const RelatedArticles = ({ currentSlug, maxArticles = 4 }: RelatedArticle
               Kontaktujte nás <ArrowRight className="w-3 h-3" />
             </Link>
             <Link
-              to="/plemeno/ruska-barevna-bolonka"
+              to="/o-plemeni"
               className="text-sm text-primary hover:underline flex items-center gap-1"
             >
               O plemeni <ArrowRight className="w-3 h-3" />
+            </Link>
+            <Link
+              to="/aktualni-vrhy"
+              className="text-sm text-primary hover:underline flex items-center gap-1"
+            >
+              Aktuální vrhy <ArrowRight className="w-3 h-3" />
+            </Link>
+            <Link
+              to="/nase-odchovy"
+              className="text-sm text-primary hover:underline flex items-center gap-1"
+            >
+              Naše odchovy <ArrowRight className="w-3 h-3" />
             </Link>
           </div>
         </div>

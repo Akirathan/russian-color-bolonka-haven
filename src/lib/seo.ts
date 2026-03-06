@@ -41,10 +41,10 @@ export const isPreviewEnvironment = (): boolean => {
 // SEO title templates with keywords for each page
 export const SEO_TEMPLATES = {
   home: {
-    title: "CHS Pikaro – ruská barevná bolonka | Plzeň",
+    title: "Chovatelská stanice ruské barevné bolonky | Pikaro Plzeň",
     h1: "Chovatelská stanice Pikaro",
-    description: "Profesionální chov ruských barevných bolonek od roku 1988. Zdravá štěňata s PP, výstavní šampioni. Chovatelská stanice Pikaro, Plzeň.",
-    keywords: "ruská barevná bolonka, štěňata ruské bolonky, ruská bolonka štěně, bolonka zwetna štěňata, chovatelská stanice Plzeň",
+    description: "Rodinní společníci – ruská barevná bolonka. Vrhy, odchovy, výchova a péče. Plzeň, ČR.",
+    keywords: "ruská barevná bolonka, chovatelská stanice ruská barevná bolonka, ruská barevná bolonka Plzeň",
   },
   aboutUs: {
     title: "O nás | CHS Pikaro – chov bolonek od 1988",
@@ -53,22 +53,40 @@ export const SEO_TEMPLATES = {
     keywords: "chovatelská stanice Pikaro, chov bolonek Plzeň, ruská bolonka chovatel",
   },
   breed: {
-    title: "Ruská barevná bolonka: povaha, péče, byt | CHS Pikaro Plzeň",
+    title: "Ruská barevná bolonka – povaha, výchova, srst | Pikaro",
     h1: "Ruská barevná bolonka – povaha a péče",
-    description: "Ruská barevná bolonka: povaha, nároky na péči, vhodnost do bytu. Vše o tomto společenském plemeni od CHS Pikaro v Plzni.",
-    keywords: "ruská barevná bolonka povaha, bolonka do bytu, ruská bolonka nároky, bolonka zkušenosti",
+    description: "Povaha do rodiny i bytu, výchova a péče o srst. Praktické info pro zájemce o bolonku.",
+    keywords: "ruská barevná bolonka povaha, bolonka do bytu, ruská bolonka nároky, malý rodinný pes",
   },
   dogs: {
     title: "Naši psi – ruská barevná bolonka | CHS Pikaro Plzeň",
     h1: "Naši chovní psi",
-    description: "Chovní jedinci ruské barevné bolonky. Výstavní šampioni s PP, zdravotními testy (patella, DNA). CHS Pikaro Plzeň.",
+    description: "Chovní jedinci ruské barevné bolonky. Výstavní šampioni s PP, zdravotní testy (patella, oči). CHS Pikaro Plzeň.",
     keywords: "chovní psi bolonka, ruská bolonka šampion, krycí pes bolonka Plzeň",
   },
   puppies: {
-    title: "Štěňata ruské bolonky | CHS Pikaro Plzeň",
-    h1: "Štěňata ruské barevné bolonky",
-    description: "Štěňata ruské barevné bolonky k prodeji. Aktuální a plánované vrhy s PP. Profesionální chov v Plzni od roku 1988.",
-    keywords: "štěňata ruské bolonky, štěně ruské barevné bolonky, bolonka zwetna štěňata, štěně bolonky Plzeň, ruská bolonka štěně",
+    title: "Štěňata ruské barevné bolonky s PP | Vrhy Pikaro",
+    h1: "Štěňata ruské barevné bolonky s PP",
+    description: "Aktuální a plánované vrhy, informace pro zájemce a průběh rezervace. Plzeň, ČR.",
+    keywords: "ruská barevná bolonka štěňata, štěňata s PP, ruská bolonka štěně, bolonka zwetna štěňata",
+  },
+  currentLitters: {
+    title: "Aktuální vrhy ruské barevné bolonky | Pikaro",
+    h1: "Aktuální vrhy ruské barevné bolonky",
+    description: "Novinky a fotky z vrhů. Aktuální dostupnost sdělíme na dotaz – část zájemců bývá domluvená předem.",
+    keywords: "aktuální vrhy bolonka, ruská barevná bolonka štěňata, štěňata s PP",
+  },
+  plannedLitters: {
+    title: "Plánované vrhy ruské barevné bolonky | Pikaro",
+    h1: "Plánované vrhy ruské barevné bolonky",
+    description: "Přehled plánovaných spojení. Termíny jsou orientační – prioritou je zdraví a pohoda fenky.",
+    keywords: "plánované vrhy bolonka, ruská barevná bolonka štěňata, budoucí vrhy",
+  },
+  pastLitters: {
+    title: "Naše odchovy ruské barevné bolonky | Pikaro",
+    h1: "Naše odchovy ruské barevné bolonky",
+    description: "Předchozí vrhy, fotografie a naše chovatelská historie.",
+    keywords: "odchovy bolonka, ruská barevná bolonka vrhy, archiv vrhů Pikaro",
   },
   articles: {
     title: "Výchova a péče o bolonku | CHS Pikaro Plzeň",
@@ -77,9 +95,9 @@ export const SEO_TEMPLATES = {
     keywords: "výchova štěněte bolonky, péče o srst bolonky, bolonka v bytě, samota bolonka",
   },
   contact: {
-    title: "Kontakt | CHS Pikaro Plzeň",
+    title: "Kontakt | CHS ruské barevné bolonky Pikaro (Plzeň)",
     h1: "Kontaktujte nás",
-    description: "Kontaktujte CHS Pikaro v Plzni. Tel: +420 724 174 659, email: ipikaro@gmail.com. Adresa: U Černého mostu 131/13.",
+    description: "Napište nám ohledně vrhů, štěňat a informací o plemeni. Plzeň, ČR.",
     keywords: "kontakt chovatelská stanice Plzeň, ruská bolonka Plzeň, štěně bolonky kontakt",
   },
 };
@@ -116,9 +134,12 @@ export const generateArticleTitle = (articleTitle: string): string => {
 export const SITE_ROUTES = [
   { path: "/", priority: 1.0, changefreq: "weekly" },
   { path: "/o-nas", priority: 0.7, changefreq: "monthly" },
-  { path: "/plemeno/ruska-barevna-bolonka", priority: 0.9, changefreq: "monthly" },
+  { path: "/o-plemeni", priority: 0.9, changefreq: "monthly" },
   { path: "/nasi-psi", priority: 0.8, changefreq: "monthly" },
   { path: "/stenata", priority: 0.95, changefreq: "weekly" },
+  { path: "/aktualni-vrhy", priority: 0.9, changefreq: "weekly" },
+  { path: "/planovane-vrhy", priority: 0.85, changefreq: "monthly" },
+  { path: "/nase-odchovy", priority: 0.8, changefreq: "monthly" },
   { path: "/clanky", priority: 0.8, changefreq: "weekly" },
   { path: "/kontakt", priority: 0.6, changefreq: "monthly" },
 ];
