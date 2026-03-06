@@ -18,6 +18,8 @@ import oskar8 from "@/assets/oskar-8.jpg";
 import bekka1 from "@/assets/bekka-1.jpg";
 import bekka3 from "@/assets/bekka-3.jpg";
 import bekka4 from "@/assets/bekka-4.jpg";
+import bekka5 from "@/assets/bekka-5.jpg";
+import bekka6 from "@/assets/bekka-6.jpg";
 import kevina1 from "@/assets/kevina-1.jpg";
 import pawTrail from "@/assets/paw-trail.png";
 
@@ -49,7 +51,7 @@ const dogs = [
     fullName: "Mery od Modlivého dolu",
     description: "Fenka s krásně klidnou, stabilní povahou a velkým srdcem. Skvělá máma a základ našeho chovu.",
     image: bekka1,
-    gallery: [bekka3, bekka4, bekka1],
+    gallery: [bekka3, bekka4, bekka5, bekka6, bekka1],
     age: "4 roky",
     birthDate: "14. září 2020",
     color: "Černá",
