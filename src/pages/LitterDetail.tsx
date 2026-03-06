@@ -51,7 +51,7 @@ const puppies = [
     weight: "320 g",
     color: "Černá",
     description: "Zvědavá a odvážná slečna, která jako první prozkoumává nové hračky. Miluje drbání za ouškem.",
-    status: "waitlist" as PuppyStatus,
+    status: "new-home" as PuppyStatus,
   },
   {
     name: "Bruno",
@@ -60,7 +60,7 @@ const puppies = [
     weight: "350 g",
     color: "Čokoládová",
     description: "Klidný a mazlivý chlapeček s nádhernou vlnitou srstí. Nejraději usíná v náručí.",
-    status: "waitlist" as PuppyStatus,
+    status: "new-home" as PuppyStatus,
   },
   {
     name: "Bella",
@@ -69,7 +69,7 @@ const puppies = [
     weight: "290 g",
     color: "Krémová",
     description: "Nejmenší ze sourozenců, ale největší osobnost. Hravá a společenská, vždy u všeho.",
-    status: "waitlist" as PuppyStatus,
+    status: "new-home" as PuppyStatus,
   },
   {
     name: "Beny",
@@ -78,7 +78,7 @@ const puppies = [
     weight: "340 g",
     color: "Černá s pálením",
     description: "Aktivní a hravý kluk s výrazným zbarvením. Rád se honí za míčkem a baví celou smečku.",
-    status: "waitlist" as PuppyStatus,
+    status: "new-home" as PuppyStatus,
   },
   {
     name: "Bibi",
@@ -87,7 +87,7 @@ const puppies = [
     weight: "310 g",
     color: "Hnědá",
     description: "Jemná a citlivá fenka s krásným kudrnatým kožíškem. Miluje blízkost lidí a mazlení.",
-    status: "waitlist" as PuppyStatus,
+    status: "new-home" as PuppyStatus,
   },
   {
     name: "Bětka",
@@ -96,7 +96,7 @@ const puppies = [
     weight: "305 g",
     color: "Šedá",
     description: "Klidná pozorovatelka s roztomilým výrazem. Ráda sleduje dění kolem a pak se přidá k zábavě.",
-    status: "waitlist" as PuppyStatus,
+    status: "new-home" as PuppyStatus,
   },
 ];
 
