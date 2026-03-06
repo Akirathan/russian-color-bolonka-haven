@@ -2,6 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import FAQSection from "@/components/FAQSection";
+import CrossLinks from "@/components/CrossLinks";
 import { Heart, Calendar, CheckCircle, Phone, Clock, Shield, Baby, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
@@ -131,9 +133,9 @@ const Puppies = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Štěňata ruské bolonky | CHS Pikaro Plzeň"
-        description="Štěňata ruské barevné bolonky k prodeji. Zdravá, socializovaná štěňata s PP, očkovaná podle věku, čipovaná. Aktuální vrhy od CHS Pikaro v Plzni."
-        keywords="štěňata ruské bolonky, štěně ruské barevné bolonky, bolonka zwetna štěňata, štěně bolonky Plzeň, ruská bolonka štěně"
+        title="Štěňata ruské barevné bolonky s PP | Vrhy Pikaro"
+        description="Aktuální a plánované vrhy ruské barevné bolonky, informace pro zájemce a průběh rezervace. Plzeň, ČR."
+        keywords="ruská barevná bolonka štěňata, štěňata s PP, ruská bolonka štěně, bolonka zwetna štěňata"
         url="/stenata"
         breadcrumbs={[
           { name: "Domů", url: "/" },
@@ -155,11 +157,11 @@ const Puppies = () => {
                 Štěňata
               </motion.span>
               <motion.h1 className="section-heading mb-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
-                Naše štěňata
+                Štěňata ruské barevné bolonky s PP
               </motion.h1>
               <motion.p className="section-subheading mx-auto" variants={fadeInUp} transition={{ duration: 0.6 }}>
-                S láskou vychováváme štěňata Ruské barevné bolonky. Každé štěně odchází do nového domova připravené,
-                socializované a zdravé.
+                S láskou vychováváme štěňata ruské barevné bolonky (Russkaya Tsvetnaya Bolonka). Každé štěně odchází do nového domova
+                socializované, zdravé a s průkazem původu. Níže najdete přehled aktuálních i plánovaných vrhů.
               </motion.p>
             </motion.div>
           </div>
@@ -175,9 +177,10 @@ const Puppies = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Aktuální vrhy</h2>
+              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Aktuální vrhy ruské bolonky</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Tady sdílíme informace o vrzích, které právě probíhají — vývoj štěňátek, fotky a novinky z prvních týdnů. Dostupnost štěňátek se může lišit, protože část zájemců bývá domluvená dopředu; pokud vás některý vrh zaujme, napište nám a rádi vám řekneme aktuální stav.
+                Tady sdílíme informace o vrzích, které právě probíhají. Dostupnost štěňátek se může lišit, protože část zájemců bývá domluvená dopředu.{" "}
+                <Link to="/aktualni-vrhy" className="text-primary hover:underline">Zobrazit podrobnosti →</Link>
               </p>
             </motion.div>
 
@@ -275,9 +278,10 @@ const Puppies = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Plánované vrhy</h2>
+              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Plánované vrhy ruské barevné bolonky</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Zde najdete naše nejbližší chovatelské plány a plánovaná spojení. Termíny jsou orientační — vždy upřednostňujeme zdraví fenky i budoucích štěňátek.
+                Naše nejbližší chovatelské plány. Termíny jsou orientační – vždy upřednostňujeme zdraví fenky i budoucích štěňátek.{" "}
+                <Link to="/planovane-vrhy" className="text-primary hover:underline">Zobrazit podrobnosti →</Link>
               </p>
             </motion.div>
 
@@ -342,9 +346,10 @@ const Puppies = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Minulé vrhy</h2>
+              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">Naše odchovy</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Přehled předchozích vrhů naší chovatelské stanice. Všechna štěňata jsou v milujících domovech.
+                Přehled předchozích vrhů naší chovatelské stanice. Všechna štěňata ruské barevné bolonky jsou v milujících domovech.{" "}
+                <Link to="/nase-odchovy" className="text-primary hover:underline">Zobrazit archiv →</Link>
               </p>
             </motion.div>
 
@@ -668,6 +673,40 @@ const Puppies = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FAQSection
+          items={[
+            {
+              question: "Jak probíhá rezervace štěněte ruské barevné bolonky?",
+              answer: "Rezervace začíná kontaktem – napište nám nebo zavolejte. Domluvíme osobní setkání, kde se seznámíte s maminkou i štěňaty. Po vzájemné dohodě složíte zálohu a štěně bude rezervováno pro vás. K odběru je připravené po dovršení 8–10 týdnů.",
+            },
+            {
+              question: "Co je PP (průkaz původu) a proč je důležitý?",
+              answer: "Průkaz původu (PP) je jediný oficiální doklad potvrzující, že štěně pochází z kontrolovaného chovu s ověřeným rodokmenem. Zaručuje, že rodiče prošli zdravotními testy a splňují plemenný standard. Štěně bez PP nemá garantovaný původ ani zdravotní historii rodičů.",
+            },
+            {
+              question: "V jakém věku lze štěně bolonky odebrat?",
+              answer: "Štěňata ruské barevné bolonky odcházejí do nových domovů ve věku 8–10 týdnů. Do té doby potřebují být s maminkou a sourozenci pro správný vývoj a socializaci. Předčasný odběr může negativně ovlivnit povahu i zdraví štěněte.",
+            },
+            {
+              question: "Co dostanu se štěnětem od chovatele?",
+              answer: "Se štěnětem dostanete očkovací průkaz, čip, převodní list, smlouvu o prodeji, potvrzení od veterináře, základní výbavičku (krmení, hračka, savé podložky), pokyny k péči a výživě. Průkaz původu (PP) zašleme po vyhotovení plemennou knihou. Nabízíme celoživotní poradenskou podporu.",
+            },
+            {
+              question: "Jak poznat seriózního chovatele ruské bolonky?",
+              answer: "Seriózní chovatel vám umožní návštěvu, ukáže podmínky chovu, představí rodiče štěňat a doloží zdravotní testy (patella, oči). Štěňata prodává s PP, smlouvou a zajímá se o to, kam štěně půjde. Nikdy neinzeruje více plemen současně a netlačí na rychlé rozhodnutí.",
+            },
+            {
+              question: "Jsou štěňata očkovaná a čipovaná?",
+              answer: "Ano, všechna naše štěňata ruské barevné bolonky jsou očkována podle věku, odčervena a čipována. Předáváme kompletní zdravotní dokumentaci. Každé štěně je před odchodem prohlédnuto veterinárním lékařem.",
+            },
+          ]}
+          title="Často kladené otázky o štěňatech"
+          subtitle="Informace pro zájemce o štěně ruské barevné bolonky"
+        />
+
+        <CrossLinks exclude={["/stenata"]} />
       </main>
       <Footer />
     </div>

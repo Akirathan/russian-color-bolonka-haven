@@ -4,14 +4,15 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import ReservationStepper from "@/components/ReservationStepper";
 import SnowEffect from "@/components/SnowEffect";
+import CrossLinks from "@/components/CrossLinks";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="CHS Pikaro – ruská barevná bolonka | Plzeň"
-        description="Chovatelská stanice ruských barevných bolonek od roku 1988. Zdravá štěňata s PP, výstavní šampioni. CHS Pikaro Plzeň."
-        keywords="ruská barevná bolonka, štěňata ruské bolonky, ruská bolonka štěně, bolonka zwetna štěňata, chovatelská stanice Plzeň"
+        title="Chovatelská stanice ruské barevné bolonky | Pikaro Plzeň"
+        description="Rodinní společníci – ruská barevná bolonka. Vrhy, odchovy, výchova a péče. CHS Pikaro, Plzeň, ČR."
+        keywords="ruská barevná bolonka, chovatelská stanice ruská barevná bolonka, ruská barevná bolonka Plzeň, štěňata bolonky"
         url="/"
         breadcrumbs={[{ name: "Domů", url: "/" }]}
       />
@@ -20,6 +21,7 @@ const Index = () => {
       <main>
         <Hero />
         <ReservationStepper />
+        <CrossLinks exclude={["/"]} title="Prozkoumejte náš web" />
       </main>
       <Footer />
     </div>

@@ -12,7 +12,7 @@ const Header = () => {
   const navLinks = [
     { href: "/", label: "Domů" },
     { href: "/o-nas", label: "O nás" },
-    { href: "/plemeno/ruska-barevna-bolonka", label: "O plemeni" },
+    { href: "/o-plemeni", label: "O plemeni" },
     { href: "/nasi-psi", label: "Naši psi" },
     { href: "/stenata", label: "Štěňata" },
     { href: "/clanky", label: "Články" },
@@ -29,7 +29,7 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
           <Link to="/" className="font-display text-xl md:text-2xl font-semibold text-foreground flex items-center gap-2">
-            <img src={pikaroLogo} alt="Logo Pikaro" className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover" />
+            <img src={pikaroLogo} alt="Logo chovatelské stanice Pikaro – ruská barevná bolonka Plzeň" className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover" />
             <span><span className="hidden sm:inline">Chovatelská stanice </span>Pikaro</span>
           </Link>
 

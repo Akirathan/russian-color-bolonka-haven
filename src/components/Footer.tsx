@@ -18,7 +18,7 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center gap-3 mb-2">
-              <img src={pikaroLogo} alt="Logo Pikaro" className="w-12 h-12 rounded-full object-cover" />
+              <img src={pikaroLogo} alt="Logo CHS Pikaro" className="w-12 h-12 rounded-full object-cover" />
               <div className="font-display text-2xl font-semibold text-foreground">
                 {SITE_CONFIG.shortName} – {SITE_CONFIG.address.city}
               </div>
@@ -60,9 +60,12 @@ const Footer = () => {
             <h3 className="font-display font-semibold text-foreground mb-4">Rychlé odkazy</h3>
             <nav className="flex flex-col gap-2">
               {[
-                { to: "/plemeno/ruska-barevna-bolonka", label: "O plemeni" },
+                { to: "/o-plemeni", label: "O plemeni" },
                 { to: "/nasi-psi", label: "Naši psi" },
                 { to: "/stenata", label: "Štěňata" },
+                { to: "/aktualni-vrhy", label: "Aktuální vrhy" },
+                { to: "/planovane-vrhy", label: "Plánované vrhy" },
+                { to: "/nase-odchovy", label: "Naše odchovy" },
                 { to: "/clanky", label: "Články" },
                 { to: "/kontakt", label: "Kontakt" },
               ].map((link) => (
