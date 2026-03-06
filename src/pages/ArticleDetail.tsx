@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,6 +9,7 @@ import { getArticleBySlug } from "@/data/articlesData";
 import { ArrowLeft, Clock, CheckCircle, AlertTriangle, Phone, Mail, User } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { toISODate } from "@/lib/seo";
+import vybavickaImg from "@/assets/vybavicka.jpg";
 
 const ArticleDetail = () => {
   const { slug } = useParams<{ slug: string }>();
