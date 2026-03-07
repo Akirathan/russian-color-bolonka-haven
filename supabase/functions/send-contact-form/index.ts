@@ -82,7 +82,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "Pikaro Web <onboarding@resend.dev>",
-      to: ["ipikaro@gmail.com"],
+      to: ["pavel.akira.marek@gmail.com"],
       reply_to: safeEmail,
       subject: `[Pikaro] ${subjectLabel} - ${safeName}`,
       html: `
