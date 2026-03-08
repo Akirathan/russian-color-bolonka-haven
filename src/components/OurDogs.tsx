@@ -4,6 +4,7 @@ import OptimizedImage from "@/components/OptimizedImage";
 import oskar4 from "@/assets/oskar-4.jpg";
 import bekka1 from "@/assets/bekka-1.jpg";
 import kevina1 from "@/assets/kevina-1.jpg";
+import coco1 from "@/assets/coco-1.jpg";
 import pawTrail from "@/assets/paw-trail.png";
 
 const dogs = [
@@ -31,7 +32,7 @@ const dogs = [
   {
     name: "Coco",
     description: "Klidná fenka z CHS Tlapky radosti v Brně, výborná maminka",
-    image: bekka1,
+    image: coco1,
     age: "",
     color: "Hnědá se znaky",
   },
