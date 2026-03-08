@@ -84,7 +84,7 @@ const dogs = [
   {
     name: "Coco",
     fullName: "Coco Pikaro",
-    description: "Hnědá fenka se znaky – temperamentní a veselá bolonka s výborným hodnocením z výstav.",
+    description: "Klidná fenka z CHS Tlapky radosti v Brně – výborná a starostlivá maminka.",
     image: bekka1,
     gallery: [],
     age: "",
@@ -95,7 +95,7 @@ const dogs = [
     titles: ["Výborná"],
     healthTests: ["Patella: 0/1", "Oči: bez nálezu na dědičné choroby"],
     character:
-      "Coco je temperamentní a veselá fenka s krásným hnědým zbarvením se znaky. Na výstavách získala hodnocení Výborná. Je to energická a přátelská bolonka, která skvěle zapadla do naší smečky.",
+      "Coco žije v Brně v chovatelské stanici Tlapky radosti. Je to klidná fenka s krásným hnědým zbarvením se znaky, která na výstavách získala hodnocení Výborná. Coco je výborná a starostlivá maminka – štěňatům věnuje maximální péči a trpělivost. Díky své pohodové povaze skvěle zapadla do chovu a její potomci přebírají její klidný temperament.",
     litters: [],
   },
 ];

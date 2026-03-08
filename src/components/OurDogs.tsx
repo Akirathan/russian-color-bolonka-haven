@@ -30,7 +30,7 @@ const dogs = [
   },
   {
     name: "Coco",
-    description: "Temperamentní fenka s výborným hodnocením z výstav",
+    description: "Klidná fenka z CHS Tlapky radosti v Brně, výborná maminka",
     image: bekka1,
     age: "",
     color: "Hnědá se znaky",
