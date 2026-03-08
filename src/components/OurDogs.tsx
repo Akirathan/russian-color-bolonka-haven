@@ -28,6 +28,13 @@ const dogs = [
     age: "10 let",
     color: "Černá",
   },
+  {
+    name: "Coco",
+    description: "Temperamentní fenka s výborným hodnocením z výstav",
+    image: bekka1,
+    age: "",
+    color: "Hnědá se znaky",
+  },
 ];
 
 const containerVariants = {

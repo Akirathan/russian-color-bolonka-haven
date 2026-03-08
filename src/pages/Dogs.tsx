@@ -81,6 +81,23 @@ const dogs = [
       "Kevina je uchovněná fenka, která už u nás není aktivně v chovu – dnes hlavně rodinná parťačka pro radost, klid a pohodu, která je stále vůdkyní naší smečky.",
     litters: [],
   },
+  {
+    name: "Coco",
+    fullName: "Coco Pikaro",
+    description: "Hnědá fenka se znaky – temperamentní a veselá bolonka s výborným hodnocením z výstav.",
+    image: bekka1,
+    gallery: [],
+    age: "",
+    birthDate: "",
+    color: "Hnědá se znaky",
+    weight: "5,8 kg",
+    height: "24,5 cm",
+    titles: ["Výborná"],
+    healthTests: ["Patella: 0/1", "Oči: bez nálezu na dědičné choroby"],
+    character:
+      "Coco je temperamentní a veselá fenka s krásným hnědým zbarvením se znaky. Na výstavách získala hodnocení Výborná. Je to energická a přátelská bolonka, která skvěle zapadla do naší smečky.",
+    litters: [],
+  },
 ];
 
 const Dogs = () => {
