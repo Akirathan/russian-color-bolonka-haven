@@ -5,9 +5,6 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // In dev/preview we serve from "/".
-  // On GitHub Pages the app is served from the repository sub-path.
-  base: mode === "production" ? "/russian-color-bolonka-haven/" : "/",
   server: {
     host: "::",
     port: 8080,
