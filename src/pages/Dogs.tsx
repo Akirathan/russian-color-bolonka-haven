@@ -99,7 +99,7 @@ const dogs = [
     titles: ["Výborná"],
     healthTests: ["Patella: 0/1", "Oči: bez nálezu na dědičné choroby"],
     character:
-      "Coco žije v Brně v chovatelské stanici Tlapky radosti. Je to klidná fenka s krásným hnědým zbarvením se znaky, která na výstavách získala hodnocení Výborná. Coco je výborná a starostlivá maminka – štěňatům věnuje maximální péči a trpělivost. Díky své pohodové povaze skvěle zapadla do chovu a její potomci přebírají její klidný temperament.",
+      "Coco je dcera naší Rebeky a Oskara – zdědila to nejlepší z obou rodičů. Je klidná, přátelská fenka s krásným hnědým zbarvením se znaky. Na výstavách získala hodnocení Výborná. Coco je výborná a starostlivá maminka – štěňatům věnuje maximální péči a trpělivost. Dnes žije v Brně v chovatelské stanici Tlapky radosti, kde pokračuje v rodinné linii.",
     litters: [],
   },
 ];
