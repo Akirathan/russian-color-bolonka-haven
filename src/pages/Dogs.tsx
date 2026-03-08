@@ -22,6 +22,10 @@ import bekka4 from "@/assets/bekka-4.jpg";
 import bekka5 from "@/assets/bekka-5.jpg";
 import bekka6 from "@/assets/bekka-6.jpg";
 import kevina1 from "@/assets/kevina-1.jpg";
+import coco1 from "@/assets/coco-1.jpg";
+import coco2 from "@/assets/coco-2.jpg";
+import coco3 from "@/assets/coco-3.jpg";
+import coco4 from "@/assets/coco-4.jpg";
 import pawTrail from "@/assets/paw-trail.png";
 
 const breadcrumbs = [
